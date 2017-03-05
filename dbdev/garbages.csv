@@ -1,0 +1,11 @@
+_id,name,nameJP,disposal,disposalJP,calendarColor
+burnables,Burnables,焼却ごみ類,designated bag,指定袋,blue
+plasticcontainers,Plastic Containers,プラスチック製容器類,designated bag,指定袋,pink
+plasticbottles,Plastic Bottles,ペットボトル類,designated bag,指定袋,green
+cans,Cans,空き缶類,container,コンテナ,grey
+foodandbeverage,Food and Beverage Glasses,飲・食料用ガラスびん類,container,コンテナ,light blue
+solidwaste,Solid Waste for Crushing,破砕ごみ類,clear bag,指定袋なし,purple
+ceramicglass,Ceramic / Glass,陶器・ガラス類,clear bag,指定袋なし,orange
+newspaperads,Newspaper / Ads,新聞・広告,bundle with string,ひもなど,bright yellow
+magazinesmisc,Magazines / Miscellaneous Recyclable Paper,雑誌・雑紙,bundle with string,ひもなど,yellow
+cardboard,Cardboard,段ボール,bundle with string,ひもなど,brown

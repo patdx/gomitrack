@@ -1,0 +1,14 @@
+<h1><a href="/districts">Back</a></h1>
+<h1>{{nameJP}} {{name}}</h1>
+<h2>Addresses</h2>
+<ul>
+    {{#each addresses}}
+    <li style="margin-bottom:10px"><a href="district/{{../name}}">{{addressJP}}</a><br><small><b>{{zipcode}}</b> {{address}}</small></li>
+    {{/each}}
+</ul>
+<h2>Garbage Types</h2>
+<ul>
+    {{#each garbages}}
+    <li><b>{{garbage.name}} {{frequency}}</b><br>{{nextDate}}</li>
+    {{/each}}
+</ul>

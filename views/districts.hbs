@@ -1,0 +1,10 @@
+{{#each districts}}
+    <div><big><b><a href="district/{{name}}">{{nameJP}}<a/></b></big> ({{name}})
+        <ul>
+            {{#each addresses}}
+                <li style="margin-bottom:10px"><a href="district/{{../name}}">{{addressJP}}</a><br><small><b>{{zipcode}}</b> {{address}}</small></li>
+            {{/each}}
+        </ul>
+    </div>
+{{/each}}
+    

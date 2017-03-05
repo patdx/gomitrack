@@ -1,0 +1,94 @@
+﻿name,nameJP,zipcode,address,addressJP,burnables,plasticcontainers,plasticbottles,cans,foodandbeverage,solidwaste,ceramicglass,newspaperads,magazinesmisc,cardboard
+Shizu A,志津A,5250041,"Aoji-cho 1~500-banchi, 1500~1600-banchi",青地町1から500番地、1500から1600番地台,火 金,水1 水3 水5,月4,木3,月3,月1,木2,月2,木1,木4
+Shizu A,志津A,5250041,"Aoji-cho 500, 600-banchi (Shizu A or Shizu B Confirmation Required)",青地町500、600番地（志津Aまたは志津Bか要確認）,火 金,水1 水3 水5,月4,木3,月3,月1,木2,月2,木1,木4
+Shizu A,志津A,5250044,"Okamoto-cho 2-banchi, Yamate-Kansen to Yamagawa",岡本町2番地、山手幹線より山側,火 金,水1 水3 水5,月4,木3,月3,月1,木2,月2,木1,木4
+Shizu A,志津A,5250043,Banba-cho,馬場町,火 金,水1 水3 水5,月4,木3,月3,月1,木2,月2,木1,木4
+Shizu A,志津A,5250042,Yamadera-cho,山寺町,火 金,水1 水3 水5,月4,木3,月3,月1,木2,月2,木1,木4
+Shizu A,志津A,5250045,Wakakusa 1~8-chome,若草一から八丁目,火 金,水1 水3 水5,月4,木3,月3,月1,木2,月2,木1,木4
+Shizu B,志津B,5250041,Aoji-cho 700~1300-banchi,青地町700から1300番地,火 金,水1 水3 水5,木4,木1,月1,月2,木3,月4,月3,木2
+Shizu B,志津B,5250041,"Aoji-cho 500, 600-banchi (Shizu A or Shizu B Confirmation Required)",青地町500、600番地（志津Aまたは志津Bか要確認）,火 金,水1 水3 水5,木4,木1,月1,月2,木3,月4,月3,木2
+Shizu B,志津B,5250047,"Oiwake 1~3-chome (""Runesu An"" is in Kusatsu B)",追分一から三丁目（ルネス・アンは草津B）,火 金,水1 水3 水5,木4,木1,月1,月2,木3,月4,月3,木2
+Shizu B,志津B,5250047,"Oiwake 4-chome 2~3-banchi, 9~12-banchi (Shizu A or Yagura A Confirmation Required)",追分四丁目2から3番地、9から12番地（志津Aまたは矢倉Aか要確認）,火 金,水1 水3 水5,木4,木1,月1,月2,木3,月4,月3,木2
+Shizu B,志津B,5250047,"Oiwake 4-chome 8-banchi, 13~14-banchi",追分四丁目8番地、13から14番地,火 金,水1 水3 水5,木4,木1,月1,月2,木3,月4,月3,木2
+Shizu B,志津B,5250047,Oiwake 5~7-chome,追分五から七丁目,火 金,水1 水3 水5,木4,木1,月1,月2,木3,月4,月3,木2
+Shizu B,志津B,5250047,"Oiwake 8-chome 1~5-banchi, 9~16-banchi",追分八丁目1から5番地、9から16番地,火 金,水1 水3 水5,木4,木1,月1,月2,木3,月4,月3,木2
+Shizu B,志津B,5250047,"Oiwake 8-chome 6-banchi, 8-banchi (Shizu A or Yagura A Confirmation Required)",追分八丁目6番地、8番地（志津Aまたは矢倉Aか要確認）,火 金,水1 水3 水5,木4,木1,月1,月2,木3,月4,月3,木2
+Shizu B,志津B,5250048,Oiwake-Minami 1-chome,追分南一丁目,火 金,水1 水3 水5,木4,木1,月1,月2,木3,月4,月3,木2
+Shizu B,志津B,5250048,"Oiwake-Minami 2-chome Rairakku, 1-banchi, 3-banchi, 5~14-banchi, 23~25-banchi, Part of 22-banchi",追分南二丁目ライラック、1番、3番、5から14番、23から25番、22番の一部,火 金,水1 水3 水5,木4,木1,月1,月2,木3,月4,月3,木2
+Shizu B,志津B,5250048,Oiwake-Minami 3~9-chome,追分南三から九丁目,火 金,水1 水3 水5,木4,木1,月1,月2,木3,月4,月3,木2
+Shizu B,志津B,5250044,Okamoto-cho,岡本町,火 金,水1 水3 水5,木4,木1,月1,月2,木3,月4,月3,木2
+Shizu B,志津B,5250033,Higashi-Kusatsu 3-chome 13-banchi,東草津三丁目13番,火 金,水1 水3 水5,木4,木1,月1,月2,木3,月4,月3,木2
+Shizu B,志津B,5250033,Higashi-Kusatsu 4-chome,東草津四丁目,火 金,水1 水3 水5,木4,木1,月1,月2,木3,月4,月3,木2
+Shizu B,志津B,5250045,Wakakusa 1~8-chome Biankūru,若草一から八丁目ビアンクール,火 金,水1 水3 水5,木4,木1,月1,月2,木3,月4,月3,木2
+Kusatsu A,草津A,5250034,Kusatsu 1~4-chome,草津一から四丁目,月 木,金1 金3 金5,水4,火3,火4,火2,水3,水1,火1,水2
+Kusatsu A,草津A,5250036,"Kusatsu-cho Gurīnpia, Kusatsu Housing Complex, Roku-No-Tsubo Housing Complex, Beruvitaun, etc.",草津町グリーンピア、草津団地、六ノ坪団地、ベルヴィタウンなど,月 木,金1 金3 金5,水4,火3,火4,火2,水3,水1,火1,水2
+Kusatsu A,草津A,5250035,Nishi-Kusatsu 1~2-chome,西草津一から二丁目,月 木,金1 金3 金5,水4,火3,火4,火2,水3,水1,火1,水2
+Kusatsu A,草津A,5250053,Yagura 1~2-chome 7-banchi 8~20-go (Excluding Mezon-Kubo),矢倉一から二丁目7番8から20号（メゾン久保除く）,月 木,金1 金3 金5,水4,火3,火4,火2,水3,水1,火1,水2
+Kusatsu B,草津B,5250047,Oiwake 1~3-chome Runesu An,追分一から三丁目ルネス・アン,月 木,水1 水3 水5,火2,金2,火1,火4,金1,金4,金3,火3
+Kusatsu B,草津B,5250033,Higashi-Kusatsu 1~2-chome,東草津一から二丁目,月 木,水1 水3 水5,火2,金2,火1,火4,金1,金4,金3,火3
+Kusatsu B,草津B,5250033,Higashi-Kusatsu 3-chome,東草津三丁目,月 木,水1 水3 水5,火2,金2,火1,火4,金1,金4,金3,火3
+Ooji A,大路A,5250032,Ooji 1 ~2-chome,大路一から二丁目,火 金,月1 月3 月5,木3,水1,木1,木2,水2,水3,木4,水4
+Ooji A,大路A,5250037,Nishi-Ooji-cho,西大路町,火 金,月1 月3 月5,木3,水1,木1,木2,水2,水3,木4,水4
+Ooji A,大路A,5250027,"Nomura 1-chome 2~7-banchi, 12~15-banchi, 21~24-banchi",野村一丁目2から7番、12から15番、21から24番,火 金,月1 月3 月5,木3,水1,木1,木2,水2,水3,木4,水4
+Ooji A,大路A,5250027,Nomura 1-chome Royal Heights Yoshida,野村一丁目ロイヤルハイツ吉田,火 金,月1 月3 月5,木3,水1,木1,木2,水2,水3,木4,水4
+Ooji A,大路A,5250027,Nomura 2-chome 1~10-banchi,野村二丁目1から10番,火 金,月1 月3 月5,木3,水1,木1,木2,水2,水3,木4,水4
+Ooji A,大路A,5250031,"Wakatake-cho 1-banchi, 8~10-banchi",若竹町1番地、8から10番地,火 金,月1 月3 月5,木3,水1,木1,木2,水2,水3,木4,水4
+Ooji B,大路B,5250032,Ooji 3-chome,大路三丁目,月 木,水1 水3 水5,火2,金2,火1,火4,金1,金4,金3,火3
+Shibukawa,渋川,5250026,Shibukawa 1~2-chome,渋川一から二丁目,火 金,月1 月3 月5,水1,水4,木4,木1,水2,水3,木2,木3
+Shibukawa,渋川,5250025,Nishi-Shibukawa 1~2-chome,西渋川一から二丁目,火 金,月1 月3 月5,水1,水4,木4,木1,水2,水3,木2,木3
+Shibukawa,渋川,5250027,Nomura 1-chome (Except Royal Heights Yoshida),野村一丁目（上記以外ロイヤルハイツ吉田）,火 金,月1 月3 月5,水1,水4,木4,木1,水2,水3,木2,木3
+Yagura A,矢倉A,5250047,"Oiwake 4-chome 1-banchi, 4~7-banchi",追分四丁目1番地、4から7番地,月 木,金2 金4 金5,火4,火1,水1,水4,水3,火2,火3,水2
+Yagura A,矢倉A,5250047,"Oiwake 4-chome 2~3-banchi , 9~12-banchi (Shizu A or Yagura A Confirmation Required)",追分四丁目2から3番地、9から12番地（志津Aまたは矢倉Aか要確認）,月 木,金2 金4 金5,火4,火1,水1,水4,水3,火2,火3,水2
+Yagura A,矢倉A,5250047,"Oiwake 8-chome 6-banchi, 8-banchi (Shizu A or YaguraA Confirmation Required)",追分八丁目6番地、8番地（志津Aまたは矢倉Aか要確認）,月 木,金2 金4 金5,火4,火1,水1,水4,水3,火2,火3,水2
+Yagura A,矢倉A,5250047,Oiwake 8-chome 7-banchi,追分八丁目7番地,月 木,金2 金4 金5,火4,火1,水1,水4,水3,火2,火3,水2
+Yagura A,矢倉A,5250048,"Oiwake-Minami 2-chome 2-banchi 13~15-go, Part of 4-banchi",追分南二丁目2番13から15号、4番の一部,月 木,金2 金4 金5,火4,火1,水1,水4,水3,火2,火3,水2
+Yagura A,矢倉A,5250054,Higashi-Yagura 1~4-chome,東矢倉一から四丁目,月 木,金2 金4 金5,火4,火1,水1,水4,水3,火2,火3,水2
+Yagura A,矢倉A,5250053,Yagura 1~2-chome [7-banchi 8~20-go (Excluding Mezon Kubo) is Kusatsu A],矢倉一から二丁目【7番8から20号（メゾン久保除く）は草津A】,月 木,金2 金4 金5,火4,火1,水1,水4,水3,火2,火3,水2
+Yagura B,矢倉B,5250052,Nishi-Yagura 1~3-chome,西矢倉一から三丁目,月 木,水1 水3 水5,火2,金2,火1,火4,金1,金4,金3,火3
+Oikami A,老上A,5250055,Noji-cho JR Toukaidou Main Line to Lake Biwa Side,野路町ＪＲ東海道本線より琵琶湖側,月 木,火2 火4 火5,金4,金3,金2,水2,水4,水1,金1,水3
+Oikami A,老上A,5250065,"Hashioka-cho-Minami Kusatsu Housing Complex, Employment Housing, etc.",橋岡町南草津団地、雇用促進住宅など,月 木,火2 火4 火5,金4,金3,金2,水2,水4,水1,金1,水3
+Oikami A,老上A,5250050,Minami-Kusatsu 1~5-chome,南草津一から五丁目,月 木,火2 火4 火5,金4,金3,金2,水2,水4,水1,金1,水3
+Oikami A,老上A,5250066,"Yabase-cho Lake Kunihira Housing Complex, Minami-Kusatsu Housing Complex, etc.",矢橋町湖州平団地、南草津団地など,月 木,火2 火4 火5,金4,金3,金2,水2,水4,水1,金1,水3
+Oikami B,老上B,5250067,Shinhama-cho,新浜町,月 木,火1 火3 火5,金2,金1,金3,水1,水4,金4,水2,水3
+Oikami B,老上B,5250065,Hashioka-cho,橋岡町,月 木,火1 火3 火5,金2,金1,金3,水1,水4,金4,水2,水3
+Oikami B,老上B,5250056,Minami-gasa-cho,南笠町,月 木,火1 火3 火5,金2,金1,金3,水1,水4,金4,水2,水3
+Oikami B,老上B,5250066,Yabase-cho Hashioka Housing Complex etc.,矢橋町橋岡団地など,月 木,火1 火3 火5,金2,金1,金3,水1,水4,金4,水2,水3
+Tamagawa A,玉川A,5250059,Noji 1~9-chome,野路一から九丁目,火 金,月2 月4 月5,木2,水3,木3,木4,水1,水4,水2,木1
+Tamagawa A,玉川A,5250071,Minami-gasa-Higashi 1~4-chome (Yokoyama Heights and Koruboriumu Minami-gasa are in Kasayama),南笠東一から四丁目横山ハイツ、コルボリウム南笠は笠山,火 金,月2 月4 月5,木2,水3,木3,木4,水1,水4,水2,木1
+Tokiwa,常盤,5250002,Ashiura-cho,芦浦町,火 金,木2 木4 木5,月2,水2,水3,月3,水1,水4,月1,月4
+Tokiwa,常盤,5250012,Anamura-cho,穴村町,火 金,木2 木4 木5,月2,水2,水3,月3,水1,水4,月1,月4
+Tokiwa,常盤,5250001,Oroshimo-cho,下物町,火 金,木2 木4 木5,月2,水2,水3,月3,水1,水4,月1,月4
+Tokiwa,常盤,5250011,Kataoka-cho,片岡町,火 金,木2 木4 木5,月2,水2,水3,月3,水1,水4,月1,月4
+Tokiwa,常盤,5250004,Kamidera-cho,上寺町,火 金,木2 木4 木5,月2,水2,水3,月3,水1,水4,月1,月4
+Tokiwa,常盤,5250016,Kitaoogaya-cho,北大萱町,火 金,木2 木4 木5,月2,水2,水3,月3,水1,水4,月1,月4
+Tokiwa,常盤,5250005,Shina-cho,志那町,火 金,木2 木4 木5,月2,水2,水3,月3,水1,水4,月1,月4
+Tokiwa,常盤,5250006,Shinanaka-cho,志那中町,火 金,木2 木4 木5,月2,水2,水3,月3,水1,水4,月1,月4
+Tokiwa,常盤,5250007,Shimodera-cho,下寺町,火 金,木2 木4 木5,月2,水2,水3,月3,水1,水4,月1,月4
+Tokiwa,常盤,5250003,Natsuka-cho,長束町,火 金,木2 木4 木5,月2,水2,水3,月3,水1,水4,月1,月4
+Hirai,平井,5250023,Hirai 1~6-chome,平井一から六丁目,火 金,木2 木4 木5,木1,水2,木2,水3,水4,木3,木4,水1
+Hirai,平井,5250024,Hirai-cho,平井町,火 金,木2 木4 木5,木1,水2,木2,水3,水4,木3,木4,水1
+Yamada B,山田B,5250051,"Kinokawa-cho (Hi-no-oka, Deyashiki, Nikkou, Shinden, Sunaike, Mitsuike Housing Complex)",木川町（陽ノ丘、出屋敷、日光、新田、砂池、三つ池団地）,月 木,火1 火3 火5,水2,金4,金1,金3,水3,水1,金2,水4
+Yamada B,山田B,5250036,"Kusatsu-cho (Erushiti, Beruvi, Kotochou, Paruntaun)",草津町（エルシティ、ベルヴィ、湖都町、パールタウンなどエルシティ、ベルヴィ、湖都町、パールタウンなど）,月 木,火1 火3 火5,水2,金4,金1,金3,水3,水1,金2,水4
+Kamigasa,上笠,5250028,Kamigasa-cho,上笠町,月 木,水2 水4 水5,火1,火2,火3,金1,金4,金3,金2,火4
+Kamigasa,上笠,5250028,Kamigasa 1~4-chome,上笠一から四丁目,月 木,水2 水4 水5,火1,火2,火3,金1,金4,金3,金2,火4
+Kasanui A,笠縫A,5250015,Atsumari-cho,集町,月 木,金2 金4 金5,火3,火4,水4,火1,水2,水3,火2,水1
+Kasanui A,笠縫A,5250028,Kamigasa 5-chome,上笠五丁目,月 木,金2 金4 金5,火3,火4,水4,火1,水2,水3,火2,水1
+Kasanui A,笠縫A,5250022,Kawara-cho (Hayama River to North),川原町（葉山川より北）,月 木,金2 金4 金5,火3,火4,水4,火1,水2,水3,火2,水1
+Kasanui A,笠縫A,5250014,Komaizawa-cho,駒井沢町,月 木,金2 金4 金5,火3,火4,水4,火1,水2,水3,火2,水1
+Kasanui A,笠縫A,5250029,Shimogasa-cho,下笠町,月 木,金2 金4 金5,火3,火4,水4,火1,水2,水3,火2,水1
+Kasanui A,笠縫A,5250013,Shindou-cho,新堂町,月 木,金2 金4 金5,火3,火4,水4,火1,水2,水3,火2,水1
+Kasanui B,笠縫B,5250021,Kawara 1~4-chome,川原一から四丁目,火 金,木1 木3 木5,水3,水4,水2,月4,水1,月2,月1,月3
+Kasanui B,笠縫B,5250022,Kawara-cho,川原町,火 金,木1 木3 木5,水3,水4,水2,月4,水1,月2,月1,月3
+Kasanui B,笠縫B,5250027,Nomura 2-chome (11~23),野村二丁目（11から23）,火 金,木1 木3 木5,水3,水4,水2,月4,水1,月2,月1,月3
+Kasanui B,笠縫B,5250027,Nomura 3~8-chome,野村三から八丁目,火 金,木1 木3 木5,水3,水4,水2,月4,水1,月2,月1,月3
+Yamada A,山田A,5250016,Kita-Yamada,北山田,月 木,水2 水4 水5,金3,金4,火2,火3,金2,火4,金1,火1
+Yamada A,山田A,5250051,Kinokawa-cho (K's Denki side of the prefectural road crossing),木川町（県道交差点ケーズデンキ側）,月 木,水2 水4 水5,金3,金4,火2,火3,金2,火4,金1,火1
+Yamada A,山田A,5250064,Mikura-cho,御倉町,月 木,水2 水4 水5,金3,金4,火2,火3,金2,火4,金1,火1
+Yamada A,山田A,5250063,Minami-Yamada-cho,南山田町,月 木,水2 水4 水5,金3,金4,火2,火3,金2,火4,金1,火1
+Yamada A,山田A,5250062,Yamada-cho,山田町,月 木,水2 水4 水5,金3,金4,火2,火3,金2,火4,金1,火1
+Kasayama,笠山,5250072,Kasayama 1~8-chome,笠山一から八丁目,火 金,水2 水4 水5,月1,木4,月4,木2,木1,木3,月3,月2
+Kasayama,笠山,5250071,"Minami-gasa-Higashi 1~4-chome (Yokoyama Heights, Koruboriumu Minami-gasa)",南笠東一から四丁目（横山ハイツ、コルボリウム南笠）,火 金,水2 水4 水5,月1,木4,月4,木2,木1,木3,月3,月2
+Tamagawa B,玉川B,5250048,Oiwake-Minami 2-chome (Part of 15~22-banchi (Oiwake Kamoda neighborhood association)),追分南二丁目（15から22番の一部（追分鴨田町内会））,火 金,水2 水4 水5,月3,木2,月2,木3,木4,月4,木1,月1
+Tamagawa B,玉川B,5250057,Sakuragaoka 1~5-chome,桜ヶ丘一から五丁目,火 金,水2 水4 水5,月3,木2,月2,木3,木4,月4,木1,月1
+Tamagawa B,玉川B,5250055,Noji-cho (JR Toukaidou Main Line to Kokudou 1-go Side),野路町（ＪＲ東海道本線より国道1号側）,火 金,水2 水4 水5,月3,木2,月2,木3,木4,月4,木1,月1
+Tamagawa B,玉川B,5250058,Noji-Higashi 1~7-chome,野路東一から七丁目,火 金,水2 水4 水5,月3,木2,月2,木3,木4,月4,木1,月1
