@@ -22,3 +22,17 @@
 body {
     font-family: ’ヒラギノ角ゴ Pro W3’, ‘Hiragino Kaku Gothic Pro’, メイリオ, Meiryo, Osaka, ‘MS Pゴシック’, ‘MS PGothic’, sans-serif;
 }
+
+.districtJP {
+    /*font-weight: bold;*/
+}
+
+.districtEN {
+    /*font-weight: normal;*/
+    /*color: #8292a0;*/
+    color:gray;
+}
+
+a:hover {
+    text-decoration: none;
+}
