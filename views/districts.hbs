@@ -1,10 +1,26 @@
-{{#each districts}}
-    <div><big><b><a href="district/{{name}}">{{nameJP}}<a/></b></big> ({{name}})
-        <ul>
-            {{#each addresses}}
-                <li style="margin-bottom:10px"><a href="district/{{../name}}">{{addressJP}}</a><br><small><b>{{zipcode}}</b> {{address}}</small></li>
-            {{/each}}
-        </ul>
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Gomitracker</a>
+        </div>
     </div>
-{{/each}}
+</nav>
+
+<div class="container">
     
+    <h1>Districts</h1>
+
+    {{#each districts}}
+    <h2><a href="district/{{name}}">{{nameJP}} {{name}}</a></h2>
+    <div class="row">
+
+        {{#each addresses}}
+        <div class="col-xs-12 col-sm-4 addresses">
+            <a href="district/{{../name}}">{{addressJP}}</a><br>{{address}}<br>{{zipcode}}
+        </div>
+        {{/each}}
+
+    </div>
+    {{/each}}
+
+</div>

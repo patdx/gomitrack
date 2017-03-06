@@ -1,15 +1,38 @@
-<h1><a href="/districts">Back</a></h1>
-<h1>{{nameJP}} {{name}}</h1>
-<h2>Addresses</h2>
-<ul>
-    {{#each addresses}}
-    <li style="margin-bottom:10px"><a href="district/{{../name}}">{{addressJP}}</a><br><small><b>{{zipcode}}</b> {{address}}</small><br>
-                <img src="//maps.googleapis.com/maps/api/staticmap?size=300x150&markers={{zipcode}}"></li>
-    {{/each}}
-</ul>
-<h2>Garbage Types</h2>
-<ul>
-    {{#each garbages}}
-    <li style="margin-bottom:10px"><b>{{garbage.name}} {{frequency}}</b><br>{{nextDate}}</li>
-    {{/each}}
-</ul>
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Gomitracker</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="/districts">Back to Districts</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    
+    <h1>{{nameJP}} {{name}}</h1>
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <h2>Addresses</h2>
+
+            {{#each addresses}}
+            <div class="addresses">
+                <a href="district/{{../name}}">{{addressJP}}</a><br>{{address}}<br>{{zipcode}}
+                <br><img src="//maps.googleapis.com/maps/api/staticmap?size=300x150&markers={{zipcode}}">
+            </div>
+            {{/each}}
+
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+            <h2>Garbage Types</h2>
+            {{#each garbages}}
+            <div class="garbages">
+                <b>{{garbage.name}} {{frequency}}</b><br>{{nextDate}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
