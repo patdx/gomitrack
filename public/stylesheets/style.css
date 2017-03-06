@@ -1,9 +1,18 @@
-.addresses, .garbages {
+.addresses,
+.garbages {
     margin-bottom: 10px;
 }
 
-/*.navbar {min-height: 80px;}
-.navbar-brand {padding: 0 15px; height: 80px; line-height: 80px;}*/
+.navbar {
+    /*min-height: 80px;*/
+    padding-top: 15px;
+}
+
+/*.navbar-brand {*/
+/*    height: 80px;*/
+/*    line-height: 80px;*/
+/*}*/
+
 
 .navbar-brand {
     padding-top: 0px;
