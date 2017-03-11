@@ -10,29 +10,87 @@
 </nav>
 
 <div class="container">
-    
-    <h1><span class="districtJP">{{nameJP}}</span> <span class="districtEN">{{name}}</span></h1>
-    
+
+    <h1><span class="districtJP">{{district.nameJP}}</span> <span class="districtEN">{{district.name}}</span></h1>
+
     <div class="row">
-        <div class="col-xs-12 col-sm-6">
-            <h2>Addresses</h2>
-
-            {{#each addresses}}
-            <div class="addresses">
-                <a href="district/{{../name}}">{{addressJP}}</a><br>{{address}}<br>{{zipcode}}
-                <br><img src="//maps.googleapis.com/maps/api/staticmap?size=300x150&key=AIzaSyDdZd8y0K_8tsa2VNnVavAmeUBJI3ExebA&markers={{zipcode}}">
-            </div>
-            {{/each}}
-
-        </div>
-
-        <div class="col-xs-12 col-sm-6">
-            <h2>Garbage Types</h2>
-            {{#each garbages}}
+        <div class="col-xs-12 col-sm-4">
+            <h2>Schedule</h2>
+            {{#each district.garbages}}
             <div class="garbages">
                 <b>{{garbage.name}} {{frequency}}</b><br>{{nextDate}}
             </div>
             {{/each}}
         </div>
+        <div class="col-xs-12 col-sm-8">
+            <h2>Addresses</h2>
+
+            <p>
+                <div id="map">test</div>
+                <script id="zipcodes" data-zipcodes="{{zipcodes}}"></script>
+                <script>
+                    var zipcodes = JSON.parse(document.getElementById("zipcodes").getAttribute("data-zipcodes"));
+                    var map;
+                    var geocoder;
+
+                    function initMap() {
+                        geocoder = new google.maps.Geocoder();
+
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            center: {
+                                lat: 35.013134,
+                                lng: 135.959936
+                            },
+                            zoom: 12,
+                            disableDefaultUI: true,
+                            draggable: false,
+                            scrollwheel: false,
+                            disableDoubleClickZoom: true
+                        });
+
+                        zipcodes.forEach(function(p) {
+                            codeAddress(p);
+                        });
+                    }
+
+                    function codeAddress(zipCode) {
+                        geocoder.geocode({
+                            'address': zipCode
+                        }, function(results, status) {
+                            if (status == google.maps.GeocoderStatus.OK) {
+                                //Got result, center the map and put it out there
+                                map.setCenter(results[0].geometry.location);
+                                var marker = new google.maps.Marker({
+                                    map: map,
+                                    position: results[0].geometry.location
+                                });
+                            }
+                            else {
+                                alert("Geocode was not successful for the following reason: " + status);
+                            }
+                        });
+                    };
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlf56fLNWNNeKN1pKWjBo-rHxJUIJ88-Y&callback=initMap" async defer></script>
+            </p>
+
+            <p>
+                <div class="row">
+                    {{#each district.addresses}}
+                    <div class="col-xs-12 col-sm-6">
+
+                        <div class="addresses">
+                            <a href="district/{{../name}}">{{addressJP}}</a><br>{{address}}<br>{{zipcode}}
+                            <!--<br><img src="//maps.googleapis.com/maps/api/staticmap?size=300x150&key=AIzaSyDdZd8y0K_8tsa2VNnVavAmeUBJI3ExebA&markers={{zipcode}}">-->
+                        </div>
+
+                    </div>
+                    {{/each}}
+                </div>
+            </p>
+
+        </div>
     </div>
 </div>
+
+{{zipcodes}}

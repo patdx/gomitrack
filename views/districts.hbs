@@ -7,18 +7,26 @@
 </nav>
 
 <div class="container">
-    
+
     <h1>Districts</h1>
 
     {{#each districts}}
-    <h2><a href="district/{{name}}"><span class="districtJP">{{nameJP}}</span> <span class="districtEN">{{name}}</span></a></h2>
     <div class="row">
 
-        {{#each addresses}}
-        <div class="col-xs-12 col-sm-4 addresses">
-            <a href="district/{{../name}}">{{addressJP}}</a><br>{{address}}<br>{{zipcode}}
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <h2 style="margin-top:5px;"><a href="district/{{name}}"><span class="districtJP">{{nameJP}}</span> <br><span class="districtEN">{{name}}</span></a></h2>
         </div>
-        {{/each}}
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <div class="row">
+                {{#each addresses}}
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="addresses">
+                        <a href="district/{{../name}}">{{addressJP}}</a><br>{{address}}<br>{{zipcode}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
 
     </div>
     {{/each}}

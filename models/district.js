@@ -7,7 +7,9 @@ var districtSchema = new Schema({
     addresses: [{
         address: String,
         addressJP: String,
-        zipcode: String
+        zipcode: String,
+        lat: Number,
+        lng: Number
     }],
     garbages: [{
         garbage: {

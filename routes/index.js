@@ -33,25 +33,31 @@ router.get('/districts', function(req, res, next) {
 
 router.get('/district/:district', function(req, res, next) {
     var district = req.params.district;
-    District.find({
+    District.findOne({
         name: district
     }).sort({
         "name": "1",
         "addresses.addressJP": "1"
-    }).populate("garbages.garbage").exec(function(err, docs) {
+    }).populate("garbages.garbage").exec(function(err, district) {
         if (err) throw err;
-        console.log(docs[0]);
-        
-        docs[0].garbages.forEach(function(garbage,index,array){
+
+        district.garbages.forEach(function(garbage, index, array) {
             console.log(garbage);
             var rruleObj = RRule.fromString(garbage.frequencyRRule);
             var nextDate = rruleObj.after(new Date(), true);
             console.log(nextDate);
-            
+
             //save the next date
             array[index].nextDate = moment(nextDate).format("dddd, M/D/YY");
         });
-        res.render('district', docs[0]);
+
+        var zipcodes = JSON.stringify(district.addresses.map(function(p) {
+            return p.zipcode;
+        }));
+        res.render('district', {
+            district: district,
+            zipcodes: zipcodes
+        });
     });
 })
 
