@@ -9,8 +9,9 @@ var fs = require('fs');
 var waterfall = require('async-waterfall');
 
 var mongoose = require('mongoose');
-var env = require('../env.json');
-mongoose.connect(env.mongoUrl);
+//IF THERE ARE ISSUES--CHECK THIS LINE
+var dotenv = require('dotenv').config({path: '../.env'});
+mongoose.connect(process.env.MONGO_URL);
 
 var Garbage = require('../models/garbage');
 var District = require('../models/district');

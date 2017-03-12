@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 var mongoose = require('mongoose');
-var env = require('../env.json');
-mongoose.connect(env.mongoUrl);
+var dotenv = require('dotenv').config({path: '../.env'});
+mongoose.connect(process.env.MONGO_URL);
 
 var User = require('../models/user');
 var Garbage = require('../models/garbage');
@@ -59,7 +59,8 @@ router.get('/district/:district', function(req, res, next) {
         }));
         res.render('district', {
             district: district,
-            locations: locations
+            locations: locations,
+            mapsURL: "https://maps.googleapis.com/maps/api/js?key=" + process.env.MAPS_API + "&callback=initMap" 
         });
     });
 })

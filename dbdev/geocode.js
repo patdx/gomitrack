@@ -2,15 +2,15 @@ var dataFolder = './dbdev/'
 
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise //use native promises
-var env = require('../env.json');
-mongoose.connect(env.mongoUrl);
+var dotenv = require('dotenv').config({path: '../.env'});
+mongoose.connect(process.env.MONGO_URL);
 
 var Garbage = require('../models/garbage');
 var District = require('../models/district');
 var User = require('../models/user');
 
 var googleMapsClient = require('@google/maps').createClient({
-    key: env.mapsApi,
+    key: process.env.MAPS_API,
     Promise: Promise
 });
 
