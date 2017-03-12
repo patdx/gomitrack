@@ -2,7 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 var mongoose = require('mongoose');
-var dotenv = require('dotenv').config({path: '../.env'});
+var dotenv = require('dotenv').config({
+    path: '../.env'
+});
 mongoose.connect(process.env.MONGO_URL);
 
 var User = require('../models/user');
@@ -48,7 +50,14 @@ router.get('/district/:district', function(req, res, next) {
             console.log(nextDate);
 
             //save the next date
-            array[index].nextDate = moment(nextDate).format("dddd, M/D/YY");
+            array[index].nextDate = nextDate;
+            array[index].nextDateFormatted = moment(nextDate).format("dddd, M/D/YY");
+        });
+
+        district.garbages.sort(function(a, b) {
+            // Turn your strings into dates, and then subtract them
+            // to get a value that is either negative, positive, or zero.
+            return a.nextDate - b.nextDate;
         });
 
         var locations = JSON.stringify(district.addresses.map(function(p) {
@@ -60,7 +69,7 @@ router.get('/district/:district', function(req, res, next) {
         res.render('district', {
             district: district,
             locations: locations,
-            mapsURL: "https://maps.googleapis.com/maps/api/js?key=" + process.env.MAPS_API + "&callback=initMap" 
+            mapsURL: "https://maps.googleapis.com/maps/api/js?key=" + process.env.MAPS_API + "&callback=initMap"
         });
     });
 })
