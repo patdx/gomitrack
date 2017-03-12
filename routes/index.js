@@ -51,12 +51,15 @@ router.get('/district/:district', function(req, res, next) {
             array[index].nextDate = moment(nextDate).format("dddd, M/D/YY");
         });
 
-        var zipcodes = JSON.stringify(district.addresses.map(function(p) {
-            return p.zipcode;
+        var locations = JSON.stringify(district.addresses.map(function(p) {
+            return {
+                lat: p.lat,
+                lng: p.lng
+            };
         }));
         res.render('district', {
             district: district,
-            zipcodes: zipcodes
+            locations: locations
         });
     });
 })
