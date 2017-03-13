@@ -20,7 +20,8 @@ router.get('/', function(req, res, next) {
     }).exec(function(err, docs) {
         if (err) throw err;
         res.render('districts', {
-            districts: docs
+            districts: docs,
+            title: "Gomitrack"
         });
     });
 })
@@ -58,7 +59,8 @@ router.get('/districts/:district', function(req, res, next) {
         res.render('district', {
             district: district,
             locations: locations,
-            mapsURL: "https://maps.googleapis.com/maps/api/js?key=" + process.env.MAPS_API + "&callback=initMap"
+            mapsURL: "https://maps.googleapis.com/maps/api/js?key=" + process.env.MAPS_API + "&callback=initMap",
+            title: district.nameJP + " " + district.name
         });
     });
 })
