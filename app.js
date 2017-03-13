@@ -31,12 +31,16 @@ hbs.localsAsTemplateData(app);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+//Set up list of districts for nav menu on every page with startup query
 District.find().justNames().exec().then((data) => {
   app.locals.navDistricts = data;
 })
 
+//set page title/metadata for template
+app.locals.title = "Gomitrack"
+
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({

@@ -91,4 +91,8 @@ function onListening() {
     'pipe ' + addr :
     'port ' + addr.port;
   console.log('Listening on ' + bind);
+  if (process.env.C9_HOSTNAME) {
+    //Remind of hostname when using Cloud9 IDE
+    console.log("Host address: https://" + process.env.C9_HOSTNAME);
+  }
 }
