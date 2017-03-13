@@ -42,10 +42,8 @@ router.get('/district/:district', function(req, res, next) {
         if (err) throw err;
 
         district.garbages.forEach(function(garbage, index, array) {
-            console.log(garbage);
             var rruleObj = RRule.fromString(garbage.frequencyRRule);
             var nextDate = rruleObj.after(new Date(), true);
-            console.log(nextDate);
 
             //save the next date
             array[index].nextDate = nextDate;
