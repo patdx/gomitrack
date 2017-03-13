@@ -1,11 +1,9 @@
+console.log("file:", __filename, "cwd:", process.cwd());
+
 var express = require('express');
 var router = express.Router();
 
-var mongoose = require('mongoose');
-var dotenv = require('dotenv').config({
-    path: '../.env'
-});
-mongoose.connect(process.env.MONGO_URL);
+var mongoose = require('../db/mongoose');
 
 var User = require('../models/user');
 var Garbage = require('../models/garbage');

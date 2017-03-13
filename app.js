@@ -1,3 +1,5 @@
+console.log("file:", __filename, "cwd:", process.cwd());
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');

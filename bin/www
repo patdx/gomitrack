@@ -1,9 +1,12 @@
 #!/usr/bin/env node
-
+console.log("file:", __filename, "cwd:", process.cwd());
 /**
  * Module dependencies.
  */
-
+var dotenv = require('dotenv').config({
+    path: __dirname + '/../.env'
+});
+console.log(dotenv);
 var app = require('../app');
 var debug = require('debug')('workspace:server');
 var http = require('http');
