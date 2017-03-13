@@ -1,5 +1,7 @@
 # gomitrack
 
+![](screenshots/main.png)
+
 ## Setting Up
 
 1. npm install
