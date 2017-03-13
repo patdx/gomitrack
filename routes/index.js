@@ -4,7 +4,6 @@ var express = require('express');
 var router = express.Router();
 
 var mongoose = require('../db/mongoose');
-
 var User = require('../models/user');
 var Garbage = require('../models/garbage');
 var District = require('../models/district');
@@ -15,11 +14,6 @@ var moment = require('moment');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    //res.render('index',{});
-    res.redirect("districts");
-});
-
-router.get('/districts', function(req, res, next) {
     District.find({}).sort({
         "name": "1",
         "addresses.addressJP": "1"
@@ -31,12 +25,11 @@ router.get('/districts', function(req, res, next) {
     });
 })
 
-router.get('/district/:district', function(req, res, next) {
+router.get('/districts/:district', function(req, res, next) {
     var district = req.params.district;
     District.findOne({
         name: district
     }).sort({
-        "name": "1",
         "addresses.addressJP": "1"
     }).populate("garbages.garbage").exec(function(err, district) {
         if (err) throw err;
@@ -68,6 +61,10 @@ router.get('/district/:district', function(req, res, next) {
             mapsURL: "https://maps.googleapis.com/maps/api/js?key=" + process.env.MAPS_API + "&callback=initMap"
         });
     });
+})
+
+router.get('/about', function(req, res, next) {
+    res.render('about', {});
 })
 
 module.exports = router;

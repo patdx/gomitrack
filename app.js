@@ -7,20 +7,41 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var mongoose = require('./db/mongoose');
+var User = require('./models/user');
+var Garbage = require('./models/garbage');
+var District = require('./models/district');
+
+console.log();
+// then((data) => {
+//   console.log("got something", data);
+// });
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 
 // view engine setup
+var hbs = require('hbs'); //See info here: https://www.npmjs.com/package/hbs
+hbs.registerPartials(__dirname + '/views/partials', () => {
+  console.log("Handlebars Partials Loaded!");
+});
+hbs.localsAsTemplateData(app);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+District.find().justNames().exec().then((data) => {
+  app.locals.navDistricts = data;
+})
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
