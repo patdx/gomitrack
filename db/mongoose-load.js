@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 console.log("Connecting to DB...");
-mongoose.connect(process.env.MONGO_URL).then(
+var connectionPromise = mongoose.connect(process.env.MONGO_URL);
+connectionPromise.then(
     () => {
         console.log("Connected to DB!")
     },
@@ -11,4 +12,7 @@ mongoose.connect(process.env.MONGO_URL).then(
     }
 );
 
-module.exports = mongoose;
+module.exports = {
+    mongoose,
+    connectionPromise
+};

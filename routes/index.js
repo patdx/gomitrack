@@ -3,7 +3,7 @@ console.log("file:", __filename, "cwd:", process.cwd());
 var express = require('express');
 var router = express.Router();
 
-var mongoose = require('../db/mongoose');
+var mongoose = require('../db/mongoose-load').mongoose;
 var User = require('../models/user');
 var Garbage = require('../models/garbage');
 var District = require('../models/district');

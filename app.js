@@ -7,7 +7,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var mongoose = require('./db/mongoose');
+var mongoose = require('./db/mongoose-load').mongoose;
 var User = require('./models/user');
 var Garbage = require('./models/garbage');
 var District = require('./models/district');
