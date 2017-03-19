@@ -1,0 +1,9 @@
+{{data.nameJP}} ({{data.name}})
+Schedule
+{{#each data.garbages}}
+-------------------
+{{garbage.nameJP}}
+  {{garbage.name}}
+  {{nextDateFormatted}}
+  ({{frequency}})
+{{/each}}
