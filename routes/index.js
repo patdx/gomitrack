@@ -28,39 +28,13 @@ router.get('/', function(req, res, next) {
 
 router.get('/districts/:district', function(req, res, next) {
     var district = req.params.district;
-    District.findOne({
-        name: district
-    }).sort({
-        "addresses.addressJP": "1"
-    }).populate("garbages.garbage").exec(function(err, district) {
-        if (err) throw err;
+    District.findDistrictWithSortedSchedule(district).then(function(data) {
 
-        district.garbages.forEach(function(garbage, index, array) {
-            var rruleObj = RRule.fromString(garbage.frequencyRRule);
-            var nextDate = rruleObj.after(new Date(), true);
-
-            //save the next date
-            array[index].nextDate = nextDate;
-            array[index].nextDateFormatted = moment(nextDate).format("dddd, M/D/YY");
-        });
-
-        district.garbages.sort(function(a, b) {
-            // Turn your strings into dates, and then subtract them
-            // to get a value that is either negative, positive, or zero.
-            return a.nextDate - b.nextDate;
-        });
-
-        var locations = JSON.stringify(district.addresses.map(function(p) {
-            return {
-                lat: p.lat,
-                lng: p.lng
-            };
-        }));
         res.render('district', {
-            district: district,
-            locations: locations,
+            district: data,
+            locations: JSON.stringify(data.mapLocations),
             mapsURL: "https://maps.googleapis.com/maps/api/js?key=" + process.env.MAPS_API + "&callback=initMap",
-            title: district.nameJP + " " + district.name
+            title: data.nameJP + " " + data.name
         });
     });
 })
