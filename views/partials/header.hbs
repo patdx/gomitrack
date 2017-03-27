@@ -16,6 +16,10 @@
             </li>
             {{/if}}
             <li><a href="/about">About</a></li>
+            <li><a href="/profile">Profile {{#if userObject}}({{userObject.username}}){{/if}}</a></li>
+            {{#unless userObject}}<li><a href="/login">Log In</a></li>
+            <li><a href="/signup">Sign Up</a></li>{{/unless}}
+            {{#if userObject}}<li><a href="/logout">Log Out</a></li>{{/if}}
         </ul>
     </div>
 </nav>

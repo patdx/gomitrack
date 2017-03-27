@@ -6,16 +6,17 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
+var passport = require("passport");
+var LocalStrategy = require('passport-local').Strategy;
+var flash = require('connect-flash');
 
 var mongoose = require('./db/mongoose-load').mongoose;
 var User = require('./models/user');
 var Garbage = require('./models/garbage');
 var District = require('./models/district');
 
-console.log();
-// then((data) => {
-//   console.log("got something", data);
-// });
+require('./config/passport')(passport);
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -39,7 +40,6 @@ District.find().justNames().exec().then((data) => {
 //set page title/metadata for template
 app.locals.title = "Gomitrack"
 
-// uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -48,6 +48,53 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: 'keyboard cat',
+  resave: true,
+  saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(function(req, res, next) {
+  //let us access locals object
+  res.locals.userObject = req.user;
+  next();
+});
+app.use(flash());
+
+app.post('/login',
+  passport.authenticate('local-login', {
+    successRedirect: '/profile',
+    failureRedirect: '/login',
+    failureFlash: true
+  })
+);
+
+app.get('/login', function(req, res, next) {
+  res.render('login', {
+    message: JSON.stringify(req.flash())
+  });
+})
+
+app.post('/signup',
+  passport.authenticate('local-signup', {
+    successRedirect: '/profile',
+    failureRedirect: '/signup',
+    failureFlash: true
+  })
+);
+
+app.get('/signup', function(req, res, next) {
+  res.render('signup', {
+    message: JSON.stringify(req.flash())
+  });
+})
+
+app.get('/profile', isLoggedIn, function(req, res, next) {
+  res.render('profile', {
+    user: JSON.stringify(req.user)
+  });
+})
 
 app.use('/', index);
 app.use('/users', users);
@@ -71,3 +118,14 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+function isLoggedIn(req, res, next) {
+
+    // if user is authenticated in the session, carry on 
+    if (req.isAuthenticated())
+        return next();
+
+    // if they aren't redirect them to the home page
+    req.flash('info', 'Can\'t access. Not logged in!')
+    res.redirect('/login');
+}
