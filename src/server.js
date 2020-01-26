@@ -4,8 +4,8 @@ console.log('file:', __filename, 'cwd:', process.cwd());
 /**
  * Module dependencies.
  */
-require('../config/dotenv').getEnv();
-var app = require('../app');
+require('./config/dotenv').getEnv();
+var app = require('./app');
 var debug = require('debug')('workspace:server');
 var http = require('http');
 
@@ -21,14 +21,15 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
+module.exports = server;
 
-/**
- * Listen on provided port, on all network interfaces.
- */
+// /**
+//  * Listen on provided port, on all network interfaces.
+//  */
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+// server.listen(port);
+// server.on('error', onError);
+// server.on('listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.

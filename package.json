@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./api/index",
-    "build": "echo okay built"
+    "start": "node ./api/index"
   },
   "dependencies": {
     "@types/lodash": "^4.14.149",

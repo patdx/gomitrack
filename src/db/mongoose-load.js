@@ -1,6 +1,10 @@
 var mongoose = require('mongoose');
 
-mongoose.Promise = global.Promise;
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useUnifiedTopology', true);
+
 console.log("Connecting to DB...");
 var connectionPromise = mongoose.connect(process.env.MONGO_URL);
 connectionPromise.then(
