@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-const bcrypt = require("bcryptjs");
+const bcrypt = require('bcryptjs');
 
 var Schema = mongoose.Schema;
 
@@ -8,9 +8,9 @@ var userSchema = new Schema({
   password: String,
   district: {
     type: Schema.Types.ObjectId,
-    ref: 'District'
+    ref: 'District',
   },
-  langPreference: String //'en' | 'jp'
+  langPreference: String, //'en' | 'jp'
 });
 
 // methods ======================
@@ -23,7 +23,6 @@ userSchema.methods.generateHash = function(password) {
 userSchema.methods.validPassword = function(password) {
   return bcrypt.compareSync(password, this.password);
 };
-
 
 var User = mongoose.model('User', userSchema);
 module.exports = User;

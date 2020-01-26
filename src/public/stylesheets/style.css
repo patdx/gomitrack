@@ -16,15 +16,11 @@
   border-color: #e7e7e7;
 }
 
-
 /*.navbar-brand {*/
-
 
 /*    height: 80px;*/
 
-
 /*    line-height: 80px;*/
-
 
 /*}*/
 
@@ -34,7 +30,8 @@
 }
 
 body {
-  font-family: ’ヒラギノ角ゴ Pro W3’, ‘Hiragino Kaku Gothic Pro’, メイリオ, Meiryo, Osaka, ‘MS Pゴシック’, ‘MS PGothic’, sans-serif;
+  font-family: ’ヒラギノ角ゴ Pro W3’, ‘Hiragino Kaku Gothic Pro’, メイリオ,
+    Meiryo, Osaka, ‘MS Pゴシック’, ‘MS PGothic’, sans-serif;
 }
 
 .districtJP {
@@ -55,7 +52,7 @@ a:hover {
   height: 300px;
 }
 
-.standalone>nav>div>ul {
+.standalone > nav > div > ul {
   display: none;
 }
 
@@ -64,87 +61,83 @@ body.standalone {
   margin-top: 70px;
 }
 
-body>nav.navbar {
+body > nav.navbar {
   /* background-color: #f8f8f8; */
 }
 
-
 /*  Bootstrap Clearfix http://www.bluthemes.com/blog/3/clearing-bootstrap-3-columns */
-
 
 /*  Tablet  */
 
-@media (min-width:767px) {
+@media (min-width: 767px) {
   /* Column clear fix */
-  .col-lg-1:nth-child(12n+1),
-  .col-lg-2:nth-child(6n+1),
-  .col-lg-3:nth-child(4n+1),
-  .col-lg-4:nth-child(3n+1),
-  .col-lg-6:nth-child(2n+1),
-  .col-md-1:nth-child(12n+1),
-  .col-md-2:nth-child(6n+1),
-  .col-md-3:nth-child(4n+1),
-  .col-md-4:nth-child(3n+1),
-  .col-md-6:nth-child(2n+1) {
+  .col-lg-1:nth-child(12n + 1),
+  .col-lg-2:nth-child(6n + 1),
+  .col-lg-3:nth-child(4n + 1),
+  .col-lg-4:nth-child(3n + 1),
+  .col-lg-6:nth-child(2n + 1),
+  .col-md-1:nth-child(12n + 1),
+  .col-md-2:nth-child(6n + 1),
+  .col-md-3:nth-child(4n + 1),
+  .col-md-4:nth-child(3n + 1),
+  .col-md-6:nth-child(2n + 1) {
     clear: none;
   }
-  .col-sm-1:nth-child(12n+1),
-  .col-sm-2:nth-child(6n+1),
-  .col-sm-3:nth-child(4n+1),
-  .col-sm-4:nth-child(3n+1),
-  .col-sm-6:nth-child(2n+1) {
+  .col-sm-1:nth-child(12n + 1),
+  .col-sm-2:nth-child(6n + 1),
+  .col-sm-3:nth-child(4n + 1),
+  .col-sm-4:nth-child(3n + 1),
+  .col-sm-6:nth-child(2n + 1) {
     clear: left;
   }
 }
-
 
 /*  Medium Desktop  */
 
-@media (min-width:992px) {
+@media (min-width: 992px) {
   /* Column clear fix */
-  .col-lg-1:nth-child(12n+1),
-  .col-lg-2:nth-child(6n+1),
-  .col-lg-3:nth-child(4n+1),
-  .col-lg-4:nth-child(3n+1),
-  .col-lg-6:nth-child(2n+1),
-  .col-sm-1:nth-child(12n+1),
-  .col-sm-2:nth-child(6n+1),
-  .col-sm-3:nth-child(4n+1),
-  .col-sm-4:nth-child(3n+1),
-  .col-sm-6:nth-child(2n+1) {
+  .col-lg-1:nth-child(12n + 1),
+  .col-lg-2:nth-child(6n + 1),
+  .col-lg-3:nth-child(4n + 1),
+  .col-lg-4:nth-child(3n + 1),
+  .col-lg-6:nth-child(2n + 1),
+  .col-sm-1:nth-child(12n + 1),
+  .col-sm-2:nth-child(6n + 1),
+  .col-sm-3:nth-child(4n + 1),
+  .col-sm-4:nth-child(3n + 1),
+  .col-sm-6:nth-child(2n + 1) {
     clear: none;
   }
-  .col-md-1:nth-child(12n+1),
-  .col-md-2:nth-child(6n+1),
-  .col-md-3:nth-child(4n+1),
-  .col-md-4:nth-child(3n+1),
-  .col-md-6:nth-child(2n+1) {
+  .col-md-1:nth-child(12n + 1),
+  .col-md-2:nth-child(6n + 1),
+  .col-md-3:nth-child(4n + 1),
+  .col-md-4:nth-child(3n + 1),
+  .col-md-6:nth-child(2n + 1) {
     clear: left;
   }
 }
 
-
 /*  Large Desktop  */
 
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
   /* Column clear fix */
-  .col-md-1:nth-child(12n+1),
-  .col-md-2:nth-child(6n+1),
-  .col-md-3:nth-child(4n+1),
-  .col-md-4:nth-child(3n+1),
-  .col-md-6:nth-child(2n+1),
-  .col-sm-1:nth-child(12n+1),
-  .col-sm-2:nth-child(6n+1),
-  .col-sm-3:nth-child(4n+1),
-  .col-sm-4:nth-child(3n+1),
-  .col-sm-6:nth-child(2n+1) {
+  .col-md-1:nth-child(12n + 1),
+  .col-md-2:nth-child(6n + 1),
+  .col-md-3:nth-child(4n + 1),
+  .col-md-4:nth-child(3n + 1),
+  .col-md-6:nth-child(2n + 1),
+  .col-sm-1:nth-child(12n + 1),
+  .col-sm-2:nth-child(6n + 1),
+  .col-sm-3:nth-child(4n + 1),
+  .col-sm-4:nth-child(3n + 1),
+  .col-sm-6:nth-child(2n + 1) {
     clear: none;
   }
-  .col-lg-1:nth-child(12n+1),
-  .col-lg-2:nth-child(6n+1),
-  .col-lg-3:nth-child(4n+1),
-  .col-lg-4:nth-child(3n+1),
-  .col-lg-6:nth-child(2n+1) {
+  .col-lg-1:nth-child(12n + 1),
+  .col-lg-2:nth-child(6n + 1),
+  .col-lg-3:nth-child(4n + 1),
+  .col-lg-4:nth-child(3n + 1),
+  .col-lg-6:nth-child(2n + 1) {
     clear: left;
   }
 }
