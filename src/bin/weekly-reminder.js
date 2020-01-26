@@ -9,7 +9,7 @@ import hbs from 'hbs';
 import fs from 'fs';
 import request from 'request'; //used to connect to test server
 
-var district = 'Oikami A'; //temp name
+let district = 'Oikami A'; //temp name
 
 //LINE Notify
 //https://notify-bot.line.me/doc/en/
@@ -20,15 +20,15 @@ mongoose.connectionPromise.then(function() {
   District.findDistrictWithSortedSchedule(district).then(function(data) {
     console.log('Got schedule info');
 
-    var templateFile = fs.readFileSync('./views/weekly-reminder.hbs', 'utf8');
-    var template = hbs.compile(templateFile, {
+    let templateFile = fs.readFileSync('./views/weekly-reminder.hbs', 'utf8');
+    let template = hbs.compile(templateFile, {
       noEscape: true, //won't escape any special characters for html
       strict: true,
     });
 
     console.log('Rendering template...');
 
-    var result = template({
+    let result = template({
       data,
     });
     console.log(result);

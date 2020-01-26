@@ -1,6 +1,6 @@
-var dataFolder = './dbdev/';
-var garbagesData = dataFolder + 'garbages.csv';
-var districtsData = dataFolder + 'districts.csv';
+let dataFolder = './dbdev/';
+let garbagesData = dataFolder + 'garbages.csv';
+let districtsData = dataFolder + 'districts.csv';
 
 //npm install csv-parse
 import parse from 'csv-parse/lib/sync';
@@ -16,7 +16,7 @@ import Garbage from '../models/garbage';
 import District from '../models/district';
 import User from '../models/user';
 
-var garbageTypes = [
+let garbageTypes = [
   'burnables',
   'plasticcontainers',
   'plasticbottles',
@@ -29,9 +29,9 @@ var garbageTypes = [
   'cardboard',
 ];
 
-var districtDemoAddressJP = '南草津一から五丁目';
+let districtDemoAddressJP = '南草津一から五丁目';
 
-var garbageDemoRRules = {
+let garbageDemoRRules = {
   burnables: 'FREQ=WEEKLY;BYDAY=MO,TH',
   plasticcontainers: 'FREQ=MONTHLY;BYDAY=TU;BYSETPOS=2,4,5',
   plasticbottles: 'FREQ=MONTHLY;BYDAY=FR;BYSETPOS=4',
@@ -46,7 +46,7 @@ var garbageDemoRRules = {
 
 function makeRRule(frequencyString) {
   //convert frequency string to RRule
-  var daysJPtoEN = {
+  let daysJPtoEN = {
     月: 'MO',
     火: 'TU',
     水: 'WE',
@@ -56,17 +56,17 @@ function makeRRule(frequencyString) {
     日: 'SU',
   };
 
-  var digitR = /\d/;
-  var daysofweekR = /[月火水木金土日]/;
+  let digitR = /\d/;
+  let daysofweekR = /[月火水木金土日]/;
 
-  var isMonthly = digitR.test(frequencyString);
-  var howOften = isMonthly ? 'monthly' : 'weekly';
-  var days = frequencyString.split(/\s/);
+  let isMonthly = digitR.test(frequencyString);
+  let howOften = isMonthly ? 'monthly' : 'weekly';
+  let days = frequencyString.split(/\s/);
 
-  var rrule = '';
+  let rrule = '';
 
   if (howOften == 'weekly') {
-    var daysEN = days.map(function(day) {
+    let daysEN = days.map(function(day) {
       return daysJPtoEN[day];
     });
 
@@ -74,10 +74,10 @@ function makeRRule(frequencyString) {
     rrule += daysEN.join(',');
   } else if (howOften == 'monthly') {
     //get day of week from first day in string
-    var dayEN = daysJPtoEN[daysofweekR.exec(frequencyString)[0]];
+    let dayEN = daysJPtoEN[daysofweekR.exec(frequencyString)[0]];
 
     //figure out which week in a month
-    var dayNumbers = days.map(function(day) {
+    let dayNumbers = days.map(function(day) {
       return digitR.exec(day)[0];
     });
 
@@ -90,8 +90,8 @@ function makeRRule(frequencyString) {
 }
 
 function initGarbage(callback) {
-  var file = fs.readFileSync(garbagesData, 'utf8');
-  var records = parse(file, {
+  let file = fs.readFileSync(garbagesData, 'utf8');
+  let records = parse(file, {
     columns: true,
   });
   console.log('Imported Garbage Data');
@@ -103,13 +103,13 @@ function initGarbage(callback) {
 }
 
 function initDistrict(callback) {
-  var file = fs.readFileSync(districtsData, 'utf8');
-  var records = parse(file, {
+  let file = fs.readFileSync(districtsData, 'utf8');
+  let records = parse(file, {
     columns: true,
   });
 
   //first get list of unsorted districts
-  var districts = records.map(function(x) {
+  let districts = records.map(function(x) {
     return x.name;
   });
   //remove duplicates
@@ -119,13 +119,13 @@ function initDistrict(callback) {
   console.log(districts);
 
   districts = districts.map(function(districtName) {
-    var relatedEntries = records.filter(function(y) {
+    let relatedEntries = records.filter(function(y) {
       return y.name == districtName;
     });
 
-    var x = relatedEntries[0]; //use values of first hit
+    let x = relatedEntries[0]; //use values of first hit
 
-    var r = {
+    let r = {
       name: x.name,
       nameJP: x.nameJP,
       addresses: [],

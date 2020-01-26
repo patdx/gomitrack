@@ -1,4 +1,4 @@
-var dataFolder = './dbdev/';
+let dataFolder = './dbdev/';
 
 import mongoose from 'mongoose';
 mongoose.Promise = global.Promise; //use native promises
@@ -9,7 +9,7 @@ import Garbage from '../models/garbage';
 import District from '../models/district';
 import User from '../models/user';
 
-var googleMapsClient = require('@google/maps').createClient({
+let googleMapsClient = require('@google/maps').createClient({
   key: process.env.MAPS_API,
   Promise: Promise,
 });
@@ -57,7 +57,7 @@ function geocodeAddress(address) {
 function getLatLonforAddress(address) {
   //returns promise
   return geocodeAddress(address).then(function(data) {
-    var location, lat, lng;
+    let location, lat, lng;
 
     try {
       location = data.json.results[0].geometry.location;
@@ -78,9 +78,9 @@ function getLatLonforAddress(address) {
 }
 
 function geocodeDBAddresses(districts) {
-  var districtsPromises = districts.map(function(district) {
-    var addressesPromises = district.addresses.map(function(address, i) {
-      var promise = getLatLonforAddress(address.zipcode);
+  let districtsPromises = districts.map(function(district) {
+    let addressesPromises = district.addresses.map(function(address, i) {
+      let promise = getLatLonforAddress(address.zipcode);
       promise.then(logSuccess, logFail);
       promise.then(function(data) {
         //update mongoose districts object
@@ -91,7 +91,7 @@ function geocodeDBAddresses(districts) {
       return promise; //return so we can check when all promises are finished
     });
 
-    var addressesPromisesAll = Promise.all(addressesPromises);
+    let addressesPromisesAll = Promise.all(addressesPromises);
     addressesPromisesAll;
 
     addressesPromisesAll.then(function(data) {
@@ -104,7 +104,7 @@ function geocodeDBAddresses(districts) {
     return addressesPromisesAll;
   });
 
-  var districtsPromisesAll = Promise.all(districtsPromises);
+  let districtsPromisesAll = Promise.all(districtsPromises);
 
   districtsPromisesAll.then(
     function(p) {
@@ -126,6 +126,6 @@ function geocodeDBAddresses(districts) {
 //     }
 // }).exec();
 
-var lookupPromise = District.find({}).exec();
+let lookupPromise = District.find({}).exec();
 
 lookupPromise.then(geocodeDBAddresses, logFail);

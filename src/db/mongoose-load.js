@@ -6,7 +6,7 @@ mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 
 console.log('Connecting to DB...');
-var connectionPromise = mongoose.connect(process.env.MONGO_URL);
+let connectionPromise = mongoose.connect(process.env.MONGO_URL);
 connectionPromise.then(
   () => {
     console.log('Connected to DB!');

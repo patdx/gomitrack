@@ -1,7 +1,7 @@
 console.log('file:', __filename, 'cwd:', process.cwd());
 
 import express from 'express';
-var router = express.Router();
+let router = express.Router();
 
 import { mongoose } from '../db/mongoose-load';
 import User from '../models/user';
@@ -30,7 +30,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/districts/:district', function(req, res, next) {
-  var district = req.params.district;
+  let district = req.params.district;
   District.findDistrictWithSortedSchedule(district).then(function(data) {
     res.render('district', {
       district: data,

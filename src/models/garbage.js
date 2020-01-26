@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-var Schema = mongoose.Schema;
+let Schema = mongoose.Schema;
 
-var garbageSchema = new Schema({
+let garbageSchema = new Schema({
   _id: String,
   name: String,
   nameJP: String,
@@ -10,5 +10,5 @@ var garbageSchema = new Schema({
   calendarColor: String,
 });
 
-var Garbage = mongoose.model('Garbage', garbageSchema);
+let Garbage = mongoose.model('Garbage', garbageSchema);
 export default Garbage;
