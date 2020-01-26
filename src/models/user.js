@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 
-let Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-let userSchema = new Schema({
+const userSchema = new Schema({
   username: String,
   password: String,
   district: {
@@ -24,5 +24,5 @@ userSchema.methods.validPassword = function(password) {
   return bcrypt.compareSync(password, this.password);
 };
 
-let User = mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 export default User;

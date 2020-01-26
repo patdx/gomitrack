@@ -1,4 +1,4 @@
-let testInput = [
+const testInput = [
   '月 木',
   '火2 火4 火5',
   '金4',
@@ -11,7 +11,7 @@ let testInput = [
   '水3',
 ];
 
-let garbageDemoRRules = {
+const garbageDemoRRules = {
   burnables: 'FREQ=WEEKLY;BYDAY=MO,TH',
   plasticcontainers: 'FREQ=MONTHLY;BYDAY=TU;BYSETPOS=2,4,5',
   plasticbottles: 'FREQ=MONTHLY;BYDAY=FR;BYSETPOS=4',
@@ -25,7 +25,7 @@ let garbageDemoRRules = {
 };
 
 function makeRRule(frequencyString) {
-  let daysJPtoEN = {
+  const daysJPtoEN = {
     月: 'MO',
     火: 'TU',
     水: 'WE',
@@ -35,18 +35,18 @@ function makeRRule(frequencyString) {
     日: 'SU',
   };
 
-  let digitR = /\d/;
-  let daysofweekR = /[月火水木金土日]/;
+  const digitR = /\d/;
+  const daysofweekR = /[月火水木金土日]/;
 
-  let isMonthly = digitR.test(frequencyString);
-  let howOften = isMonthly ? 'monthly' : 'weekly';
+  const isMonthly = digitR.test(frequencyString);
+  const howOften = isMonthly ? 'monthly' : 'weekly';
   console.log(frequencyString, howOften);
-  let days = frequencyString.split(/\s/);
+  const days = frequencyString.split(/\s/);
 
   let rrule = '';
 
   if (howOften == 'weekly') {
-    let daysEN = days.map(function(day) {
+    const daysEN = days.map(function(day) {
       return daysJPtoEN[day];
     });
     console.log(daysEN);
@@ -55,10 +55,10 @@ function makeRRule(frequencyString) {
     rrule += daysEN.join(',');
   } else if (howOften == 'monthly') {
     //get day of week from first day in string
-    let dayEN = daysJPtoEN[daysofweekR.exec(frequencyString)[0]];
+    const dayEN = daysJPtoEN[daysofweekR.exec(frequencyString)[0]];
 
     //figure out which week in a month
-    let dayNumbers = days.map(function(day) {
+    const dayNumbers = days.map(function(day) {
       return digitR.exec(day)[0];
     });
     console.log(dayEN, dayNumbers);

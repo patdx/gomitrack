@@ -1,10 +1,10 @@
 import mongoose from 'mongoose';
-let Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 import { RRule } from 'rrule';
 import moment from 'moment';
 
-let garbageScheduleSchema = new Schema({
+const garbageScheduleSchema = new Schema({
   garbage: {
     type: String,
     ref: 'Garbage',
@@ -14,7 +14,7 @@ let garbageScheduleSchema = new Schema({
 });
 
 garbageScheduleSchema.virtual('nextDate').get(function() {
-  let rruleObj = RRule.fromString(this.frequencyRRule);
+  const rruleObj = RRule.fromString(this.frequencyRRule);
   return rruleObj.after(new Date(), true);
 });
 
@@ -22,7 +22,7 @@ garbageScheduleSchema.virtual('nextDateFormatted').get(function() {
   return moment(this.nextDate).format('dddd, M/D/YY');
 });
 
-let addressSchema = new Schema({
+const addressSchema = new Schema({
   address: String,
   addressJP: String,
   zipcode: String,
@@ -35,7 +35,7 @@ addressSchema.virtual('zipcodePretty').get(function() {
   return this.zipcode.slice(0, 3) + '-' + this.zipcode.slice(3);
 });
 
-let districtSchema = new Schema({
+const districtSchema = new Schema({
   name: String,
   nameJP: String,
   addresses: [addressSchema],
@@ -86,6 +86,6 @@ districtSchema.statics.findDistrictWithSortedSchedule = function(districtName) {
     });
 };
 
-let District = mongoose.model('District', districtSchema);
+const District = mongoose.model('District', districtSchema);
 
 export default District;

@@ -15,7 +15,7 @@ import users from './routes/users';
 
 passportFactory(passport);
 
-let app = express();
+const app = express();
 
 hbs.registerPartials(__dirname + '/views/partials', () => {
   console.log('Handlebars Partials Loaded!');
@@ -70,7 +70,7 @@ app.post(
   })
 );
 
-app.get('/login', function(req, res, next) {
+app.get('/login', function(req, res, _next) {
   res.render('login', {
     message: JSON.stringify(req.flash()),
   });
@@ -102,7 +102,7 @@ app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  let err = new Error('Not Found');
+  const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });

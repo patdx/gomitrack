@@ -1,6 +1,6 @@
-let dataFolder = './dbdev/';
-let garbagesData = dataFolder + 'garbages.csv';
-let districtsData = dataFolder + 'districts.csv';
+const dataFolder = './dbdev/';
+const garbagesData = dataFolder + 'garbages.csv';
+const districtsData = dataFolder + 'districts.csv';
 
 import waterfall from 'async-waterfall';
 import parse from 'csv-parse/lib/sync';
@@ -11,7 +11,7 @@ import Garbage from '../models/garbage';
 
 mongoose.connect(process.env.MONGO_URL);
 
-let garbageTypes = [
+const garbageTypes = [
   'burnables',
   'plasticcontainers',
   'plasticbottles',
@@ -24,9 +24,9 @@ let garbageTypes = [
   'cardboard',
 ];
 
-let districtDemoAddressJP = '南草津一から五丁目';
+const districtDemoAddressJP = '南草津一から五丁目';
 
-let garbageDemoRRules = {
+const garbageDemoRRules = {
   burnables: 'FREQ=WEEKLY;BYDAY=MO,TH',
   plasticcontainers: 'FREQ=MONTHLY;BYDAY=TU;BYSETPOS=2,4,5',
   plasticbottles: 'FREQ=MONTHLY;BYDAY=FR;BYSETPOS=4',
@@ -41,7 +41,7 @@ let garbageDemoRRules = {
 
 function makeRRule(frequencyString) {
   //convert frequency string to RRule
-  let daysJPtoEN = {
+  const daysJPtoEN = {
     月: 'MO',
     火: 'TU',
     水: 'WE',
@@ -51,17 +51,17 @@ function makeRRule(frequencyString) {
     日: 'SU',
   };
 
-  let digitR = /\d/;
-  let daysofweekR = /[月火水木金土日]/;
+  const digitR = /\d/;
+  const daysofweekR = /[月火水木金土日]/;
 
-  let isMonthly = digitR.test(frequencyString);
-  let howOften = isMonthly ? 'monthly' : 'weekly';
-  let days = frequencyString.split(/\s/);
+  const isMonthly = digitR.test(frequencyString);
+  const howOften = isMonthly ? 'monthly' : 'weekly';
+  const days = frequencyString.split(/\s/);
 
   let rrule = '';
 
   if (howOften == 'weekly') {
-    let daysEN = days.map(function(day) {
+    const daysEN = days.map(function(day) {
       return daysJPtoEN[day];
     });
 
@@ -69,10 +69,10 @@ function makeRRule(frequencyString) {
     rrule += daysEN.join(',');
   } else if (howOften == 'monthly') {
     //get day of week from first day in string
-    let dayEN = daysJPtoEN[daysofweekR.exec(frequencyString)[0]];
+    const dayEN = daysJPtoEN[daysofweekR.exec(frequencyString)[0]];
 
     //figure out which week in a month
-    let dayNumbers = days.map(function(day) {
+    const dayNumbers = days.map(function(day) {
       return digitR.exec(day)[0];
     });
 
@@ -85,8 +85,8 @@ function makeRRule(frequencyString) {
 }
 
 function initGarbage(callback) {
-  let file = fs.readFileSync(garbagesData, 'utf8');
-  let records = parse(file, {
+  const file = fs.readFileSync(garbagesData, 'utf8');
+  const records = parse(file, {
     columns: true,
   });
   console.log('Imported Garbage Data');
@@ -98,8 +98,8 @@ function initGarbage(callback) {
 }
 
 function initDistrict(callback) {
-  let file = fs.readFileSync(districtsData, 'utf8');
-  let records = parse(file, {
+  const file = fs.readFileSync(districtsData, 'utf8');
+  const records = parse(file, {
     columns: true,
   });
 
@@ -114,13 +114,13 @@ function initDistrict(callback) {
   console.log(districts);
 
   districts = districts.map(function(districtName) {
-    let relatedEntries = records.filter(function(y) {
+    const relatedEntries = records.filter(function(y) {
       return y.name == districtName;
     });
 
-    let x = relatedEntries[0]; //use values of first hit
+    const x = relatedEntries[0]; //use values of first hit
 
-    let r = {
+    const r = {
       name: x.name,
       nameJP: x.nameJP,
       addresses: [],

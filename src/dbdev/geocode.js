@@ -4,7 +4,7 @@ import District from '../models/district';
 
 mongoose.connect(process.env.MONGO_URL);
 
-let googleMapsClient = require('@google/maps').createClient({
+const googleMapsClient = require('@google/maps').createClient({
   key: process.env.MAPS_API,
   Promise: Promise,
 });
@@ -71,9 +71,9 @@ function getLatLonforAddress(address) {
 }
 
 function geocodeDBAddresses(districts) {
-  let districtsPromises = districts.map(function(district) {
-    let addressesPromises = district.addresses.map(function(address, i) {
-      let promise = getLatLonforAddress(address.zipcode);
+  const districtsPromises = districts.map(function(district) {
+    const addressesPromises = district.addresses.map(function(address, i) {
+      const promise = getLatLonforAddress(address.zipcode);
       promise.then(logSuccess, logFail);
       promise.then(function(data) {
         //update mongoose districts object
@@ -84,7 +84,7 @@ function geocodeDBAddresses(districts) {
       return promise; //return so we can check when all promises are finished
     });
 
-    let addressesPromisesAll = Promise.all(addressesPromises);
+    const addressesPromisesAll = Promise.all(addressesPromises);
     addressesPromisesAll;
 
     addressesPromisesAll.then(function(data) {
@@ -97,7 +97,7 @@ function geocodeDBAddresses(districts) {
     return addressesPromisesAll;
   });
 
-  let districtsPromisesAll = Promise.all(districtsPromises);
+  const districtsPromisesAll = Promise.all(districtsPromises);
 
   districtsPromisesAll.then(
     function(p) {
@@ -113,6 +113,6 @@ function geocodeDBAddresses(districts) {
   );
 }
 
-let lookupPromise = District.find({}).exec();
+const lookupPromise = District.find({}).exec();
 
 lookupPromise.then(geocodeDBAddresses, logFail);

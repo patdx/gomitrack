@@ -7,5 +7,5 @@ import http from 'http';
  * Create HTTP server.
  */
 
-let server = http.createServer(app);
+const server = http.createServer(app);
 export default server;

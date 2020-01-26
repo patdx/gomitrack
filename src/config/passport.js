@@ -31,7 +31,7 @@ export default function(passport) {
               // if there is no user with that email
               // create the user
               console.log('Making user');
-              let newUser = new User();
+              const newUser = new User();
               console.log('made user', newUser);
 
               // set the user's local credentials

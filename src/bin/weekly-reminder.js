@@ -4,7 +4,7 @@ import request from 'request'; //used to connect to test server
 import mongoose from '../db/mongoose-load';
 import District from '../models/district';
 
-let district = 'Oikami A'; //temp name
+const district = 'Oikami A'; //temp name
 
 //LINE Notify
 //https://notify-bot.line.me/doc/en/
@@ -15,15 +15,15 @@ mongoose.connectionPromise.then(function() {
   District.findDistrictWithSortedSchedule(district).then(function(data) {
     console.log('Got schedule info');
 
-    let templateFile = fs.readFileSync('./views/weekly-reminder.hbs', 'utf8');
-    let template = hbs.compile(templateFile, {
+    const templateFile = fs.readFileSync('./views/weekly-reminder.hbs', 'utf8');
+    const template = hbs.compile(templateFile, {
       noEscape: true, //won't escape any special characters for html
       strict: true,
     });
 
     console.log('Rendering template...');
 
-    let result = template({
+    const result = template({
       data,
     });
     console.log(result);
