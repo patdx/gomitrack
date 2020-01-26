@@ -201,7 +201,4 @@ if (!module.parent) {
   console.log("run 'init()' to initialize");
 }
 
-module.exports.initGarbage = initGarbage;
-module.exports.initDistrict = initDistrict;
-module.exports.initDemoDistrictData = initDemoDistrictData;
-module.exports.init = init;
+export { initGarbage, initDistrict, initDemoDistrictData, init };

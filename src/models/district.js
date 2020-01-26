@@ -88,4 +88,4 @@ districtSchema.statics.findDistrictWithSortedSchedule = function(districtName) {
 
 var District = mongoose.model('District', districtSchema);
 
-module.exports = District;
+export default District;

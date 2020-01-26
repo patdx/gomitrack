@@ -11,4 +11,4 @@ var garbageSchema = new Schema({
 });
 
 var Garbage = mongoose.model('Garbage', garbageSchema);
-module.exports = Garbage;
+export default Garbage;

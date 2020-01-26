@@ -1,29 +1,21 @@
-console.log('file:', __filename, 'cwd:', process.cwd());
-
+import bodyParser from 'body-parser';
+import flash from 'connect-flash';
+import cookieParser from 'cookie-parser';
 import express from 'express';
+import session from 'express-session';
+import hbs from 'hbs';
+import logger from 'morgan';
+import passport from 'passport';
 import path from 'path';
 import favicon from 'serve-favicon';
-import logger from 'morgan';
-import cookieParser from 'cookie-parser';
-import bodyParser from 'body-parser';
-import session from 'express-session';
-import passport from 'passport';
-import { Strategy as LocalStrategy } from 'passport-local';
-import flash from 'connect-flash';
-import { mongoose } from './db/mongoose-load';
-import User from './models/user';
-import Garbage from './models/garbage';
+import passportFactory from './config/passport';
 import District from './models/district';
-
-require('./config/passport')(passport);
-
 import index from './routes/index';
 import users from './routes/users';
 
-var app = express();
+passportFactory(passport);
 
-// view engine setup
-import hbs from 'hbs'; //See info here: https://www.npmjs.com/package/hbs
+var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials', () => {
   console.log('Handlebars Partials Loaded!');
@@ -126,7 +118,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+export default app;
 
 function isLoggedIn(req, res, next) {
   // if user is authenticated in the session, carry on

@@ -16,7 +16,4 @@ connectionPromise.then(
   }
 );
 
-module.exports = {
-  mongoose,
-  connectionPromise,
-};
+export { mongoose, connectionPromise };

@@ -1,5 +1,5 @@
 import { memoize } from 'lodash';
 
-module.exports.getEnv = memoize(() => {
+export const getEnv = memoize(() => {
   require('dotenv').config();
 });

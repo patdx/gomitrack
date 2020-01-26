@@ -4,7 +4,7 @@ import { Strategy as LocalStrategy } from 'passport-local';
 // load up the user model
 import User from '../models/user';
 
-module.exports = function(passport) {
+export default function(passport) {
   //set up passport
   passport.use(
     'local-signup',
@@ -88,4 +88,4 @@ module.exports = function(passport) {
       done(err, user);
     });
   });
-};
+}
