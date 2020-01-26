@@ -1,20 +1,13 @@
-let dataFolder = './dbdev/';
-
 import mongoose from 'mongoose';
-mongoose.Promise = global.Promise; //use native promises
-require('../config/dotenv').getEnv();
-mongoose.connect(process.env.MONGO_URL);
-
-import Garbage from '../models/garbage';
+import util from 'util';
 import District from '../models/district';
-import User from '../models/user';
+
+mongoose.connect(process.env.MONGO_URL);
 
 let googleMapsClient = require('@google/maps').createClient({
   key: process.env.MAPS_API,
   Promise: Promise,
 });
-
-import util from 'util';
 
 function logSuccess(data) {
   console.log(
@@ -119,12 +112,6 @@ function geocodeDBAddresses(districts) {
     }
   );
 }
-
-// var lookupPromise = District.find({
-//     "addresses.lat": {
-//         $exists: false
-//     }
-// }).exec();
 
 let lookupPromise = District.find({}).exec();
 

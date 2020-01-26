@@ -1,13 +1,8 @@
-console.log('file:', __filename, 'cwd:', process.cwd());
-require('../config/dotenv').getEnv();
-
-import mongoose from '../db/mongoose-load';
-import User from '../models/user';
-import Garbage from '../models/garbage';
-import District from '../models/district';
-import hbs from 'hbs';
 import fs from 'fs';
+import hbs from 'hbs';
 import request from 'request'; //used to connect to test server
+import mongoose from '../db/mongoose-load';
+import District from '../models/district';
 
 let district = 'Oikami A'; //temp name
 

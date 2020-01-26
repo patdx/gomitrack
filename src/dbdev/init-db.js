@@ -2,19 +2,14 @@ let dataFolder = './dbdev/';
 let garbagesData = dataFolder + 'garbages.csv';
 let districtsData = dataFolder + 'districts.csv';
 
-//npm install csv-parse
-import parse from 'csv-parse/lib/sync';
-
-import fs from 'fs';
 import waterfall from 'async-waterfall';
+import parse from 'csv-parse/lib/sync';
+import fs from 'fs';
 import mongoose from 'mongoose';
-//IF THERE ARE ISSUES--CHECK THIS LINE
-require('../config/dotenv').getEnv();
-mongoose.connect(process.env.MONGO_URL);
-
-import Garbage from '../models/garbage';
 import District from '../models/district';
-import User from '../models/user';
+import Garbage from '../models/garbage';
+
+mongoose.connect(process.env.MONGO_URL);
 
 let garbageTypes = [
   'burnables',
@@ -188,17 +183,5 @@ function init() {
   });
 }
 
-//initGarbage();
-//initDistrict();
-//initDemoDistrictData();
-//init();
-
-if (!module.parent) {
-  console.log('Initializing');
-  init();
-  //initDistrict();
-} else {
-  console.log("run 'init()' to initialize");
-}
-
-export { initGarbage, initDistrict, initDemoDistrictData, init };
+console.log('Initializing');
+init();
