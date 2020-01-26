@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node ./api/index",
     "build": "echo okay built"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.149",
     "bcryptjs": "^2.4.3",
     "body-parser": "~1.19.0",
     "connect-flash": "^0.1.1",
@@ -16,6 +17,7 @@
     "express": "~4.17.1",
     "express-session": "^1.17.0",
     "hbs": "~4.1.0",
+    "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "mongoose": "^5.8.9",
     "morgan": "~1.9.1",

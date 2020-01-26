@@ -1,0 +1,6 @@
+{
+  "env": {
+    "MAPS_AP": "@gomitrack-maps-api",
+    "MONGO_URL": "@gomitrack-mongo-url"
+  }
+}

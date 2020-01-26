@@ -2,7 +2,7 @@ var dataFolder = './dbdev/'
 
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise //use native promises
-var dotenv = require('dotenv').config({path: '../.env'});
+require('../config/dotenv').getEnv()
 mongoose.connect(process.env.MONGO_URL);
 
 var Garbage = require('../models/garbage');
@@ -31,10 +31,10 @@ function geocodeAddress(address) {
     return googleMapsClient.geocode({
         address: address
     }).asPromise();
-    
+
     //It's not really clear how the Google API might return data so I think it's
     //good to test what happens with other strange results. For example:
-    
+
     //return Promise.reject("bad data");
     //return Promise.accept("bad data");
 

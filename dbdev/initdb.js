@@ -10,7 +10,7 @@ var waterfall = require('async-waterfall');
 
 var mongoose = require('mongoose');
 //IF THERE ARE ISSUES--CHECK THIS LINE
-var dotenv = require('dotenv').config({path: '../.env'});
+require('../config/dotenv').getEnv()
 mongoose.connect(process.env.MONGO_URL);
 
 var Garbage = require('../models/garbage');

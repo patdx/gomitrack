@@ -1,13 +1,10 @@
 #!/usr/bin/env node
 
-console.log("file:", __filename, "cwd:", process.cwd());
+console.log('file:', __filename, 'cwd:', process.cwd());
 /**
  * Module dependencies.
  */
-var dotenv = require('dotenv').config({
-  path: __dirname + '/../.env'
-});
-console.log(dotenv);
+require('../config/dotenv').getEnv();
 var app = require('../app');
 var debug = require('debug')('workspace:server');
 var http = require('http');
@@ -62,9 +59,7 @@ function onError(error) {
     throw error;
   }
 
-  var bind = typeof port === 'string' ?
-    'Pipe ' + port :
-    'Port ' + port;
+  var bind = typeof port === 'string' ? 'Pipe ' + port : 'Port ' + port;
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
@@ -87,12 +82,10 @@ function onError(error) {
 
 function onListening() {
   var addr = server.address();
-  var bind = typeof addr === 'string' ?
-    'pipe ' + addr :
-    'port ' + addr.port;
+  var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
   console.log('Listening on ' + bind);
   if (process.env.C9_HOSTNAME) {
     //Remind of hostname when using Cloud9 IDE
-    console.log("Host address: https://" + process.env.C9_HOSTNAME);
+    console.log('Host address: https://' + process.env.C9_HOSTNAME);
   }
 }

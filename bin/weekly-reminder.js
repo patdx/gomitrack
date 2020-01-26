@@ -1,8 +1,5 @@
 console.log("file:", __filename, "cwd:", process.cwd());
-var dotenv = require('dotenv').config({
-    path: __dirname + '/../.env'
-});
-console.log(dotenv);
+require('../config/dotenv').getEnv()
 
 var mongoose = require('../db/mongoose-load');
 var User = require('../models/user');
@@ -59,8 +56,8 @@ mongoose.connectionPromise.then(function() {
                 message: result //use result text
             }
         }, function(error, response, body) {
-            console.log('error:', error); // Print the error if one occurred 
-            console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received 
+            console.log('error:', error); // Print the error if one occurred
+            console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
             console.log('body:', body); // Print the result
             process.exit();
         });
