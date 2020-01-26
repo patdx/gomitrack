@@ -1,23 +1,33 @@
-<h1>Districts</h1>
+<h1>
+  Districts
+</h1>
 
 {{#each districts}}
-<div class="row">
+  <div class='row'>
+    <div class='col-xs-12 col-sm-3 col-md-3 col-lg-3'>
+      <h2 style='margin-top:5px;'>
+        <a href="/districts/{{name}}">
+          <span class='districtJP'>
+            {{nameJP}}
+          </span>
 
-    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-        <h2 style="margin-top:5px;"><a href="/districts/{{name}}"><span class="districtJP">{{nameJP}}</span> <br><span class="districtEN">{{name}}</span></a></h2>
+          <br />
+          <span class='districtEN'>
+            {{name}}
+          </span>
+        </a>
+      </h2>
     </div>
-    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-        <div class="row">
-            {{#each addresses}}
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="addresses">
-                    <a href="/districts/{{../name}}">{{addressJP}}</a><br>{{address}}<br>〒{{zipcodePretty}}
-                </div>
+    <div class='col-xs-12 col-sm-9 col-md-9 col-lg-9'>
+      <div class='row'>
+        {{#each addresses}}
+          <div class='col-xs-12 col-sm-6 col-md-4 col-lg-4'>
+            <div class='addresses'>
+              <a href="/districts/{{../name}}">{{addressJP}}</a><br>{{address}}<br>〒{{zipcodePretty}}
             </div>
-            {{/each}}
-        </div>
+          </div>
+        {{/each}}
+      </div>
     </div>
-
-</div>
+  </div>
 {{/each}}
-    
