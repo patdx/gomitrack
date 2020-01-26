@@ -1,5 +1,5 @@
-var mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
+import mongoose from 'mongoose';
+import bcrypt from 'bcryptjs';
 
 var Schema = mongoose.Schema;
 

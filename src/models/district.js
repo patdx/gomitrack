@@ -1,8 +1,8 @@
-var mongoose = require('mongoose');
+import mongoose from 'mongoose';
 var Schema = mongoose.Schema;
 
-var RRule = require('rrule').RRule;
-var moment = require('moment');
+import { RRule } from 'rrule';
+import moment from 'moment';
 
 var garbageScheduleSchema = new Schema({
   garbage: {

@@ -1,30 +1,30 @@
 console.log('file:', __filename, 'cwd:', process.cwd());
 
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var session = require('express-session');
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
-var flash = require('connect-flash');
-
-var mongoose = require('./db/mongoose-load').mongoose;
-var User = require('./models/user');
-var Garbage = require('./models/garbage');
-var District = require('./models/district');
+import express from 'express';
+import path from 'path';
+import favicon from 'serve-favicon';
+import logger from 'morgan';
+import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
+import session from 'express-session';
+import passport from 'passport';
+import { Strategy as LocalStrategy } from 'passport-local';
+import flash from 'connect-flash';
+import { mongoose } from './db/mongoose-load';
+import User from './models/user';
+import Garbage from './models/garbage';
+import District from './models/district';
 
 require('./config/passport')(passport);
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+import index from './routes/index';
+import users from './routes/users';
 
 var app = express();
 
 // view engine setup
-var hbs = require('hbs'); //See info here: https://www.npmjs.com/package/hbs
+import hbs from 'hbs'; //See info here: https://www.npmjs.com/package/hbs
+
 hbs.registerPartials(__dirname + '/views/partials', () => {
   console.log('Handlebars Partials Loaded!');
 });

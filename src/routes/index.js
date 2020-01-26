@@ -1,16 +1,17 @@
 console.log('file:', __filename, 'cwd:', process.cwd());
 
-var express = require('express');
+import express from 'express';
 var router = express.Router();
 
-var mongoose = require('../db/mongoose-load').mongoose;
-var User = require('../models/user');
-var Garbage = require('../models/garbage');
-var District = require('../models/district');
+import { mongoose } from '../db/mongoose-load';
+import User from '../models/user';
+import Garbage from '../models/garbage';
+import District from '../models/district';
 
 //used for districts.hbs
-var RRule = require('rrule').RRule;
-var moment = require('moment');
+import { RRule } from 'rrule';
+
+import moment from 'moment';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

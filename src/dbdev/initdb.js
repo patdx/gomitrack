@@ -3,19 +3,18 @@ var garbagesData = dataFolder + 'garbages.csv';
 var districtsData = dataFolder + 'districts.csv';
 
 //npm install csv-parse
-var parse = require('csv-parse/lib/sync');
-var fs = require('fs');
+import parse from 'csv-parse/lib/sync';
 
-var waterfall = require('async-waterfall');
-
-var mongoose = require('mongoose');
+import fs from 'fs';
+import waterfall from 'async-waterfall';
+import mongoose from 'mongoose';
 //IF THERE ARE ISSUES--CHECK THIS LINE
 require('../config/dotenv').getEnv();
 mongoose.connect(process.env.MONGO_URL);
 
-var Garbage = require('../models/garbage');
-var District = require('../models/district');
-var User = require('../models/user');
+import Garbage from '../models/garbage';
+import District from '../models/district';
+import User from '../models/user';
 
 var garbageTypes = [
   'burnables',

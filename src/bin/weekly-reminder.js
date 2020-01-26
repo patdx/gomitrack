@@ -1,16 +1,13 @@
 console.log('file:', __filename, 'cwd:', process.cwd());
 require('../config/dotenv').getEnv();
 
-var mongoose = require('../db/mongoose-load');
-var User = require('../models/user');
-var Garbage = require('../models/garbage');
-var District = require('../models/district');
-
-var hbs = require('hbs');
-
-var fs = require('fs');
-
-var request = require('request'); //used to connect to test server
+import mongoose from '../db/mongoose-load';
+import User from '../models/user';
+import Garbage from '../models/garbage';
+import District from '../models/district';
+import hbs from 'hbs';
+import fs from 'fs';
+import request from 'request'; //used to connect to test server
 
 var district = 'Oikami A'; //temp name
 

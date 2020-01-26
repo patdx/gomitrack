@@ -1,13 +1,12 @@
-#!/usr/bin/env node
-
-console.log('file:', __filename, 'cwd:', process.cwd());
+#!/usr/bin/env nodeconsole.log('file:', __filename, 'cwd:', process.cwd());
 /**
  * Module dependencies.
  */
 require('./config/dotenv').getEnv();
-var app = require('./app');
-var debug = require('debug')('workspace:server');
-var http = require('http');
+import app from './app';
+import debugFactory from 'debug';
+const debug = debugFactory('workspace:server');
+import http from 'http';
 
 /**
  * Get port from environment and store in Express.

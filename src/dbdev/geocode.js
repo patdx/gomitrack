@@ -1,20 +1,20 @@
 var dataFolder = './dbdev/';
 
-var mongoose = require('mongoose');
+import mongoose from 'mongoose';
 mongoose.Promise = global.Promise; //use native promises
 require('../config/dotenv').getEnv();
 mongoose.connect(process.env.MONGO_URL);
 
-var Garbage = require('../models/garbage');
-var District = require('../models/district');
-var User = require('../models/user');
+import Garbage from '../models/garbage';
+import District from '../models/district';
+import User from '../models/user';
 
 var googleMapsClient = require('@google/maps').createClient({
   key: process.env.MAPS_API,
   Promise: Promise,
 });
 
-const util = require('util');
+import util from 'util';
 
 function logSuccess(data) {
   console.log(
