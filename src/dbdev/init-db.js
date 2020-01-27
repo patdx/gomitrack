@@ -8,8 +8,9 @@ import fs from 'fs';
 import mongoose from 'mongoose';
 import District from '../models/district';
 import Garbage from '../models/garbage';
+import { MONGO_URL } from '../config/env';
 
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(MONGO_URL);
 
 const garbageTypes = [
   'burnables',
@@ -69,11 +70,11 @@ function makeRRule(frequencyString) {
     rrule += daysEN.join(',');
   } else if (howOften == 'monthly') {
     //get day of week from first day in string
-    const dayEN = daysJPtoEN[daysofweekR.exec(frequencyString)[0]];
+    const dayEN = daysJPtoEN[daysofweekR.exec(frequencyString)?.[0]];
 
     //figure out which week in a month
     const dayNumbers = days.map(function(day) {
-      return digitR.exec(day)[0];
+      return digitR.exec(day)?.[0];
     });
 
     rrule = 'FREQ=MONTHLY;BYDAY=';
@@ -154,7 +155,7 @@ function initDistrict(callback) {
   });
 }
 
-function initDemoDistrictData(callback) {
+export function initDemoDistrictData(callback) {
   //DEPRECATED
   District.findOne(
     {

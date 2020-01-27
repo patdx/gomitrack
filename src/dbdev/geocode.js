@@ -1,8 +1,9 @@
 import mongoose from 'mongoose';
 import util from 'util';
 import District from '../models/district';
+import { MONGO_URL } from '../config/env';
 
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(MONGO_URL);
 
 const googleMapsClient = require('@google/maps').createClient({
   key: process.env.MAPS_API,
@@ -87,9 +88,9 @@ function geocodeDBAddresses(districts) {
     const addressesPromisesAll = Promise.all(addressesPromises);
     addressesPromisesAll;
 
-    addressesPromisesAll.then(function(data) {
+    addressesPromisesAll.then(function() {
       console.log('Saving ' + district.name + '...');
-      district.save().then(function(data) {
+      district.save().then(function() {
         console.log('Saved ' + district.name + '!');
       }, logFail);
     });
@@ -100,7 +101,7 @@ function geocodeDBAddresses(districts) {
   const districtsPromisesAll = Promise.all(districtsPromises);
 
   districtsPromisesAll.then(
-    function(p) {
+    function() {
       console.log('Finished Everything');
       process.exit();
     },

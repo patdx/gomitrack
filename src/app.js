@@ -12,8 +12,12 @@ import passportFactory from './config/passport';
 import District from './models/district';
 import index from './routes/index';
 import users from './routes/users';
+import { getOrInitMongoose } from './db/mongoose-load';
 
 passportFactory(passport);
+
+// try to get mongoose started soon
+getOrInitMongoose()
 
 const app = express();
 
@@ -60,6 +64,12 @@ app.use(function(req, res, next) {
   next();
 });
 app.use(flash());
+
+app.use((req, res, next) => {
+  getOrInitMongoose()
+    .then(() => next())
+    .catch(error => next(error));
+});
 
 app.post(
   '/login',

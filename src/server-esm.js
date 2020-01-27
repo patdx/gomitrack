@@ -1,7 +1,7 @@
-import { getEnv } from './config/dotenv';
+import { getEnv } from './config/env';
 getEnv();
 import app from './app';
-import http from 'http';
+import http, { ServerResponse } from 'http';
 
 /**
  * Create HTTP server.

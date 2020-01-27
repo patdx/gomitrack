@@ -2,4 +2,8 @@
 // Set options as a parameter, environment variable, or rc file.
 require = require('esm')(module /*, options*/);
 require('./config/env').getEnv();
-module.exports = require('./server-esm');
+const server = require('./server-esm').default;
+// @ts-ignore
+server.listen(3000, () => {
+  console.log('listening on port 3000');
+});
