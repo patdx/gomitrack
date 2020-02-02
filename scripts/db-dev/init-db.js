@@ -6,9 +6,9 @@ import waterfall from 'async-waterfall';
 import parse from 'csv-parse/lib/sync';
 import fs from 'fs';
 import mongoose from 'mongoose';
-import District from '../models/district';
-import Garbage from '../models/garbage';
-import { MONGO_URL } from '../config/env';
+import District from '../../src/models/district';
+import Garbage from '../../src/models/garbage';
+import { MONGO_URL } from '../../src/config/env';
 
 mongoose.connect(MONGO_URL);
 

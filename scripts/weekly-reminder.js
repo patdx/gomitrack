@@ -1,8 +1,8 @@
 import fs from 'fs';
 import hbs from 'hbs';
 import request from 'request'; //used to connect to test server
-import mongoose from '../db/mongoose-load';
-import District from '../models/district';
+import mongoose from '../src/db/mongoose-load';
+import District from '../src/models/district';
 
 const district = 'Oikami A'; //temp name
 

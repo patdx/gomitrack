@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import util from 'util';
-import District from '../models/district';
-import { MONGO_URL } from '../config/env';
+import District from '../../src/models/district';
+import { MONGO_URL } from '../../src/config/env';
 
 mongoose.connect(MONGO_URL);
 
