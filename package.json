@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./src/server.js"
+    "start": "node ./src/server-legacy.js",
+    "build": "tsc --project ./tsconfig.json",
+    "prettier": "prettier --write \"**/*.js\""
   },
   "dependencies": {
     "@types/lodash": "^4.14.149",
@@ -24,7 +26,8 @@
     "passport-local": "^1.0.0",
     "request": "^2.88.0",
     "rrule": "^2.6.4",
-    "serve-favicon": "~2.5.0"
+    "serve-favicon": "~2.5.0",
+    "ts-node": "^8.6.2"
   },
   "devDependencies": {
     "5to6-codemod": "^1.8.0",
