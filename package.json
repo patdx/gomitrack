@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./src/server-legacy.js",
     "build": "tsc --project ./tsconfig.json",
-    "prettier": "prettier --write \"**/*.js\""
+    "prettier": "prettier --write \"**/*.{js,ts}\""
   },
   "dependencies": {
     "@types/lodash": "^4.14.149",

@@ -9,7 +9,7 @@ import passport from 'passport';
 import path from 'path';
 import favicon from 'serve-favicon';
 import passportFactory from './config/passport';
-import {District} from './models/district';
+import { District } from './models/district';
 import index from './routes/index';
 import users from './routes/users';
 import { getOrInitMongoose } from './db/mongoose-load';
@@ -17,7 +17,7 @@ import { getOrInitMongoose } from './db/mongoose-load';
 passportFactory(passport);
 
 // try to get mongoose started soon
-getOrInitMongoose()
+getOrInitMongoose();
 
 const app = express();
 

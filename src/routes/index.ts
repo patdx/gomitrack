@@ -1,7 +1,7 @@
 console.log('file:', __filename, 'cwd:', process.cwd());
 
 import express from 'express';
-import {District} from '../models/district';
+import { District } from '../models/district';
 const router = express.Router();
 
 /* GET home page. */
