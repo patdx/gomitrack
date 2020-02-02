@@ -1,7 +1,7 @@
 console.log('file:', __filename, 'cwd:', process.cwd());
 
 import express from 'express';
-import { District } from '../models/district';
+import { District, findDistrictWithSortedSchedule } from '../models/district';
 const router = express.Router();
 
 /* GET home page. */
@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/districts/:district', function(req, res, next) {
   const district = req.params.district;
-  District.findDistrictWithSortedSchedule(district).then(function(data) {
+  findDistrictWithSortedSchedule(district).then(function(data) {
     res.render('district', {
       district: data,
       locations: JSON.stringify(data.mapLocations),

@@ -1,8 +1,8 @@
 import fs from 'fs';
 import hbs from 'hbs';
 import request from 'request'; //used to connect to test server
-import mongoose from '../src/db/mongoose-load';
-import { District } from '../src/models/district';
+import { getOrInitMongoose } from '../src/db/mongoose-load';
+import { findDistrictWithSortedSchedule } from '../src/models/district';
 
 const district = 'Oikami A'; //temp name
 
@@ -10,9 +10,9 @@ const district = 'Oikami A'; //temp name
 //https://notify-bot.line.me/doc/en/
 const LINENotifyURL = 'https://notify-api.line.me/api/notify';
 
-mongoose.connectionPromise.then(function() {
+getOrInitMongoose().then(function() {
   console.log('Getting Schedule Info...');
-  District.findDistrictWithSortedSchedule(district).then(function(data) {
+  findDistrictWithSortedSchedule(district).then(function(data) {
     console.log('Got schedule info');
 
     const templateFile = fs.readFileSync('./views/weekly-reminder.hbs', 'utf8');

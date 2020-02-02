@@ -9,7 +9,7 @@ import passport from 'passport';
 import path from 'path';
 import favicon from 'serve-favicon';
 import passportFactory from './config/passport';
-import { District } from './models/district';
+import { District, justNames } from './models/district';
 import index from './routes/index';
 import users from './routes/users';
 import { getOrInitMongoose } from './db/mongoose-load';
@@ -29,8 +29,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 //Set up list of districts for nav menu on every page with startup query
-District.find()
-  .justNames()
+justNames()
   .exec()
   .then(data => {
     app.locals.navDistricts = data;

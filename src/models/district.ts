@@ -13,12 +13,12 @@ const garbageScheduleSchema = new Schema({
   frequencyRRule: String,
 });
 
-garbageScheduleSchema.virtual('nextDate').get(function() {
+garbageScheduleSchema.virtual('nextDate').get(function(this: any) {
   const rruleObj = RRule.fromString(this.frequencyRRule);
   return rruleObj.after(new Date(), true);
 });
 
-garbageScheduleSchema.virtual('nextDateFormatted').get(function() {
+garbageScheduleSchema.virtual('nextDateFormatted').get(function(this: any) {
   return moment(this.nextDate).format('dddd, M/D/YY');
 });
 
@@ -30,7 +30,7 @@ const addressSchema = new Schema({
   lng: Number,
 });
 
-addressSchema.virtual('zipcodePretty').get(function() {
+addressSchema.virtual('zipcodePretty').get(function(this: any) {
   //adds the dash "1550000" --> "155-0000"
   return this.zipcode.slice(0, 3) + '-' + this.zipcode.slice(3);
 });
@@ -42,7 +42,7 @@ const districtSchema = new Schema({
   garbages: [garbageScheduleSchema],
 });
 
-districtSchema.virtual('mapLocations').get(function() {
+districtSchema.virtual('mapLocations').get(function(this: any) {
   return this.addresses.map(function(p) {
     return {
       lat: p.lat,
@@ -51,9 +51,9 @@ districtSchema.virtual('mapLocations').get(function() {
   });
 });
 
-districtSchema.query.justNames = function() {
+export const justNames = () => {
   //used to populate navbar
-  return this.find({})
+  return District.find({})
     .select({
       _id: 0,
       name: 1,
@@ -64,7 +64,7 @@ districtSchema.query.justNames = function() {
     });
 };
 
-districtSchema.query.findDistrict = function(districtName) {
+export const findDistrict = districtName => {
   return District.findOne({
     name: districtName,
   })
@@ -74,11 +74,13 @@ districtSchema.query.findDistrict = function(districtName) {
     .populate('garbages.garbage');
 };
 
-districtSchema.statics.findDistrictWithSortedSchedule = function(districtName) {
-  return this.find()
-    .findDistrict(districtName)
+export const findDistrictWithSortedSchedule = districtName => {
+  return findDistrict(districtName)
     .exec()
-    .then(function(data) {
+    .then((data?: any) => {
+      if (!data) {
+        return;
+      }
       data.garbages.sort(function(a, b) {
         return a.nextDate - b.nextDate;
       });

@@ -70,7 +70,12 @@ function makeRRule(frequencyString) {
     rrule += daysEN.join(',');
   } else if (howOften == 'monthly') {
     //get day of week from first day in string
-    const dayEN = daysJPtoEN[daysofweekR.exec(frequencyString)?.[0]];
+
+    const dayOfWeekJA = daysofweekR.exec(frequencyString)?.[0];
+    if (!dayOfWeekJA) {
+      throw new Error('missing day of week value in JA');
+    }
+    const dayEN = daysJPtoEN[dayOfWeekJA];
 
     //figure out which week in a month
     const dayNumbers = days.map(function(day) {
