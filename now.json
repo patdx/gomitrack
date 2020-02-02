@@ -4,6 +4,6 @@
     "MAPS_API": "@gomitrack-maps-api",
     "MONGO_URL": "@gomitrack-mongo-url"
   },
-  "builds": [{ "src": "src/server.js", "use": "@now/node" }],
-  "routes": [{ "src": "/.*", "dest": "src/server.js" }]
+  "builds": [{ "src": "src/server-esm.js", "use": "@now/node" }],
+  "routes": [{ "src": "/.*", "dest": "src/server-esm.js" }]
 }

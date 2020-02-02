@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./api/index"
+    "start": "node ./src/server.js"
   },
   "dependencies": {
     "@types/lodash": "^4.14.149",
