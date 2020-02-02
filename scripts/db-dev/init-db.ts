@@ -7,7 +7,7 @@ import parse from 'csv-parse/lib/sync';
 import fs from 'fs';
 import mongoose from 'mongoose';
 import { District } from '../../src/models/district';
-import Garbage from '../../src/models/garbage';
+import { Garbage } from '../../src/models/garbage';
 import { MONGO_URL } from '../../src/config/env';
 
 mongoose.connect(MONGO_URL);

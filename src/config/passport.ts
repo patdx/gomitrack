@@ -2,7 +2,7 @@
 import { Strategy as LocalStrategy } from 'passport-local';
 
 // load up the user model
-import User from '../models/user';
+import { User } from '../models/user';
 
 export default function(passport) {
   //set up passport

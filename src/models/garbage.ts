@@ -10,5 +10,4 @@ const garbageSchema = new Schema({
   calendarColor: String,
 });
 
-const Garbage = mongoose.model('Garbage', garbageSchema);
-export default Garbage;
+export const Garbage = mongoose.model('Garbage', garbageSchema);
