@@ -35,8 +35,10 @@ export default function(passport) {
               console.log('made user', newUser);
 
               // set the user's local credentials
-              newUser.username = username;
-              newUser.password = newUser.generateHash(password);
+              (newUser as any).username = username;
+              (newUser as any).password = (newUser as any).generateHash(
+                password
+              );
 
               // save the user
               newUser.save(function(err) {
@@ -66,7 +68,7 @@ export default function(passport) {
               message: 'Incorrect username.',
             });
           }
-          if (!user.validPassword(password)) {
+          if (!(user as any).validPassword(password)) {
             return done(null, false, {
               message: 'Incorrect password.',
             });

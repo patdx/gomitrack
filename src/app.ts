@@ -9,10 +9,10 @@ import passport from 'passport';
 import path from 'path';
 import favicon from 'serve-favicon';
 import passportFactory from './config/passport';
-import { District, justNames } from './models/district';
+import { getOrInitMongoose } from './db/mongoose-load';
+import { justNames } from './models/district';
 import index from './routes/index';
 import users from './routes/users';
-import { getOrInitMongoose } from './db/mongoose-load';
 
 passportFactory(passport);
 
@@ -112,7 +112,7 @@ app.use('/users', users);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   const err = new Error('Not Found');
-  err.status = 404;
+  (err as any).status = 404;
   next(err);
 });
 
