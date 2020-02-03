@@ -1,6 +1,5 @@
 /* eslint-disable no-global-assign */
-// Set options as a parameter, environment variable, or rc file.
-require = require('esm')(module /*, options*/);
+require('ts-node').register();
 require('./config/env').getEnv();
 const server = require('./server').default;
 // @ts-ignore

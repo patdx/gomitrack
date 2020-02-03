@@ -2,10 +2,14 @@ console.log('file:', __filename, 'cwd:', process.cwd());
 
 import express from 'express';
 import { District, findDistrictWithSortedSchedule } from '../models/district';
+import { getLowDb } from '../db/low-db';
 const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  getLowDb().then(db => {
+    db.get(['districts']).orderBy({});
+  });
   District.find({})
     .sort({
       name: '1',
