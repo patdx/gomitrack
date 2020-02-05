@@ -68,20 +68,7 @@ app.get('/login', function(req, res, _next) {
   });
 });
 
-app.post(
-  '/signup',
-  passport.authenticate('local-signup', {
-    successRedirect: '/profile',
-    failureRedirect: '/signup',
-    failureFlash: true,
-  })
-);
 
-app.get('/signup', function(req, res, _next) {
-  res.render('signup', {
-    message: JSON.stringify(req.flash()),
-  });
-});
 
 app.get('/profile', isLoggedIn, function(req, res, _next) {
   res.render('profile', {
