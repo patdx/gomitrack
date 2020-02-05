@@ -1,30 +1,28 @@
-console.log('file:', __filename, 'cwd:', process.cwd());
-
 import express from 'express';
-import { District, findDistrictWithSortedSchedule } from '../models/district';
-import { getLowDb } from '../db/low-db';
-const router = express.Router();
+import { getLowDb, District } from '../db/low-db';
+import { plainToClass } from 'class-transformer';
+import { findDistrictWithSortedSchedule } from '../models/district';
+
+export const indexRouter = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  getLowDb().then(db => {
-    db.get(['districts']).orderBy({});
+indexRouter.get('/', async function(_req, res, _next) {
+  const db = await getLowDb();
+
+  const districts = db
+    .get(['districts'])
+    .orderBy(['name', 'addresses.addressJP'])
+    .value();
+
+  const districtsClass = plainToClass(District, districts);
+
+  res.render('districts', {
+    districts: districtsClass,
+    title: 'Gomitrack',
   });
-  District.find({})
-    .sort({
-      name: '1',
-      'addresses.addressJP': '1',
-    })
-    .exec(function(err, docs) {
-      if (err) throw err;
-      res.render('districts', {
-        districts: docs,
-        title: 'Gomitrack',
-      });
-    });
 });
 
-router.get('/districts/:district', function(req, res, next) {
+indexRouter.get('/districts/:district', function(req, res, _next) {
   const district = req.params.district;
   findDistrictWithSortedSchedule(district).then(function(data) {
     res.render('district', {
@@ -39,8 +37,6 @@ router.get('/districts/:district', function(req, res, next) {
   });
 });
 
-router.get('/about', function(req, res, next) {
+indexRouter.get('/about', function(_req, res, _next) {
   res.render('about', {});
 });
-
-export default router;

@@ -11,8 +11,7 @@ import favicon from 'serve-favicon';
 import passportFactory from './config/passport';
 import { getOrInitMongoose } from './db/mongoose-load';
 import { justNames } from './models/district';
-import index from './routes/index';
-import users from './routes/users';
+import { indexRouter} from './routes/index';
 
 passportFactory(passport);
 
@@ -64,7 +63,7 @@ app.use(function(req, res, next) {
 });
 app.use(flash());
 
-app.use((req, res, next) => {
+app.use((_req, _res, next) => {
   getOrInitMongoose()
     .then(() => next())
     .catch(error => next(error));
@@ -94,30 +93,29 @@ app.post(
   })
 );
 
-app.get('/signup', function(req, res, next) {
+app.get('/signup', function(req, res, _next) {
   res.render('signup', {
     message: JSON.stringify(req.flash()),
   });
 });
 
-app.get('/profile', isLoggedIn, function(req, res, next) {
+app.get('/profile', isLoggedIn, function(req, res, _next) {
   res.render('profile', {
     user: JSON.stringify(req.user),
   });
 });
 
-app.use('/', index);
-app.use('/users', users);
+app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function(_req, _res, next) {
   const err = new Error('Not Found');
   (err as any).status = 404;
   next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res, _next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

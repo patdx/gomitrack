@@ -1,4 +1,5 @@
 import { memoize } from 'lodash';
+import 'reflect-metadata';
 
 export const getEnv = memoize(() => {
   require('dotenv').config();
