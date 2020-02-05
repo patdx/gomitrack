@@ -1,16 +1,23 @@
+import { Type } from 'class-transformer';
 import { memoize } from 'lodash';
 import low from 'lowdb';
 import FileAsync from 'lowdb/adapters/FileAsync';
-import { RRule } from 'rrule';
 import moment from 'moment';
-import {Type, plainToClass} from "class-transformer";
+import { RRule } from 'rrule';
 
 const adapter = new FileAsync<AppDb>('db.json');
 
-export const getLowDb = memoize(() => low(adapter));
+export const getLowDb = memoize(async () => {
+  const db = await low(adapter);
+  await db.defaults({
+    districts: [],
+    garbages: [],
+  } as AppDb).write();
+  return db;
+});
 
 export class GarbageItem {
-  garbage!: string;
+  garbage!: string | GarbageType;
   frequency!: string;
   frequencyRRule!: string;
 

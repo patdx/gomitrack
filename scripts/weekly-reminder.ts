@@ -1,7 +1,6 @@
 import fs from 'fs';
 import hbs from 'hbs';
 import request from 'request'; //used to connect to test server
-import { getOrInitMongoose } from '../src/db/mongoose-load';
 import { findDistrictWithSortedSchedule } from '../src/models/district';
 
 const district = 'Oikami A'; //temp name
@@ -10,7 +9,7 @@ const district = 'Oikami A'; //temp name
 //https://notify-bot.line.me/doc/en/
 const LINENotifyURL = 'https://notify-api.line.me/api/notify';
 
-getOrInitMongoose().then(function() {
+function main() {
   console.log('Getting Schedule Info...');
   findDistrictWithSortedSchedule(district).then(function(data) {
     console.log('Got schedule info');
@@ -57,4 +56,6 @@ getOrInitMongoose().then(function() {
       }
     );
   });
-});
+}
+
+main();

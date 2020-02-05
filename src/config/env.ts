@@ -18,4 +18,4 @@ const required = key => {
   return value;
 };
 
-export const MONGO_URL = required('MONGO_URL');
+// export const MONGO_URL = required('MONGO_URL');

@@ -8,15 +8,8 @@ import logger from 'morgan';
 import passport from 'passport';
 import path from 'path';
 import favicon from 'serve-favicon';
-import passportFactory from './config/passport';
-import { getOrInitMongoose } from './db/mongoose-load';
 import { justNames } from './models/district';
 import { indexRouter} from './routes/index';
-
-passportFactory(passport);
-
-// try to get mongoose started soon
-getOrInitMongoose();
 
 const app = express();
 
@@ -29,7 +22,6 @@ app.set('view engine', 'hbs');
 
 //Set up list of districts for nav menu on every page with startup query
 justNames()
-  .exec()
   .then(data => {
     app.locals.navDistricts = data;
   });
@@ -54,20 +46,12 @@ app.use(
     saveUninitialized: true,
   })
 );
-app.use(passport.initialize());
-app.use(passport.session());
 app.use(function(req, res, next) {
   //let us access locals object
   res.locals.userObject = req.user;
   next();
 });
 app.use(flash());
-
-app.use((_req, _res, next) => {
-  getOrInitMongoose()
-    .then(() => next())
-    .catch(error => next(error));
-});
 
 app.post(
   '/login',

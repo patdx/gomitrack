@@ -1,9 +1,6 @@
-import mongoose from 'mongoose';
+import { plainToClass } from 'class-transformer';
 import util from 'util';
-import { District } from '../../src/models/district';
-import { MONGO_URL } from '../../src/config/env';
-
-mongoose.connect(MONGO_URL);
+import { District, getLowDb } from '../../src/db/low-db';
 
 const googleMapsClient = require('@google/maps').createClient({
   key: process.env.MAPS_API,
@@ -77,7 +74,6 @@ function geocodeDBAddresses(districts) {
       const promise = getLatLonforAddress(address.zipcode);
       promise.then(logSuccess, logFail);
       promise.then(function(data) {
-        //update mongoose districts object
         district.addresses[i].lat = data.lat;
         district.addresses[i].lng = data.lng;
       });
@@ -114,6 +110,8 @@ function geocodeDBAddresses(districts) {
   );
 }
 
-const lookupPromise = District.find({}).exec();
+const lookupPromise = getLowDb().then(db =>
+  db.get('districts').thru(districts => plainToClass(District, districts))
+);
 
 lookupPromise.then(geocodeDBAddresses, logFail);

@@ -27,12 +27,12 @@ indexRouter.get('/districts/:district', function(req, res, _next) {
   findDistrictWithSortedSchedule(district).then(function(data) {
     res.render('district', {
       district: data,
-      locations: JSON.stringify(data.mapLocations),
+      locations: JSON.stringify(data?.mapLocations),
       mapsURL:
         'https://maps.googleapis.com/maps/api/js?key=' +
         process.env.MAPS_API +
         '&callback=initMap',
-      title: data.nameJP + ' ' + data.name,
+      title: data?.nameJP + ' ' + data?.name,
     });
   });
 });

@@ -2,15 +2,9 @@ const dataFolder = './dbdev/';
 const garbagesData = dataFolder + 'garbages.csv';
 const districtsData = dataFolder + 'districts.csv';
 
-import waterfall from 'async-waterfall';
 import parse from 'csv-parse/lib/sync';
 import fs from 'fs';
-import mongoose from 'mongoose';
-import { District } from '../../src/models/district';
-import { Garbage } from '../../src/models/garbage';
-import { MONGO_URL } from '../../src/config/env';
-
-mongoose.connect(MONGO_URL);
+import { getLowDb } from '../../src/db/low-db';
 
 const garbageTypes = [
   'burnables',
@@ -90,20 +84,22 @@ function makeRRule(frequencyString) {
   return rrule;
 }
 
-function initGarbage(callback) {
+async function initGarbage() {
   const file = fs.readFileSync(garbagesData, 'utf8');
   const records = parse(file, {
     columns: true,
   });
+
   console.log('Imported Garbage Data');
 
-  Garbage.insertMany(records, function() {
-    console.log('Inserted Garbage Data!');
-    callback();
-  });
+  const db = await getLowDb();
+  await db
+    .get('garbages')
+    .push(...records)
+    .write();
 }
 
-function initDistrict(callback) {
+async function initDistrict() {
   const file = fs.readFileSync(districtsData, 'utf8');
   const records = parse(file, {
     columns: true,
@@ -154,39 +150,32 @@ function initDistrict(callback) {
 
   console.log('Imported District Data');
 
-  District.insertMany(districts, function() {
-    console.log('Inserted District Data!');
-    callback();
-  });
+  const db = await getLowDb();
+  await db
+    .get('districts')
+    .push(...districts)
+    .write();
+
+  console.log('Inserted District Data!');
 }
 
-export function initDemoDistrictData(callback) {
+export async function initDemoDistrictData() {
   //DEPRECATED
-  District.findOne(
-    {
-      'addresses.addressJP': districtDemoAddressJP,
-    },
-    foundone
-  );
 
-  function foundone(err, docs) {
-    if (err) throw err;
+  const db = await getLowDb();
 
-    docs.garbages.forEach(function(x) {
-      x.frequencyRRule = garbageDemoRRules[x.garbage];
-    });
-    docs.save(function() {
-      console.log('Demo data saved');
-      callback();
-    });
-  }
+  await db
+    .get('districts')
+    .find(['addresses.addressJP', districtDemoAddressJP])
+    .update('garbages', function(x) {
+      x.frequencyRRule = garbageDemoRRules[x.garbage as string];
+    })
+    .write();
 }
 
-function init() {
-  waterfall([initGarbage, initDistrict], function() {
-    console.log('Everything initialized');
-    process.exit();
-  });
+async function init() {
+  await initGarbage();
+  await initDistrict();
 }
 
 console.log('Initializing');
