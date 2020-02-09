@@ -1,15 +1,11 @@
 import bodyParser from 'body-parser';
-import flash from 'connect-flash';
-import cookieParser from 'cookie-parser';
 import express from 'express';
-import session from 'express-session';
 import hbs from 'hbs';
 import logger from 'morgan';
-import passport from 'passport';
 import path from 'path';
 import favicon from 'serve-favicon';
 import { justNames } from './models/district';
-import { indexRouter} from './routes/index';
+import { indexRouter } from './routes/index';
 
 const app = express();
 
@@ -21,10 +17,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 //Set up list of districts for nav menu on every page with startup query
-justNames()
-  .then(data => {
-    app.locals.navDistricts = data;
-  });
+justNames().then(data => {
+  app.locals.navDistricts = data;
+});
 
 //set page title/metadata for template
 app.locals.title = 'Gomitrack';
@@ -37,38 +32,7 @@ app.use(
     extended: false,
   })
 );
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(
-  session({
-    secret: 'keyboard cat',
-    resave: true,
-    saveUninitialized: true,
-  })
-);
-app.use(function(req, res, next) {
-  //let us access locals object
-  res.locals.userObject = req.user;
-  next();
-});
-app.use(flash());
-
-app.post(
-  '/login',
-  passport.authenticate('local-login', {
-    successRedirect: '/profile',
-    failureRedirect: '/login',
-    failureFlash: true,
-  })
-);
-
-app.get('/login', function(req, res, _next) {
-  res.render('login', {
-    message: JSON.stringify(req.flash()),
-  });
-});
-
-
 
 app.get('/profile', isLoggedIn, function(req, res, _next) {
   res.render('profile', {
