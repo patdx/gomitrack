@@ -5,14 +5,23 @@ import FileAsync from 'lowdb/adapters/FileAsync';
 import moment from 'moment';
 import { RRule } from 'rrule';
 
+console.log(
+  JSON.stringify({
+    __dirname,
+    __filename,
+  })
+);
+
 const adapter = new FileAsync<AppDb>('db.json');
 
 export const getLowDb = memoize(async () => {
   const db = await low(adapter);
-  await db.defaults({
-    districts: [],
-    garbages: [],
-  } as AppDb).write();
+  await db
+    .defaults({
+      districts: [],
+      garbages: [],
+    } as AppDb)
+    .write();
   return db;
 });
 
