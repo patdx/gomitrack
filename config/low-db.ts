@@ -1,4 +1,4 @@
-import { Type } from 'class-transformer';
+import { Type } from './class-transformer';
 import { memoize } from 'lodash';
 import low from 'lowdb';
 import FileAsync from 'lowdb/adapters/FileAsync';

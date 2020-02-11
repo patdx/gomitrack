@@ -1,6 +1,5 @@
 import { NextPage } from 'next';
-import App, { AppProps, AppInitialProps } from 'next/app';
-import '../client/polyfills'; // import the polyfills for server rendering
+import App, { AppInitialProps, AppProps } from 'next/app';
 import '../client/styles.css';
 import { justNames } from '../config/district';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';

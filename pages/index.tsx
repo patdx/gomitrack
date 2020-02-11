@@ -2,10 +2,11 @@ import { NextPage } from 'next';
 import React from 'react';
 import { Layout } from '../components/Layout';
 import { District, getLowDb } from '../config/low-db';
-import { plainToClass } from 'class-transformer';
+import { plainToClass } from '../config/class-transformer';
 
-const IndexPage: NextPage<{ districts: District[], navDistricts?: any }> = ({
-  districts: districtsPlain, navDistricts
+const IndexPage: NextPage<{ districts: District[]; navDistricts?: any }> = ({
+  districts: districtsPlain,
+  navDistricts,
 }) => {
   const districts = plainToClass(District, districtsPlain);
 

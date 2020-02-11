@@ -1,4 +1,4 @@
-import { plainToClass } from 'class-transformer';
+import { plainToClass } from './class-transformer';
 import produce from 'immer';
 import { pick } from 'lodash';
 import { getLowDb, District } from './low-db';
