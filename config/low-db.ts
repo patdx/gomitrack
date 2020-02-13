@@ -4,15 +4,10 @@ import low from 'lowdb';
 import FileAsync from 'lowdb/adapters/FileAsync';
 import moment from 'moment';
 import { RRule } from 'rrule';
+// import { resolve } from 'path';
 
-console.log(
-  JSON.stringify({
-    __dirname,
-    __filename,
-  })
-);
-
-const adapter = new FileAsync<AppDb>('db.json');
+debugger;
+const adapter = new FileAsync<AppDb>('public/db.json');
 
 export const getLowDb = memoize(async () => {
   const db = await low(adapter);
