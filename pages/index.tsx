@@ -56,8 +56,8 @@ const IndexPage: NextPage<{ districts: District[]; navDistricts?: any }> = ({
   );
 };
 
-IndexPage.getInitialProps = async _context => {
-  const db = await getLowDb();
+IndexPage.getInitialProps = async context => {
+  const db = await getLowDb(context.req!);
 
   const districts = db
     .get(['districts'])

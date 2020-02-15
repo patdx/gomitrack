@@ -1,15 +1,15 @@
 import { Type } from './class-transformer';
 import { memoize } from 'lodash';
-import low from 'lowdb';
-import FileAsync from 'lowdb/adapters/FileAsync';
+import low, { AdapterAsync } from 'lowdb';
 import moment from 'moment';
 import { RRule } from 'rrule';
-// import { resolve } from 'path';
+import { LowDbAdapter } from './low-db-adapter';
+import { IncomingMessage } from 'http';
 
-debugger;
-const adapter = new FileAsync<AppDb>('public/db.json');
-
-export const getLowDb = memoize(async () => {
+export const getLowDb = memoize(async (req: IncomingMessage) => {
+  const adapter = (new LowDbAdapter(req, '/db.json') as unknown) as AdapterAsync<
+    AppDb
+  >;
   const db = await low(adapter);
   await db
     .defaults({

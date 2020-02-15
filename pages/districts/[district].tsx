@@ -107,10 +107,13 @@ const DistrictPage: NextPage<{
 
 DistrictPage.getInitialProps = async context => {
   const districtName = context.query.district as string;
-  const district = await findDistrictWithSortedSchedule(districtName);
+  const district = await findDistrictWithSortedSchedule(
+    context.req!,
+    districtName
+  );
 
   if (!district) {
-    throw new Error(`could not ifnd district ${districtName}`);
+    throw new Error(`could not find district ${districtName}`);
   }
 
   return {

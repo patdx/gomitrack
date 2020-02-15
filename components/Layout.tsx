@@ -13,6 +13,7 @@ import {
   Container,
   Collapse,
 } from 'reactstrap';
+import Link from 'next/link';
 
 type Props = {
   title?: string;
@@ -46,7 +47,9 @@ export const Layout: React.FunctionComponent<Props> = ({
         <Collapse isOpen={true} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="/">Home</NavLink>
+              <Link href="/">
+                <NavLink href="/">Home</NavLink>
+              </Link>
             </NavItem>
 
             <UncontrolledDropdown nav inNavbar>
@@ -56,13 +59,14 @@ export const Layout: React.FunctionComponent<Props> = ({
               <DropdownMenu>
                 {navDistricts.map((district, index) => {
                   return (
-                    <DropdownItem
-                      tag="a"
-                      href={`/districts/${district.name}`}
-                      key={index}
-                    >
-                      {district.nameJP} {district.name}
-                    </DropdownItem>
+                    <Link href={`/districts/${district.name}`} key={index}>
+                      <DropdownItem
+                        tag="a"
+                        href={`/districts/${district.name}`}
+                      >
+                        {district.nameJP} {district.name}
+                      </DropdownItem>
+                    </Link>
                   );
                 })}
               </DropdownMenu>
