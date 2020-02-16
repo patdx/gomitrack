@@ -2,17 +2,19 @@ import { NextPage } from 'next';
 import { findDistrictWithSortedSchedule } from '../../config/district';
 import { District, GarbageType } from '../../config/low-db';
 import { Layout } from '../../components/Layout';
+import { plainToClass } from 'class-transformer';
 
 const DistrictPage: NextPage<{
   district: District;
   locations: string;
-  navDistricts?: any;
-}> = ({ district, navDistricts }) => {
+}> = ({ district: plainDistrict }) => {
+  const district = plainToClass(District, plainDistrict);
+
   return (
-    <Layout navDistricts={navDistricts}>
+    <Layout>
       <h1>
-        <span className="districtJP">{district.nameJP}</span>{' '}
-        <span className="districtEN">{district.name}</span>
+        <span className="districtJP">{district?.nameJP}</span>{' '}
+        <span className="districtEN">{district?.name}</span>
       </h1>
 
       <div className="row">
@@ -31,7 +33,7 @@ const DistrictPage: NextPage<{
                     {(garbage.garbage as GarbageType).name}
                   </span>
                 </b>
-                <br />({garbage.frequency}) {garbage.nextDateFormatted}
+                <br />({garbage.frequency}) {garbage.nextDateFormatted()}
               </div>
             );
           })}
@@ -93,7 +95,7 @@ const DistrictPage: NextPage<{
                     {address.addressJP}
                     <br />
                     {address.address}
-                    <br />〒{address.zipcodePretty}
+                    <br />〒{address.zipcodePretty()}
                   </div>
                 </div>
               );
@@ -105,7 +107,7 @@ const DistrictPage: NextPage<{
   );
 };
 
-DistrictPage.getInitialProps = async context => {
+export const unstable_getServerProps = async (context: any) => {
   const districtName = context.query.district as string;
   const district = await findDistrictWithSortedSchedule(
     context.req!,
@@ -117,8 +119,10 @@ DistrictPage.getInitialProps = async context => {
   }
 
   return {
-    district,
-    locations: JSON.stringify(district.mapLocations),
+    props: {
+      district,
+      locations: district.mapLocations(),
+    },
   };
 };
 

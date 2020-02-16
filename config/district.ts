@@ -14,7 +14,10 @@ export const justNames = async (req: IncomingMessage) => {
   return districts;
 };
 
-export const findDistrict = async (req: IncomingMessage, districtName: string) => {
+export const findDistrict = async (
+  req: IncomingMessage,
+  districtName: string
+) => {
   const db = await getLowDb(req);
   const district = db
     .get('districts')
@@ -35,11 +38,14 @@ export const findDistrict = async (req: IncomingMessage, districtName: string) =
   return district;
 };
 
-export const findDistrictWithSortedSchedule = async (req: IncomingMessage, districtName: string) => {
+export const findDistrictWithSortedSchedule = async (
+  req: IncomingMessage,
+  districtName: string
+) => {
   const data = await findDistrict(req, districtName);
   if (!data) {
     return;
   }
-  data.garbages.sort((a, b) => Number(a.nextDate) - Number(b.nextDate));
+  data.garbages.sort((a, b) => Number(a.nextDate()) - Number(b.nextDate()));
   return data;
 };

@@ -1,15 +1,16 @@
 import { Type } from './class-transformer';
 import { memoize } from 'lodash';
 import low, { AdapterAsync } from 'lowdb';
-import moment from 'moment';
 import { RRule } from 'rrule';
 import { LowDbAdapter } from './low-db-adapter';
 import { IncomingMessage } from 'http';
+import { format } from 'date-fns';
 
 export const getLowDb = memoize(async (req: IncomingMessage) => {
-  const adapter = (new LowDbAdapter(req, '/db.json') as unknown) as AdapterAsync<
-    AppDb
-  >;
+  const adapter = (new LowDbAdapter(
+    req,
+    '/db.json'
+  ) as unknown) as AdapterAsync<AppDb>;
   const db = await low(adapter);
   await db
     .defaults({
@@ -25,13 +26,13 @@ export class GarbageItem {
   frequency!: string;
   frequencyRRule!: string;
 
-  get nextDate() {
+  nextDate() {
     const rruleObj = RRule.fromString(this.frequencyRRule);
     return rruleObj.after(new Date(), true);
   }
 
-  get nextDateFormatted() {
-    return moment(this.nextDate).format('dddd, M/D/YY');
+  nextDateFormatted() {
+    return format(this.nextDate(), 'PPPP');
   }
 }
 
@@ -43,7 +44,7 @@ export class Address {
   lat!: number;
   lng!: number;
 
-  get zipcodePretty() {
+  zipcodePretty() {
     //adds the dash "1550000" --> "155-0000"
     return this.zipcode.slice(0, 3) + '-' + this.zipcode.slice(3);
   }
@@ -59,7 +60,7 @@ export class District {
   @Type(() => Address)
   addresses!: Address[];
 
-  get mapLocations() {
+  mapLocations() {
     return this.addresses.map(p => {
       return {
         lat: p.lat,
