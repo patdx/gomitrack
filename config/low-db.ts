@@ -27,8 +27,27 @@ export class GarbageItem {
   frequencyRRule!: string;
 
   nextDate() {
-    const rruleObj = RRule.fromString(this.frequencyRRule);
-    return rruleObj.after(new Date(), true);
+    // the rrule plugin only supports working in fake UTC format
+    const localDate = new Date();
+    const dateInFakeUtc = new Date(
+      Date.UTC(
+        localDate.getFullYear(),
+        localDate.getMonth(),
+        localDate.getDate()
+      )
+    );
+
+    const rrule = RRule.fromString(this.frequencyRRule);
+    const nextDateInFakeUtc = rrule.after(dateInFakeUtc, true);
+
+    const nextDate = new Date(
+      nextDateInFakeUtc.getUTCFullYear(),
+      nextDateInFakeUtc.getUTCMonth(),
+      nextDateInFakeUtc.getUTCDate()
+    );
+    console.log(nextDateInFakeUtc, JSON.stringify(nextDateInFakeUtc));
+    console.log(nextDate, JSON.stringify(nextDate));
+    return nextDate;
   }
 
   nextDateFormatted() {
