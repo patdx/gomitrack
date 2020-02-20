@@ -28,6 +28,9 @@ export class GarbageItem {
 
   nextDate() {
     // the rrule plugin only supports working in fake UTC format
+    // for now, on SSR, it will be calculated from real UTC, I guess,
+    // but ideally we want to calculate in Japanese time zone always
+
     const localDate = new Date();
     const dateInFakeUtc = new Date(
       Date.UTC(
