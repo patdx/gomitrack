@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react';
+import React, { forwardRef } from 'react';
 import {
   Collapse,
   Container,
@@ -14,6 +14,14 @@ import {
 type Props = {
   title?: string;
 };
+
+// There seems to be some warning about accessing the ref. This does not
+// seem to provide the ref but it does suppress the error.
+const Brand = forwardRef((_props, ref) => (
+  <NavbarBrand {...{ref: ref as any}}>
+    <img src="/images/logo4.svg" style={{ width: '200px', height: '40px' }} />
+  </NavbarBrand>
+));
 
 export const Layout: React.FunctionComponent<Props> = ({
   children,
@@ -30,12 +38,7 @@ export const Layout: React.FunctionComponent<Props> = ({
       <Container>
         <Navbar expand="sm" className="px-0">
           <Link href="/" passHref>
-            <NavbarBrand>
-              <img
-                src="/images/logo4.svg"
-                style={{ width: '200px', height: '40px' }}
-              />
-            </NavbarBrand>
+            <Brand />
           </Link>
 
           <Collapse isOpen={true} navbar>

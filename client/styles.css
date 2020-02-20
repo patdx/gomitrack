@@ -1,64 +1,23 @@
 .addresses,
 .garbages {
   margin-bottom: 10px;
-  /*make boxes*/
   padding: 5px;
   background-color: #eeeeee;
-  /*margin: 5px -5px 15px -5px;*/
 }
-
-/* .navbar {
-  background-color: white;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-color: #e7e7e7;
-} */
-
-/*.navbar-brand {*/
-
-/*    height: 80px;*/
-
-/*    line-height: 80px;*/
-
-/*}*/
-
-/* .navbar-brand {
-  padding-top: 0px;
-  padding-bottom: 0px;
-} */
 
 body {
   font-family: ’ヒラギノ角ゴ Pro W3’, ‘Hiragino Kaku Gothic Pro’, メイリオ,
     Meiryo, Osaka, ‘MS Pゴシック’, ‘MS PGothic’, sans-serif;
 }
 
-.districtJP {
+/* .districtJP {
   /*font-weight: bold;*/
-}
+/* } */
 
 .districtEN {
-  /*font-weight: normal;*/
-  /*color: #8292a0;*/
   color: gray;
 }
 
 a:hover {
   text-decoration: none;
 }
-
-#map {
-  height: 300px;
-}
-
-/* .standalone > nav > div > ul {
-  display: none;
-} */
-
-/* body.standalone {
-  /*helps with sticky navbar*/
-  /* margin-top: 70px; */
-/* } */
-
-/* body > nav.navbar { */
-  /* background-color: #f8f8f8; */
-/* } */
