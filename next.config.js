@@ -1,5 +1,6 @@
 const merge = require('webpack-merge');
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
+require('dotenv').config();
 
 module.exports = phase => ({
   env: (() => {
@@ -10,6 +11,7 @@ module.exports = phase => ({
 
     return {
       NEXT_BUILD_PHASE: phase,
+      MAPS_URL: process.env.MAPS_URL,
     };
   })(),
   webpack: (
