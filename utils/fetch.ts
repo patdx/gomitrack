@@ -1,12 +1,8 @@
-import unFetch from 'isomorphic-unfetch';
 import fs from 'fs-extra';
-import path from 'path';
-import {
-  PHASE_DEVELOPMENT_SERVER,
-  PHASE_PRODUCTION_BUILD,
-} from 'next/constants';
 import { IncomingMessage } from 'http';
+import unFetch from 'isomorphic-unfetch';
 import originalUrl from 'original-url';
+import path from 'path';
 import urlJoin from 'url-join';
 
 export async function fetch({
