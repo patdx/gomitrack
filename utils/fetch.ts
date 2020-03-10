@@ -17,19 +17,7 @@ export async function fetch({
   src: string;
 }) {
   if (typeof window === 'undefined') {
-    // server
-
-    if (
-      [PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD].includes(
-        process.env.NEXT_BUILD_PHASE || ''
-      )
-    ) {
-      // read from the fs as a shortcut
-      console.log('read from the fs as a shortcut');
-
-      const fsPath = path.resolve(path.join('./public', src));
-      return await fs.readJSON(fsPath);
-    } else {
+    if (req) {
       // read from the server
       const url = req ? originalUrl(req) : undefined;
 
@@ -49,7 +37,20 @@ export async function fetch({
 
       const response = await unFetch(newSrc);
       return await response.json();
+    } else {
+      // read from the fs as a shortcut
+      console.log('read from the fs as a shortcut');
+
+      const fsPath = path.resolve(path.join('./public', src));
+      return await fs.readJSON(fsPath);
     }
+    // server
+
+    //   i      [
+    //     // PHASE_DEVELOPMENT_SERVER,
+    //     PHASE_PRODUCTION_BUILD,
+    //   ].includes(process.env.NEXT_BUILD_PHASE || '')
+    // ) {
   } else {
     // client
     const response = await unFetch(src);
