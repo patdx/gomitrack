@@ -1,10 +1,15 @@
-import { NextPage } from 'next';
-import React from 'react';
-import { Layout } from '../components/Layout';
-import { District, getLowDb } from '../config/low-db';
-import { plainToClass } from '../config/class-transformer';
+import { GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
+import React from 'react';
+import { Card, CardBody } from 'reactstrap';
+import { Layout } from '../components/Layout';
+import { plainToClass } from '../utils/class-transformer';
+import { District, getLowDb } from '../utils/low-db';
 import styles from './index.module.css';
+
+// const A = forwardRef<HTMLAnchorElement>((props, ref) => (
+//   <a {...props} ref={ref} />
+// ));
 
 const IndexPage: NextPage<{ districts: District[] }> = ({
   districts: districtsPlain,
@@ -46,8 +51,11 @@ const IndexPage: NextPage<{ districts: District[] }> = ({
                         href="/districts/[district]"
                         as={`/districts/${name}`}
                       >
-                        <a className="text-decoration-none">
-                          <div className="addresses">
+                        <Card
+                          className="my-2 text-decoration-none shadow-sm"
+                          tag="a"
+                        >
+                          <CardBody>
                             <div className={styles.underlineOnHover}>
                               {addressJP}
                             </div>
@@ -55,8 +63,8 @@ const IndexPage: NextPage<{ districts: District[] }> = ({
                             <div className="text-black-50">
                               〒{addressItem.zipcodePretty()}
                             </div>
-                          </div>
-                        </a>
+                          </CardBody>
+                        </Card>
                       </Link>
                     </div>
                   );
@@ -70,8 +78,8 @@ const IndexPage: NextPage<{ districts: District[] }> = ({
   );
 };
 
-export const unstable_getServerProps = async (context: any) => {
-  const db = await getLowDb(context.req!);
+export const getStaticProps: GetStaticProps = async _context => {
+  const db = await getLowDb(undefined as any);
 
   const districts = db
     .get(['districts'])

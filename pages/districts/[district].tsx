@@ -1,6 +1,6 @@
-import { NextPage } from 'next';
-import { findDistrictWithSortedSchedule } from '../../config/district';
-import { District, GarbageType } from '../../config/low-db';
+import { NextPage, GetServerSideProps } from 'next';
+import { findDistrictWithSortedSchedule } from '../../utils/district';
+import { District, GarbageType } from '../../utils/low-db';
 import { Layout } from '../../components/Layout';
 import { plainToClass } from 'class-transformer';
 import ReactMapGL, { Marker, WebMercatorViewport } from 'react-map-gl';
@@ -14,6 +14,7 @@ const ICON = `M20.2,15.7L20.2,15.7c1.1-1.6,1.8-3.6,1.8-5.7c0-5.6-4.5-10-10-10S2,
 const SIZE = 20;
 
 import { useState } from 'react';
+import { CardBody, Card } from 'reactstrap';
 
 const DistrictPage: NextPage<{
   district: District;
@@ -54,18 +55,23 @@ const DistrictPage: NextPage<{
 
           {district.garbages.map((garbage, index) => {
             return (
-              <div className="garbages" key={index}>
-                <b>
-                  <span className="nameJP">
-                    {(garbage.garbage as GarbageType).nameJP}
-                  </span>
-                  <br />
-                  <span className="nameEN">
-                    {(garbage.garbage as GarbageType).name}
-                  </span>
-                </b>
-                <br />({garbage.frequency}) {garbage.nextDateFormatted()}
-              </div>
+              <Card key={index} className="shadow my-2">
+                <CardBody>
+                  <b>
+                    <span className="nameJP">
+                      {(garbage.garbage as GarbageType).nameJP}
+                    </span>
+                    <br />
+                    <span className="nameEN">
+                      {(garbage.garbage as GarbageType).name}
+                    </span>
+                  </b>
+                  <br />({garbage.frequency}) {garbage.nextDateFormatted()}
+                </CardBody>
+              </Card>
+              // <div className="garbages" key={index}>
+
+              // </div>
             );
           })}
         </div>
@@ -169,7 +175,7 @@ const DistrictPage: NextPage<{
   );
 };
 
-export const unstable_getServerProps = async (context: any) => {
+export const getServerSideProps: GetServerSideProps = async context => {
   const districtName = context.query.district as string;
   const district = await findDistrictWithSortedSchedule(
     context.req!,
@@ -181,10 +187,10 @@ export const unstable_getServerProps = async (context: any) => {
   }
 
   return {
-    props: {
+    props: JSON.parse(JSON.stringify({
       district,
       locations: district.mapLocations(),
-    },
+    })) ,
   };
 };
 

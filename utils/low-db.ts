@@ -6,11 +6,11 @@ import { LowDbAdapter } from './low-db-adapter';
 import { IncomingMessage } from 'http';
 import { format } from 'date-fns';
 
-export const getLowDb = memoize(async (req: IncomingMessage) => {
-  const adapter = (new LowDbAdapter(
+export const getLowDb = memoize(async (req?: IncomingMessage) => {
+  const adapter = (new LowDbAdapter({
     req,
-    '/db.json'
-  ) as unknown) as AdapterAsync<AppDb>;
+    src: '/db.json',
+  }) as unknown) as AdapterAsync<AppDb>;
   const db = await low(adapter);
   await db
     .defaults({

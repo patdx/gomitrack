@@ -1,19 +1,31 @@
 import unFetch from 'isomorphic-unfetch';
 import fs from 'fs-extra';
 import path from 'path';
-import { PHASE_DEVELOPMENT_SERVER } from 'next/constants';
+import {
+  PHASE_DEVELOPMENT_SERVER,
+  PHASE_PRODUCTION_BUILD,
+} from 'next/constants';
 import { IncomingMessage } from 'http';
 import originalUrl from 'original-url';
 import urlJoin from 'url-join';
 
-export async function fetch(
-  req: IncomingMessage & Record<string, any>,
-  src: string
-) {
+export async function fetch({
+  req,
+  src,
+}: {
+  req?: IncomingMessage & Record<string, any>;
+  src: string;
+}) {
   if (typeof window === 'undefined') {
     // server
-    if (process.env.NEXT_BUILD_PHASE === PHASE_DEVELOPMENT_SERVER && false) {
+
+    if (
+      [PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD].includes(
+        process.env.NEXT_BUILD_PHASE || ''
+      )
+    ) {
       // read from the fs as a shortcut
+      console.log('read from the fs as a shortcut');
 
       const fsPath = path.resolve(path.join('./public', src));
       return await fs.readJSON(fsPath);

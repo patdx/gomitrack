@@ -5,10 +5,15 @@ import { IncomingMessage } from 'http';
 // and a read-write adapter for dev mode
 
 export class LowDbAdapter {
-  constructor(private req: IncomingMessage, private src: string) {}
+  constructor(
+    private options: {
+      req?: IncomingMessage;
+      src: string;
+    }
+  ) {}
 
   async read() {
-    const fetched = await fetch(this.req, this.src);
+    const fetched = await fetch({ req: this.options.req, src: this.options.src });
     return fetched;
   }
 
