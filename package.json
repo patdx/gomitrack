@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "start-inspect": "NODE_OPTIONS='--inspect' next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.8.3",
@@ -26,7 +28,7 @@
     "immer": "^6.0.1",
     "isomorphic-unfetch": "^3.0.0",
     "lowdb": "^1.0.0",
-    "next": "^9.3.0",
+    "next": "^9.3.4",
     "original-url": "^1.2.3",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
@@ -35,7 +37,8 @@
     "reflect-metadata": "^0.1.13",
     "rrule": "^2.6.4",
     "url-join": "^4.0.1",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "snyk": "^1.323.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -46,5 +49,6 @@
     "@types/webpack": "^4.41.7",
     "typescript": "^3.8.3"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "snyk": true
 }
