@@ -8,9 +8,7 @@
     "build": "next build",
     "start": "next start",
     "start-inspect": "NODE_OPTIONS='--inspect' next start",
-    "type-check": "tsc",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "type-check": "tsc"
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.8.3",
@@ -49,6 +47,5 @@
     "@types/webpack": "^4.41.7",
     "typescript": "^3.8.3"
   },
-  "license": "ISC",
-  "snyk": true
+  "license": "ISC"
 }
