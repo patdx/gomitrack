@@ -35,8 +35,7 @@
     "reflect-metadata": "^0.1.13",
     "rrule": "^2.6.4",
     "url-join": "^4.0.1",
-    "webpack-merge": "^4.2.2",
-    "snyk": "^1.323.0"
+    "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
