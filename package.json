@@ -22,7 +22,7 @@
     "class-transformer": "^0.2.3",
     "date-fns": "^2.14.0",
     "dotenv": "^8.2.0",
-    "fs-extra": "^9.0.0",
+    "fs-extra": "^9.0.1",
     "immer": "^6.0.9",
     "isomorphic-unfetch": "^3.0.0",
     "lowdb": "^1.0.0",
