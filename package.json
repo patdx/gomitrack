@@ -16,7 +16,7 @@
     "@turf/helpers": "6.1.4",
     "@types/fs-extra": "9.0.1",
     "@types/lowdb": "1.0.9",
-    "@types/reactstrap": "8.4.3",
+    "@types/reactstrap": "8.5.0",
     "@types/url-join": "4.0.0",
     "bootstrap": "4.5.0",
     "class-transformer": "0.2.3",
