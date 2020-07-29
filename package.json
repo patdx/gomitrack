@@ -19,7 +19,7 @@
     "@types/reactstrap": "8.5.0",
     "@types/url-join": "4.0.0",
     "bootstrap": "4.5.0",
-    "class-transformer": "0.2.3",
+    "class-transformer": "0.3.1",
     "date-fns": "2.15.0",
     "dotenv": "8.2.0",
     "fs-extra": "9.0.1",
