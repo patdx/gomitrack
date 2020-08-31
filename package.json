@@ -20,7 +20,7 @@
     "@types/url-join": "4.0.0",
     "bootstrap": "4.5.2",
     "class-transformer": "0.3.1",
-    "date-fns": "2.16.0",
+    "date-fns": "2.16.1",
     "dotenv": "8.2.0",
     "fs-extra": "9.0.1",
     "immer": "7.0.8",
