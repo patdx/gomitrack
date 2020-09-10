@@ -33,7 +33,7 @@
     "react-map-gl": "5.2.8",
     "reactstrap": "8.5.1",
     "reflect-metadata": "0.1.13",
-    "rrule": "2.6.4",
+    "rrule": "2.6.6",
     "url-join": "4.0.1",
     "webpack-merge": "4.2.2"
   },
