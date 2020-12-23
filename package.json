@@ -11,7 +11,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
-    "@babel/plugin-proposal-decorators": "7.12.1",
+    "@babel/plugin-proposal-decorators": "7.12.12",
     "@turf/bbox": "6.0.1",
     "@turf/helpers": "6.1.4",
     "@types/fs-extra": "9.0.5",
