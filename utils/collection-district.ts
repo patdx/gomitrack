@@ -1,0 +1,61 @@
+import { pipe } from 'fp-ts/pipeable';
+import { IncomingMessage } from 'http';
+import produce from 'immer';
+import { find } from 'mingo';
+import { CollectionArea } from './collection-area';
+import { GarbageTypeFrequency, nextDate } from './garbage-type-frequency';
+import { getDatabase } from './database';
+
+export interface CollectionDistrict {
+  name: string;
+  nameJP: string;
+
+  garbages: GarbageTypeFrequency[];
+
+  addresses: CollectionArea[];
+}
+
+export const mapLocations = (district: CollectionDistrict) => {
+  return district.addresses.map((address) => {
+    return {
+      lat: address.lat,
+      lng: address.lng,
+    };
+  });
+};
+
+export const findDistrict = async (
+  districtName: string,
+  req?: IncomingMessage
+) => {
+  const db = await getDatabase(req);
+  const district = pipe(
+    find(db.districts ?? [], { name: districtName }).next() as CollectionDistrict,
+    (district) =>
+      produce(district, (draft) => {
+        draft.garbages.forEach((garbage) => {
+          // TODO: use two properties for this
+          garbage.garbage = find(db.garbages ?? [], {
+            _id: garbage.garbage as string,
+          }).next();
+        });
+      })
+  );
+
+  return district;
+};
+
+export const findDistrictWithSortedSchedule = async (
+  districtName: string,
+  req?: IncomingMessage
+) => {
+  const district = await findDistrict(districtName, req);
+  if (!district) {
+    return;
+  }
+  const result = produce(district, (draft) => {
+    draft.garbages.sort((a, b) => Number(nextDate(a)) - Number(nextDate(b)));
+  });
+
+  return result;
+};

@@ -4,6 +4,7 @@ import unFetch from 'isomorphic-unfetch';
 import originalUrl from 'original-url';
 import path from 'path';
 import urlJoin from 'url-join';
+import { AppDatabase } from './database';
 
 export async function fetch({
   req,
@@ -11,7 +12,7 @@ export async function fetch({
 }: {
   req?: IncomingMessage & Record<string, any>;
   src: string;
-}) {
+}): Promise<AppDatabase> {
   if (typeof window === 'undefined') {
     if (req) {
       // read from the server

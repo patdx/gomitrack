@@ -3,19 +3,17 @@ import Link from 'next/link';
 import React from 'react';
 import { Card, CardBody } from 'reactstrap';
 import { Layout } from '../components/Layout';
-import { plainToClass } from '../utils/class-transformer';
-import { District, getLowDb } from '../utils/low-db';
+import { getDatabase } from '../utils/database';
 import styles from './index.module.css';
+import mingo from 'mingo';
+import { CollectionDistrict } from '../utils/collection-district';
+import { formatZip } from '../utils/collection-area';
 
 // const A = forwardRef<HTMLAnchorElement>((props, ref) => (
 //   <a {...props} ref={ref} />
 // ));
 
-const IndexPage: NextPage<{ districts: District[] }> = ({
-  districts: districtsPlain,
-}) => {
-  const districts = plainToClass(District, districtsPlain);
-
+const IndexPage: NextPage<{ districts: CollectionDistrict[] }> = ({ districts }) => {
   return (
     <Layout title="Gomitrack Districts">
       <h1>Districts</h1>
@@ -61,7 +59,7 @@ const IndexPage: NextPage<{ districts: District[] }> = ({
                             </div>
                             <div className="text-muted">{address}</div>
                             <div className="text-black-50">
-                              〒{addressItem.zipcodePretty()}
+                              〒{formatZip(addressItem)}
                             </div>
                           </CardBody>
                         </Card>
@@ -78,13 +76,16 @@ const IndexPage: NextPage<{ districts: District[] }> = ({
   );
 };
 
-export const getStaticProps: GetStaticProps = async _context => {
-  const db = await getLowDb(undefined as any);
+export const getStaticProps: GetStaticProps = async (_context) => {
+  const db = await getDatabase();
 
-  const districts = db
-    .get(['districts'])
-    .orderBy(['name', 'addresses.addressJP'])
-    .value();
+  const districts = mingo
+    .find(db.districts ?? [], {})
+    .sort({
+      name: 1,
+      'addresses.addressJP': 1,
+    })
+    .all();
 
   return {
     props: {
