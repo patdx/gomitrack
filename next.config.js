@@ -1,8 +1,8 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
 require('dotenv').config();
 
-module.exports = phase => ({
+module.exports = (phase) => ({
   env: (() => {
     console.log(JSON.stringify({ phase }));
 
@@ -23,9 +23,11 @@ module.exports = phase => ({
       isServer
         ? {}
         : {
-            node: {
-              fs: 'empty',
-              net: 'empty',
+            resolve: {
+              fallback: {
+                fs: false,
+                net: false,
+              },
             },
             externals: {
               'fs-extra': '{}',
