@@ -21,3 +21,9 @@ body {
 a:hover {
   text-decoration: none;
 }
+
+/* until it's added back to bootstrap 5 */
+.my-n2 {
+  margin-top: -0.5rem !important;
+  margin-bottom: -0.5rem !important;
+}

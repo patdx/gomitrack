@@ -1,7 +1,0 @@
-a:hover .underlineOnHover {
-  text-decoration: underline;
-}
-
-a.boldOnHover:hover {
-  font-weight: bold;
-}
