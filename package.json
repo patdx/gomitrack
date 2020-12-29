@@ -29,7 +29,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-leaflet": "3.0.5",
-    "reactstrap": "8.8.0",
+    "reactstrap": "8.8.1",
     "rrule": "2.6.6",
     "url-join": "4.0.1",
     "webpack-merge": "5.7.3"
