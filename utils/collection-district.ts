@@ -5,6 +5,7 @@ import { find } from 'mingo';
 import { CollectionArea } from './collection-area';
 import { GarbageTypeFrequency, nextDate } from './garbage-type-frequency';
 import { getDatabase } from './database';
+import { GarbageType } from './garbage-type';
 
 export interface CollectionDistrict {
   name: string;
@@ -37,7 +38,7 @@ export const findDistrict = async (
           // TODO: use two properties for this
           garbage.garbage = find(db.garbages ?? [], {
             _id: garbage.garbage as string,
-          }).next();
+          }).next() as GarbageType;
         });
       })
   );
