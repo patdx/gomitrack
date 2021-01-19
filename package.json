@@ -19,7 +19,7 @@
     "bootstrap": "5.0.0-beta1",
     "date-fns": "2.16.1",
     "dotenv": "8.2.0",
-    "fs-extra": "9.0.1",
+    "fs-extra": "9.1.0",
     "immer": "8.0.0",
     "isomorphic-unfetch": "3.1.0",
     "mingo": "4.1.0",
