@@ -22,7 +22,7 @@
     "fs-extra": "9.1.0",
     "immer": "8.0.1",
     "isomorphic-unfetch": "3.1.0",
-    "mingo": "4.1.1",
+    "mingo": "4.1.2",
     "next": "10.0.5",
     "leaflet": "1.7.1",
     "original-url": "1.2.3",
