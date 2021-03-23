@@ -16,7 +16,7 @@
     "@types/fs-extra": "9.0.8",
     "@types/lowdb": "1.0.9",
     "@types/url-join": "4.0.0",
-    "bootstrap": "5.0.0-beta2",
+    "bootstrap": "5.0.0-beta3",
     "date-fns": "2.19.0",
     "dotenv": "8.2.0",
     "fs-extra": "9.1.0",
