@@ -42,7 +42,7 @@
     "@types/node": "14.14.36",
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.3",
-    "@types/webpack": "4.41.27",
+    "@types/webpack": "5.0.0",
     "fp-ts": "2.9.5",
     "typescript": "4.2.3",
     "webpack": "5.28.0"
