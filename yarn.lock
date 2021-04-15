@@ -2002,10 +2002,10 @@ forwarded-parse@^2.1.0:
   resolved "https://registry.yarnpkg.com/forwarded-parse/-/forwarded-parse-2.1.1.tgz#be73f3df5aa0bad5ba1af42005801ac9f4d49263"
   integrity sha512-8Jh3uv3iaaTTvH3vM4qyRjKfe5dvR/THhiPY5zhsfFa/UviqnEd3hqNyxEtRCwL3+L2vv8JsanGZ5XHQcncyUA==
 
-fp-ts@2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/fp-ts/-/fp-ts-2.10.0.tgz#e8d54691061be6561d4fe6e5b4012eea2a66d274"
-  integrity sha512-FC2VYweD6QJ5qIKq2wGXRuTtMxIRrXqLlIhRDnxVisbmjEEENHPyf6vrQ9Tdj5Pha1o/SbdYBrfANpvaUxW0dg==
+fp-ts@2.10.2:
+  version "2.10.2"
+  resolved "https://registry.yarnpkg.com/fp-ts/-/fp-ts-2.10.2.tgz#1df0ccabf10a611a9c64eccfd5d0ae0ea0fc13ea"
+  integrity sha512-YB/FSwESW8C3kVCbbyFiZSXXoQEJ/SaeHHorL6KCKHoPIPV6v/hyfMiXBPMjW7O7D9jfxlRs6VeCRonfqi1Tcg==
 
 fragment-cache@^0.2.1:
   version "0.2.1"
