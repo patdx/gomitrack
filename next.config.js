@@ -38,4 +38,7 @@ module.exports = (phase) => ({
 
     return output;
   },
+  future: {
+    webpack5: true,
+  },
 });
