@@ -816,12 +816,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.0.4":
-  version: 8.0.4
-  resolution: "acorn@npm:8.0.4"
+"acorn@npm:^8.2.1":
+  version: 8.2.4
+  resolution: "acorn@npm:8.2.4"
   bin:
     acorn: bin/acorn
-  checksum: d23a2df6c64845afd521f0df1f8f93f611c3647e01b8770b8ad2972c59246529fa42756bfd3ad6abf2d0cacb8e5203f5470c96637778ec583460f1637e1f6eb7
+  checksum: 6879266ea9ba4ece99afb4ab4f3ac6eaa3cf866cee40651ca90cde0b1fd5c6954d2006c54877c83287d5d38700327cbd6bda028b6fbb1daa346c7034f18147c2
   languageName: node
   linkType: hard
 
@@ -1737,10 +1737,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:2.21.2":
-  version: 2.21.2
-  resolution: "date-fns@npm:2.21.2"
-  checksum: 044e5af3aa7e2d4988747c435700a6ebf6b744b75a9d514cb599d5f8f058d69cc43060e008be33ec8a4ebccb8416b8cdfceb6f13800625e2bc2e57da043b2398
+"date-fns@npm:2.21.3":
+  version: 2.21.3
+  resolution: "date-fns@npm:2.21.3"
+  checksum: a88c9da180cde3a3426c09cacf3f6bffb615e31d73e458da90e9d5304432eea2e0b360f40ee4fd5ca187659e8a7f8f667db902a3eb033e8d2d1522b1cc1b9e32
   languageName: node
   linkType: hard
 
@@ -2395,7 +2395,7 @@ fsevents@~2.3.1:
     "@types/url-join": 4.0.0
     "@types/webpack": 5.28.0
     bootstrap: 5.0.0
-    date-fns: 2.21.2
+    date-fns: 2.21.3
     dotenv: 9.0.0
     fp-ts: 2.10.5
     fs-extra: 10.0.0
@@ -5353,16 +5353,16 @@ typescript@4.2.4:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.34.0":
-  version: 5.34.0
-  resolution: "webpack@npm:5.34.0"
+"webpack@npm:5.36.2, webpack@npm:^5":
+  version: 5.36.2
+  resolution: "webpack@npm:5.36.2"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.47
     "@webassemblyjs/ast": 1.11.0
     "@webassemblyjs/wasm-edit": 1.11.0
     "@webassemblyjs/wasm-parser": 1.11.0
-    acorn: ^8.0.4
+    acorn: ^8.2.1
     browserslist: ^4.14.5
     chrome-trace-event: ^1.0.2
     enhanced-resolve: ^5.8.0
@@ -5385,7 +5385,7 @@ typescript@4.2.4:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: ce93de995d8d348a7a6f97fa2fabfd7d14718bc6163c4b17b758e92aba9fb908fc4e1d7a290c2482a7aa1445d68376bc51c58bc002e5daf4fc122b76dd5d2145
+  checksum: 221f75148a40809ce4c8c2f51e3510d716a75ba086ddd18f4d8313f2f18f18efce74b55bfee58223b8ae2d8bcab035d07d2a8f5690c3f3f6a4ce59d015879179
   languageName: node
   linkType: hard
 
