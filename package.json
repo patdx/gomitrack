@@ -17,7 +17,7 @@
     "@types/lowdb": "1.0.9",
     "@types/url-join": "4.0.0",
     "bootstrap": "5.0.0",
-    "date-fns": "2.21.2",
+    "date-fns": "2.21.3",
     "dotenv": "9.0.0",
     "fs-extra": "10.0.0",
     "immer": "9.0.2",
