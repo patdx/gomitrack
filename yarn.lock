@@ -1881,10 +1881,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:9.0.0":
-  version: 9.0.0
-  resolution: "dotenv@npm:9.0.0"
-  checksum: 8111fb99a12a8da9fedc90d855d734bbf026f3257d67b611b2517d393b027ca5774c1f9dd5aa0887f339f4e7c711f99bdd8bc82fa076e572f3eb6000b2c09343
+"dotenv@npm:9.0.1":
+  version: 9.0.1
+  resolution: "dotenv@npm:9.0.1"
+  checksum: d269ad03ed91e8f44a77fbf04ac6f67678b22a7ca2094f3033e1197d5d4756be29ad1ea3951a335149a2363889144a6b171dc91fda88a60114c5dd388a6e17d3
   languageName: node
   linkType: hard
 
@@ -2396,7 +2396,7 @@ fsevents@~2.3.1:
     "@types/webpack": 5.28.0
     bootstrap: 5.0.0
     date-fns: 2.21.3
-    dotenv: 9.0.0
+    dotenv: 9.0.1
     fp-ts: 2.10.5
     fs-extra: 10.0.0
     immer: 9.0.2
