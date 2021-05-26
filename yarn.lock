@@ -713,14 +713,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.7":
-  version: 17.0.7
-  resolution: "@types/react@npm:17.0.7"
+"@types/react@npm:17.0.8":
+  version: 17.0.8
+  resolution: "@types/react@npm:17.0.8"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 0b550ae747c254c8117cf92b99fb1e98ad71d073f0661d4119aa422487da06ab2f3e6e3523389ff3c54a0f2c59d9fb8f03e729001839490fcc473b0f7e275ff3
+  checksum: b59a3abafd240b2880f9e6a11b2b7f75165888260c56e95a77ed10a7dd55570b307fb2356eda7fde2a8e1255d2def11797e4ae9800ae114a1f578546acabda67
   languageName: node
   linkType: hard
 
@@ -2524,7 +2524,7 @@ fsevents@~2.3.1:
     "@types/leaflet": 1.7.0
     "@types/lowdb": 1.0.10
     "@types/node": 15.3.0
-    "@types/react": 17.0.7
+    "@types/react": 17.0.8
     "@types/react-dom": 17.0.5
     "@types/url-join": 4.0.0
     "@types/webpack": 5.28.0
