@@ -1864,10 +1864,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:2.21.3":
-  version: 2.21.3
-  resolution: "date-fns@npm:2.21.3"
-  checksum: a88c9da180cde3a3426c09cacf3f6bffb615e31d73e458da90e9d5304432eea2e0b360f40ee4fd5ca187659e8a7f8f667db902a3eb033e8d2d1522b1cc1b9e32
+"date-fns@npm:2.22.0":
+  version: 2.22.0
+  resolution: "date-fns@npm:2.22.0"
+  checksum: 51432d994c59076af500cfea1fc72c9d078be094aaef19c125fd6c4de166d60f2ad3e1143eb1cca2f65cc892cd2e88ca2b165fd9c44216eb7d6c91eec0e172b0
   languageName: node
   linkType: hard
 
@@ -2529,7 +2529,7 @@ fsevents@~2.3.1:
     "@types/url-join": 4.0.0
     "@types/webpack": 5.28.0
     bootstrap: 5.0.1
-    date-fns: 2.21.3
+    date-fns: 2.22.0
     dotenv: 10.0.0
     fp-ts: 2.10.5
     fs-extra: 10.0.0
