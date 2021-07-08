@@ -640,12 +640,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lowdb@npm:1.0.10":
-  version: 1.0.10
-  resolution: "@types/lowdb@npm:1.0.10"
+"@types/lowdb@npm:1.0.11":
+  version: 1.0.11
+  resolution: "@types/lowdb@npm:1.0.11"
   dependencies:
     "@types/lodash": "*"
-  checksum: fed38d0ec94149adf1ddb434ea2b5e21dc055fcbc7c7b63cdc061bbd871691a3643d7755712a6ee15f2a39a5264c929db1a7548a398560eddb325f2f149ae5d6
+  checksum: 4c86232ee6fd38519cdad942b308922898c57c5d8dbb829eb8e31e2fa3d9b752713a223bd09950fc3d553ea54d18e48c4dc82ad5fcb27d14925acfb85cf97797
   languageName: node
   linkType: hard
 
@@ -2665,7 +2665,7 @@ fsevents@~2.3.1:
     "@turf/helpers": 6.4.0
     "@types/fs-extra": 9.0.12
     "@types/leaflet": 1.7.4
-    "@types/lowdb": 1.0.10
+    "@types/lowdb": 1.0.11
     "@types/node": 15.3.0
     "@types/react": 17.0.14
     "@types/react-dom": 17.0.9
