@@ -708,10 +708,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/url-join@npm:4.0.0":
-  version: 4.0.0
-  resolution: "@types/url-join@npm:4.0.0"
-  checksum: 324a992dc0303f4dc9f231994db02d011b901f5a29c6a688727e092131c48d1d869f5cef26d12da9594776bc5a13f5ee1b67543193dca30de3e41008b0cbdaf5
+"@types/url-join@npm:4.0.1":
+  version: 4.0.1
+  resolution: "@types/url-join@npm:4.0.1"
+  checksum: e4998eb4cb61208315b21170c6f6c6938c927c25e55a1e9ffbcbcb820a8494bc033ce54a6337dff8e5ea26a40e03160a3aeb087f53dac9eab3daae7726cd5129
   languageName: node
   linkType: hard
 
@@ -2669,7 +2669,7 @@ fsevents@~2.3.1:
     "@types/node": 15.3.0
     "@types/react": 17.0.14
     "@types/react-dom": 17.0.9
-    "@types/url-join": 4.0.0
+    "@types/url-join": 4.0.1
     "@types/webpack": 5.28.0
     bootstrap: 5.0.2
     date-fns: 2.22.1
