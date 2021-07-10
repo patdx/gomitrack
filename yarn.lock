@@ -551,14 +551,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@turf/helpers@npm:6.4.0":
-  version: 6.4.0
-  resolution: "@turf/helpers@npm:6.4.0"
-  checksum: 3a78b0e665571443245ce08256ef985e779a75460f8df780b39c83b4e6529cd6987413314406ea566a9fe45c67113402a192e1e2bb3a7551632beff85f64566b
-  languageName: node
-  linkType: hard
-
-"@turf/helpers@npm:^6.5.0":
+"@turf/helpers@npm:6.5.0, @turf/helpers@npm:^6.5.0":
   version: 6.5.0
   resolution: "@turf/helpers@npm:6.5.0"
   checksum: e531ab902beabe9c80ba2364fdd3af65af16678f25d1e32b44d485b4aecf268d4f6083dfbddf53c2448f693cf37e62559fbc07c08f6c68ef324512c48a02cfe0
@@ -2669,7 +2662,7 @@ fsevents@~2.3.1:
     "@babel/core": 7.14.6
     "@babel/plugin-proposal-decorators": 7.14.5
     "@turf/bbox": 6.5.0
-    "@turf/helpers": 6.4.0
+    "@turf/helpers": 6.5.0
     "@types/fs-extra": 9.0.12
     "@types/leaflet": 1.7.4
     "@types/lowdb": 1.0.11
