@@ -20,7 +20,7 @@
     "date-fns": "2.23.0",
     "dotenv": "10.0.0",
     "fs-extra": "10.0.0",
-    "immer": "9.0.5",
+    "immer": "9.0.6",
     "isomorphic-unfetch": "3.1.0",
     "leaflet": "1.7.1",
     "mingo": "4.1.4",
