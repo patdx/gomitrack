@@ -2821,7 +2821,7 @@ fsevents@~2.3.1:
     react: 17.0.2
     react-dom: 17.0.2
     react-leaflet: 3.2.1
-    reactstrap: 8.9.0
+    reactstrap: 8.10.0
     rrule: 2.6.8
     typescript: 4.2.4
     url-join: 4.0.1
@@ -4639,9 +4639,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"reactstrap@npm:8.9.0":
-  version: 8.9.0
-  resolution: "reactstrap@npm:8.9.0"
+"reactstrap@npm:8.10.0":
+  version: 8.10.0
+  resolution: "reactstrap@npm:8.10.0"
   dependencies:
     "@babel/runtime": ^7.12.5
     classnames: ^2.2.3
@@ -4651,7 +4651,7 @@ fsevents@~2.3.1:
   peerDependencies:
     react: ">=16.3.0"
     react-dom: ">=16.3.0"
-  checksum: 50345ab9291eab2748c7aa9c13dccead653341049aa6d5dff0d34a20b39ee97edc4ec759b8b1468f2cfc91272b96bdedeb0b7443dddfc19ea09aa8d698390070
+  checksum: 46c9c6182b7eb61db26eedf6e41a6c8d73bce65b255e143eb55a8d94e9b4ac8d61491402128cf0ed9515ef74aacee276876d09359389ba0409079d92b56c9cae
   languageName: node
   linkType: hard
 
