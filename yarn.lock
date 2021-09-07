@@ -1403,12 +1403,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap@npm:5.1.0":
-  version: 5.1.0
-  resolution: "bootstrap@npm:5.1.0"
+"bootstrap@npm:5.1.1":
+  version: 5.1.1
+  resolution: "bootstrap@npm:5.1.1"
   peerDependencies:
-    "@popperjs/core": ^2.9.3
-  checksum: 0400dfa3e07726e07131d9fbc0b14acb2a602fd4ba17ef9bd32758b588a120419b61c1569efa3751a18c57beea9d1c386d487e001224aba82f0e3e032b92f136
+    "@popperjs/core": ^2.10.1
+  checksum: 5201ce1d76523be94290ce7d7f0321b791d1ad93ea072150d95d5c46d1589f070648f97409c1cfc97e7d34a67c0e9ee110a7157082b7b8c336be10ca1932c609
   languageName: node
   linkType: hard
 
@@ -2694,7 +2694,7 @@ fsevents@~2.3.1:
     "@types/react-dom": 17.0.9
     "@types/url-join": 4.0.1
     "@types/webpack": 5.28.0
-    bootstrap: 5.1.0
+    bootstrap: 5.1.1
     date-fns: 2.23.0
     dotenv: 10.0.0
     fp-ts: 2.11.1
