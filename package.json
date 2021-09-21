@@ -13,7 +13,7 @@
   "dependencies": {
     "@turf/bbox": "6.5.0",
     "@turf/helpers": "6.5.0",
-    "@types/fs-extra": "9.0.12",
+    "@types/fs-extra": "9.0.13",
     "@types/lowdb": "1.0.11",
     "@types/url-join": "4.0.1",
     "bootstrap": "5.1.1",
