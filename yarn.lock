@@ -555,14 +555,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-leaflet/core@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@react-leaflet/core@npm:1.1.0"
+"@react-leaflet/core@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@react-leaflet/core@npm:1.1.1"
   peerDependencies:
     leaflet: ^1.7.1
     react: ^17.0.1
     react-dom: ^17.0.1
-  checksum: 4e52e24efc34ef695299e52456ca39f09bb85259b61432280ce1f6644e9624ae3435b1a6f745e904420fcc6b1e7e65e6e034e992c60d5d83d23c4f534edd73b1
+  checksum: a959eb48074b10f69f46b5afb72277889b739cd52f41bf94676d0dcc68de1930b5aaa194cd76dfac64fce6692fff4bc0f3dac90f3a981becf36044f1a591a605
   languageName: node
   linkType: hard
 
@@ -2459,7 +2459,7 @@ fsevents@~2.3.1:
     original-url: 1.2.3
     react: 17.0.2
     react-dom: 17.0.2
-    react-leaflet: 3.2.1
+    react-leaflet: 3.2.2
     reactstrap: 8.10.0
     rrule: 2.6.8
     typescript: 4.2.4
@@ -3912,16 +3912,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"react-leaflet@npm:3.2.1":
-  version: 3.2.1
-  resolution: "react-leaflet@npm:3.2.1"
+"react-leaflet@npm:3.2.2":
+  version: 3.2.2
+  resolution: "react-leaflet@npm:3.2.2"
   dependencies:
-    "@react-leaflet/core": ^1.1.0
+    "@react-leaflet/core": ^1.1.1
   peerDependencies:
     leaflet: ^1.7.1
     react: ^17.0.1
     react-dom: ^17.0.1
-  checksum: 4645d346f166da2bc08e5296614b4e1ba43208a9e174999e1c5696edd82fc097c16bca9b12abfe99ecf839132fc6f4cbc39413b51285eb9c3d920fe586c977fc
+  checksum: 02469268539a434d703baa09451eb91b5e0b3ef0d9db2d5b5b60ad2e6c54a37551ffc8d327da59a1eb60b62767feba9b6512022395d399b300214679103a49ed
   languageName: node
   linkType: hard
 
