@@ -2464,7 +2464,7 @@ fsevents@~2.3.1:
     rrule: 2.6.8
     typescript: 4.2.4
     url-join: 4.0.1
-    webpack: 5.60.0
+    webpack: 5.61.0
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -4941,9 +4941,9 @@ typescript@4.2.4:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.60.0":
-  version: 5.60.0
-  resolution: "webpack@npm:5.60.0"
+"webpack@npm:5.61.0":
+  version: 5.61.0
+  resolution: "webpack@npm:5.61.0"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -4974,7 +4974,7 @@ typescript@4.2.4:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 4da1378a2cce65c1805136d771e8ee574c8110ff4c0dfd8b27948887061b2cbd0e0a956d91e63bf71fdf2b6c63af1cc12d8e18ae1d1c3aa7c351430300ccde29
+  checksum: eada88458356f74a38cd75fb7917b1bb58329485b16f85a7be75ec1c745269e16a12f0358b50e84c78ef45f221845b8c3facd32aad319f2c90275f3038739e55
   languageName: node
   linkType: hard
 
