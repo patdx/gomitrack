@@ -1,12 +1,11 @@
 import fs from 'fs-extra';
 import { IncomingMessage } from 'http';
-import unFetch from 'isomorphic-unfetch';
 import originalUrl from 'original-url';
 import path from 'path';
 import urlJoin from 'url-join';
 import { AppDatabase } from './database';
 
-export async function fetch({
+export async function fetchJson({
   req,
   src,
 }: {
@@ -32,7 +31,7 @@ export async function fetch({
         return {};
       }
 
-      const response = await unFetch(newSrc);
+      const response = await fetch(newSrc);
       return await response.json();
     } else {
       // read from the fs as a shortcut
@@ -50,7 +49,7 @@ export async function fetch({
     // ) {
   } else {
     // client
-    const response = await unFetch(src);
+    const response = await fetch(src);
     return await response.json();
   }
 }

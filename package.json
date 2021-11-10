@@ -23,13 +23,14 @@
     "immer": "9.0.6",
     "isomorphic-unfetch": "3.1.0",
     "leaflet": "1.7.1",
+    "lodash": "^4.17.21",
     "mingo": "4.3.0",
-    "next": "10.2.3",
+    "next": "12.0.3",
     "original-url": "1.2.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-leaflet": "3.2.2",
-    "reactstrap": "8.10.1",
+    "reactstrap": "9.0.0",
     "rrule": "2.6.8",
     "url-join": "4.0.1",
     "webpack-merge": "5.8.0"
@@ -39,13 +40,15 @@
     "@babel/core": "7.16.0",
     "@babel/plugin-proposal-decorators": "7.16.0",
     "@types/leaflet": "1.7.5",
+    "@types/lodash": "^4.14.176",
     "@types/node": "16.11.7",
     "@types/react": "17.0.34",
     "@types/react-dom": "17.0.11",
     "@types/webpack": "5.28.0",
     "fp-ts": "2.11.5",
-    "typescript": "4.2.4",
+    "typescript": "4.4.4",
     "webpack": "5.63.0"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "packageManager": "yarn@3.1.0"
 }
