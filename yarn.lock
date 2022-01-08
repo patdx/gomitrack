@@ -2508,7 +2508,7 @@ fsevents@~2.3.1:
     original-url: 1.2.3
     react: 17.0.2
     react-dom: 17.0.2
-    react-leaflet: 3.2.2
+    react-leaflet: 3.2.3
     reactstrap: 9.0.1
     rrule: 2.6.8
     typescript: 4.5.4
@@ -3937,16 +3937,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"react-leaflet@npm:3.2.2":
-  version: 3.2.2
-  resolution: "react-leaflet@npm:3.2.2"
+"react-leaflet@npm:3.2.3":
+  version: 3.2.3
+  resolution: "react-leaflet@npm:3.2.3"
   dependencies:
     "@react-leaflet/core": ^1.1.1
   peerDependencies:
     leaflet: ^1.7.1
     react: ^17.0.1
     react-dom: ^17.0.1
-  checksum: d5e5f34dea05e4d48d1d8c5c455b62ac1d2d417620b025f1098ca4014d83e81c97db3d5adef6abaa0c0c429aa6230564f50091aab4e7ebd9402d1fc541573967
+  checksum: 2ed0492853006e60486b6a955f9984de5a2f65698bd0423aafd5f702acb3808f3674d44ec165bda24e331476edb67feccba70074c26cdab12101050205d39997
   languageName: node
   linkType: hard
 
