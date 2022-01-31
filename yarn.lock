@@ -1846,7 +1846,7 @@ fsevents@~2.3.1:
     isomorphic-unfetch: 3.1.0
     leaflet: 1.7.1
     lodash: 4.17.21
-    mingo: 5.1.0
+    mingo: 6.0.0
     next: 12.0.9
     original-url: 1.2.3
     react: 17.0.2
@@ -2276,10 +2276,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mingo@npm:5.1.0":
-  version: 5.1.0
-  resolution: "mingo@npm:5.1.0"
-  checksum: f0452925f22929f1f2e50bcedcfe01cb7753a8add22ab74a6b29a7b233b4f4b632a0e20f82a42554925951793dc7e3a8d7706260101805c7b52e7fe5a2e8fad4
+"mingo@npm:6.0.0":
+  version: 6.0.0
+  resolution: "mingo@npm:6.0.0"
+  checksum: 25a4f8f8faeefe1ef1660e472bf0e9ddfa8a22c9de81d0f25be319e944791b29e7f9e971f965883a81174faddd2d72f14bdb413a87bc99b82770e56e37197288
   languageName: node
   linkType: hard
 
