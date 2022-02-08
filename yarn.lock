@@ -59,16 +59,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.17.0":
-  version: 7.17.0
-  resolution: "@babel/core@npm:7.17.0"
+"@babel/core@npm:7.17.2":
+  version: 7.17.2
+  resolution: "@babel/core@npm:7.17.2"
   dependencies:
     "@ampproject/remapping": ^2.0.0
     "@babel/code-frame": ^7.16.7
     "@babel/generator": ^7.17.0
     "@babel/helper-compilation-targets": ^7.16.7
     "@babel/helper-module-transforms": ^7.16.7
-    "@babel/helpers": ^7.17.0
+    "@babel/helpers": ^7.17.2
     "@babel/parser": ^7.17.0
     "@babel/template": ^7.16.7
     "@babel/traverse": ^7.17.0
@@ -78,7 +78,7 @@ __metadata:
     gensync: ^1.0.0-beta.2
     json5: ^2.1.2
     semver: ^6.3.0
-  checksum: b05ab50ee3234cf6ead6fc947fff1c577773040d88b6fea64efda046c3b87aa596c5bbfe2bd287680102bda620e5294625fe1350a54d800d09cca51435b70918
+  checksum: 68ab3459f41b41feb5cb263937f15e418e1c46998d482d1b6dfe34f78064765466cfd5b10205c22fb16b69dbd1d46e7a3c26c067884ca4eb514b3dac1e09a57f
   languageName: node
   linkType: hard
 
@@ -127,9 +127,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helper-create-class-features-plugin@npm:^7.17.0":
-  version: 7.17.0
-  resolution: "@babel/helper-create-class-features-plugin@npm:7.17.0"
+"@babel/helper-create-class-features-plugin@npm:^7.17.1":
+  version: 7.17.1
+  resolution: "@babel/helper-create-class-features-plugin@npm:7.17.1"
   dependencies:
     "@babel/helper-annotate-as-pure": ^7.16.7
     "@babel/helper-environment-visitor": ^7.16.7
@@ -140,7 +140,7 @@ __metadata:
     "@babel/helper-split-export-declaration": ^7.16.7
   peerDependencies:
     "@babel/core": ^7.0.0
-  checksum: 8f709fd51616db817a75cfe6442984c793d94844e29eef330ea1410bd6f82b3df77d64648cf0047889a62ed08cd6fa86fc294bcbaf78372eecfdb2e799601bbe
+  checksum: fb791071dcaa664640d7f1d041772c6b57a8a456720bf7cb21aa055845fad98c644cc7707f03aa94abe8720d19a7c69fd5984fe02fe57b7e99a69f77aa501fc8
   languageName: node
   linkType: hard
 
@@ -284,14 +284,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helpers@npm:^7.17.0":
-  version: 7.17.0
-  resolution: "@babel/helpers@npm:7.17.0"
+"@babel/helpers@npm:^7.17.2":
+  version: 7.17.2
+  resolution: "@babel/helpers@npm:7.17.2"
   dependencies:
     "@babel/template": ^7.16.7
     "@babel/traverse": ^7.17.0
     "@babel/types": ^7.17.0
-  checksum: fed0b0d8fe1b0aef18a0dbc4a0683bbcb039fd3fcff09a4f5b2a1e8f5fc911368983a9a177610c4a88f35ed5c3f5d51bf971ff01596e6f384414dcee2de694a4
+  checksum: 5fa06bbf59636314fb4098bb2e70cf488e0fb6989553438abab90356357b79976102ac129fb16fc8186893c79e0809de1d90e3304426d6fcdb1750da2b6dff9d
   languageName: node
   linkType: hard
 
@@ -324,18 +324,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-decorators@npm:7.17.0":
-  version: 7.17.0
-  resolution: "@babel/plugin-proposal-decorators@npm:7.17.0"
+"@babel/plugin-proposal-decorators@npm:7.17.2":
+  version: 7.17.2
+  resolution: "@babel/plugin-proposal-decorators@npm:7.17.2"
   dependencies:
-    "@babel/helper-create-class-features-plugin": ^7.17.0
+    "@babel/helper-create-class-features-plugin": ^7.17.1
     "@babel/helper-plugin-utils": ^7.16.7
     "@babel/helper-replace-supers": ^7.16.7
     "@babel/plugin-syntax-decorators": ^7.17.0
     charcodes: ^0.2.0
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 363d0fc3e9d75753797c6026cc18132c97cef104c8bfb0f0ecf13411bcc484b49e36254afaa9ceb074f8ed16346270285bfe83c391267076d19a90b4befb8083
+  checksum: da5424d51e49912a1784a7074e8fb7b2d55b4a41c32bf05a829a81987274068e170f469de81d95d177def3480f7de3402a1808d599ad91f98fdaa44023a416da
   languageName: node
   linkType: hard
 
@@ -1852,8 +1852,8 @@ fsevents@~2.3.1:
   resolution: "gomitrack@workspace:."
   dependencies:
     "@babel/cli": 7.17.0
-    "@babel/core": 7.17.0
-    "@babel/plugin-proposal-decorators": 7.17.0
+    "@babel/core": 7.17.2
+    "@babel/plugin-proposal-decorators": 7.17.2
     "@turf/bbox": 6.5.0
     "@turf/helpers": 6.5.0
     "@types/fs-extra": 9.0.13
