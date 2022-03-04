@@ -1944,7 +1944,7 @@ fsevents@~2.3.1:
     react-dom: 17.0.2
     react-leaflet: 3.2.5
     reactstrap: 9.0.1
-    rrule: 2.6.8
+    rrule: 2.6.9
     typescript: 4.6.2
     url-join: 4.0.1
     webpack: 5.70.0
@@ -2916,16 +2916,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"rrule@npm:2.6.8":
-  version: 2.6.8
-  resolution: "rrule@npm:2.6.8"
+"rrule@npm:2.6.9":
+  version: 2.6.9
+  resolution: "rrule@npm:2.6.9"
   dependencies:
     luxon: ^1.21.3
     tslib: ^1.10.0
   dependenciesMeta:
     luxon:
       optional: true
-  checksum: 6c8e84679dd9fad37d063771b709abf68bdb2a8f95c9783400201f5b97f9a2cecfb69fc5f6564d3a8ad79d94c0c94f2537f8023483895fb828395b86954e4cfa
+  checksum: 0dad14c114def9c43c57fe09c9122fd1f985d397cb04dfc62d178918743712b7dbfe1d2b6483be43ff23447f2b72ee84a0ea5d55ac18606c5acff75b64858bd1
   languageName: node
   linkType: hard
 
