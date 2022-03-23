@@ -32,7 +32,7 @@
     "react-leaflet": "3.2.5",
     "reactstrap": "9.0.1",
     "rrule": "2.6.9",
-    "url-join": "4.0.1",
+    "url-join": "5.0.0",
     "webpack-merge": "5.8.0"
   },
   "devDependencies": {
