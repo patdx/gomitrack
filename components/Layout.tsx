@@ -1,16 +1,14 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Collapse, Container, Nav, Navbar, NavItem, NavLink } from 'reactstrap';
+import logoSvg from '../assets/logo.svg';
+import Image from 'next/image';
 
-type Props = {
+export const Layout: React.FunctionComponent<{
+  children?: ReactNode;
   title?: string;
-};
-
-export const Layout: React.FunctionComponent<Props> = ({
-  children,
-  title = 'Gomitrack',
-}) => {
+}> = ({ children, title = 'Gomitrack' }) => {
   return (
     <React.Fragment>
       <Head>
@@ -23,11 +21,12 @@ export const Layout: React.FunctionComponent<Props> = ({
         <Navbar expand="sm" className="px-0">
           <Link href="/" passHref>
             <a className="navbar-brand">
-              <img
+              <Image aria-label="Gomitrack" src={logoSvg} unoptimized width={200} height={40} />
+              {/* <img
                 aria-label="Gomitrack"
                 src="/images/logo4.svg"
                 style={{ width: '200px', height: '40px' }}
-              />
+              /> */}
             </a>
           </Link>
 

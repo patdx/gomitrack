@@ -1,6 +1,6 @@
 import bbox from '@turf/bbox';
 import { lineString } from '@turf/helpers';
-import { pipe } from 'fp-ts/pipeable';
+import { pipe } from 'fp-ts/function';
 import { GetServerSideProps, NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
@@ -73,9 +73,9 @@ const DistrictPage: NextPage<{
                   [minY, minX],
                   [maxY, maxX],
                 ],
-                whenCreated: (map) => {
-                  (window as any).map = map;
-                },
+                // whenCreated: (map) => {
+                //   (window as any).map = map;
+                // },
               }}
             />
           </div>
