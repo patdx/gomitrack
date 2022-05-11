@@ -2573,7 +2573,7 @@ fsevents@~2.3.1:
     eslint-config-next: 12.1.6
     fp-ts: 2.12.1
     fs-extra: 10.1.0
-    immer: 9.0.12
+    immer: 9.0.13
     isomorphic-unfetch: 3.1.0
     leaflet: 1.8.0
     lodash: 4.17.21
@@ -2714,10 +2714,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"immer@npm:9.0.12":
-  version: 9.0.12
-  resolution: "immer@npm:9.0.12"
-  checksum: bcbec6d76dac65e49068eb67ece4d407116e62b8cde3126aa89c801e408f5047763ba0aeb62f1938c1aa704bb6612f1d8302bb2a86fa1fc60fcc12d8b25dc895
+"immer@npm:9.0.13":
+  version: 9.0.13
+  resolution: "immer@npm:9.0.13"
+  checksum: cd3b82d4f4e9ad61879ab27071855224665fd8b5893ecc42a267f8965a7f75bcceae24e47244c826768124e95a3ae0a4a15a0dfd034a9efae4298936e162c7d7
   languageName: node
   linkType: hard
 
