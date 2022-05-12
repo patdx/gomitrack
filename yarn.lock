@@ -772,12 +772,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/leaflet@npm:1.7.9":
-  version: 1.7.9
-  resolution: "@types/leaflet@npm:1.7.9"
+"@types/leaflet@npm:1.7.10":
+  version: 1.7.10
+  resolution: "@types/leaflet@npm:1.7.10"
   dependencies:
     "@types/geojson": "*"
-  checksum: 1a8c18b50d1b7726e99d86f9087733216b830c545a97ea95a83ff45e51e555bbef8f4eab654de603f539b9a297d352f8c443895f75cc5c52a7b488eaed664c04
+  checksum: 212b01080df85994eb0d8e9b81f51d218da47876a9dcf59b5c34ffd1916979b9a784364d1838be72f5712ae969a21698ee36ed81350ec6a36d19fe8ccc1b3473
   languageName: node
   linkType: hard
 
@@ -2558,7 +2558,7 @@ fsevents@~2.3.1:
     "@turf/bbox": 6.5.0
     "@turf/helpers": 6.5.0
     "@types/fs-extra": 9.0.13
-    "@types/leaflet": 1.7.9
+    "@types/leaflet": 1.7.10
     "@types/lodash": 4.14.182
     "@types/lowdb": 1.0.11
     "@types/node": 16.11.34
