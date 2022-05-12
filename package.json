@@ -20,7 +20,7 @@
     "date-fns": "2.28.0",
     "dotenv": "16.0.1",
     "fs-extra": "10.1.0",
-    "immer": "9.0.13",
+    "immer": "9.0.14",
     "isomorphic-unfetch": "3.1.0",
     "leaflet": "1.8.0",
     "lodash": "4.17.21",
