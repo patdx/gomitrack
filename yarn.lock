@@ -2654,7 +2654,7 @@ fsevents@~2.3.1:
     react-dom: 18.1.0
     react-leaflet: 4.0.0
     reactstrap: 9.0.3
-    rrule: 2.6.9
+    rrule: 2.7.0
     typescript: 4.7.3
     url-join: 5.0.0
     webpack: 5.73.0
@@ -3264,13 +3264,6 @@ fsevents@~2.3.1:
   dependencies:
     yallist: ^4.0.0
   checksum: f97f499f898f23e4585742138a22f22526254fdba6d75d41a1c2526b3b6cc5747ef59c5612ba7375f42aca4f8461950e925ba08c991ead0651b4918b7c978297
-  languageName: node
-  linkType: hard
-
-"luxon@npm:^1.21.3":
-  version: 1.25.0
-  resolution: "luxon@npm:1.25.0"
-  checksum: 0c3807b92684c4c84061f9666afc3e87c4852e3c557d4ab837c7d938582fb66961a6d33a7d49731492712456ac2d19ac5a6ae480a6bc53941bca31ce7d36112b
   languageName: node
   linkType: hard
 
@@ -4174,16 +4167,12 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"rrule@npm:2.6.9":
-  version: 2.6.9
-  resolution: "rrule@npm:2.6.9"
+"rrule@npm:2.7.0":
+  version: 2.7.0
+  resolution: "rrule@npm:2.7.0"
   dependencies:
-    luxon: ^1.21.3
     tslib: ^1.10.0
-  dependenciesMeta:
-    luxon:
-      optional: true
-  checksum: 0dad14c114def9c43c57fe09c9122fd1f985d397cb04dfc62d178918743712b7dbfe1d2b6483be43ff23447f2b72ee84a0ea5d55ac18606c5acff75b64858bd1
+  checksum: 26d028297b11ea94ac34e4c9779178f56e02f9844adbbdf0642ad6c8838a85742a49323e8591c07bed6561411ddd41f49fd8847e99f83d055a4a6abf550cba6b
   languageName: node
   linkType: hard
 
