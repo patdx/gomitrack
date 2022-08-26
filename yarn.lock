@@ -2729,7 +2729,7 @@ fsevents@~2.3.1:
     react: 18.2.0
     react-dom: 18.2.0
     react-leaflet: 4.0.2
-    reactstrap: 9.1.3
+    reactstrap: 9.1.4
     rrule: 2.7.0
     typescript: 4.8.2
     url-join: 5.0.0
@@ -4136,9 +4136,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"reactstrap@npm:9.1.3":
-  version: 9.1.3
-  resolution: "reactstrap@npm:9.1.3"
+"reactstrap@npm:9.1.4":
+  version: 9.1.4
+  resolution: "reactstrap@npm:9.1.4"
   dependencies:
     "@babel/runtime": ^7.12.5
     "@popperjs/core": ^2.6.0
@@ -4149,7 +4149,7 @@ fsevents@~2.3.1:
   peerDependencies:
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: dafec5beef91c34e71871bb943c9f9eb1e9da088b76f155aa56ece452f16c083782bae5c27243a362f61041f8cb709fa0004d734f671a13078d60c4c8d08bb8e
+  checksum: b0a02aea8cdd0525a34f023fd1a558c821680cbca5ec6d82c958e7e8c77793369a02dd5fd32d99ec911ef56646daf8c3135177ce1c66b2d8971ae6fcdc503be7
   languageName: node
   linkType: hard
 
