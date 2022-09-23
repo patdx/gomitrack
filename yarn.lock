@@ -2826,7 +2826,7 @@ fsevents@~2.3.1:
     fs-extra: 10.1.0
     immer: 9.0.15
     isomorphic-unfetch: 3.1.0
-    leaflet: 1.9.0
+    leaflet: 1.9.1
     lodash: 4.17.21
     mingo: 6.1.0
     next: 12.3.1
@@ -3394,10 +3394,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"leaflet@npm:1.9.0":
-  version: 1.9.0
-  resolution: "leaflet@npm:1.9.0"
-  checksum: 2f55313f681f149ff8f011b0cbc66e3a8710cec40f033243d24a26c57a46c56e7b8ceed53a61f0b258d4adf99592cc9c14d5f1de8eb70a6037f496ead2d228cf
+"leaflet@npm:1.9.1":
+  version: 1.9.1
+  resolution: "leaflet@npm:1.9.1"
+  checksum: e91f71c9979c8988e11c49ca456f827f1fbe92bdda8ad266defd32a2272b5108678ba13d7564e4edbca9b2c1b40d310c01174222fd148445733ba1166c520350
   languageName: node
   linkType: hard
 
