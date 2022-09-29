@@ -18,7 +18,7 @@
     "@types/url-join": "4.0.1",
     "bootstrap": "5.2.1",
     "date-fns": "2.29.3",
-    "dotenv": "16.0.2",
+    "dotenv": "16.0.3",
     "fs-extra": "10.1.0",
     "immer": "9.0.15",
     "isomorphic-unfetch": "3.1.0",
