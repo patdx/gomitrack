@@ -991,12 +991,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/leaflet@npm:1.8.0":
-  version: 1.8.0
-  resolution: "@types/leaflet@npm:1.8.0"
+"@types/leaflet@npm:1.9.0":
+  version: 1.9.0
+  resolution: "@types/leaflet@npm:1.9.0"
   dependencies:
     "@types/geojson": "*"
-  checksum: a0190d48dfd49c7526a38c94490d9acdcb09de8b0338ebae8b33374b24f474330be82733007ab1c39008a61c4712b743ccf230909f203f0f35c9986b3a583ab6
+  checksum: f3ee2e2fc8bd3480d77667471c8f774a3726ff7694a7d08d2423c05b40e28f00379c7d469b4cbd3b53a1bc96c75970c92f9da7908fc477cbac0eda2a9d17b6ad
   languageName: node
   linkType: hard
 
@@ -2865,7 +2865,7 @@ fsevents@~2.3.1:
     "@turf/bbox": 6.5.0
     "@turf/helpers": 6.5.0
     "@types/fs-extra": 9.0.13
-    "@types/leaflet": 1.8.0
+    "@types/leaflet": 1.9.0
     "@types/lodash": 4.14.186
     "@types/lowdb": 1.0.11
     "@types/node": 16.11.63
@@ -2882,7 +2882,7 @@ fsevents@~2.3.1:
     fs-extra: 10.1.0
     immer: 9.0.15
     isomorphic-unfetch: 3.1.0
-    leaflet: 1.9.1
+    leaflet: 1.9.3
     lodash: 4.17.21
     mingo: 6.1.1
     next: 12.3.1
@@ -3450,10 +3450,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"leaflet@npm:1.9.1":
-  version: 1.9.1
-  resolution: "leaflet@npm:1.9.1"
-  checksum: e91f71c9979c8988e11c49ca456f827f1fbe92bdda8ad266defd32a2272b5108678ba13d7564e4edbca9b2c1b40d310c01174222fd148445733ba1166c520350
+"leaflet@npm:1.9.3":
+  version: 1.9.3
+  resolution: "leaflet@npm:1.9.3"
+  checksum: f8bc33215e6aed8488cb3d32511b943ff093c1747bcda8a39116e24fe714e12525f1a6843b6a79940ece4cf8d2a86e2cb1d7b80fc550344b3182659b19231a04
   languageName: node
   linkType: hard
 
