@@ -1030,10 +1030,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:16.11.63":
-  version: 16.11.63
-  resolution: "@types/node@npm:16.11.63"
-  checksum: d0c905916560fea680cadca356418016bd07d0227b7374139b6342191e11cc0fa2251400453d08c49f111bd88c58728113271573b8ce8d90796d220b7d3a9b39
+"@types/node@npm:16.18.4":
+  version: 16.18.4
+  resolution: "@types/node@npm:16.18.4"
+  checksum: c2da162df295d81eed199d2b12f1edf9618d9f4099ba84a8553859b40e1dac2d44131c75b57803bd35cf9da881434d0abebe46994a2936b6b9c16d8e52db9146
   languageName: node
   linkType: hard
 
@@ -2868,7 +2868,7 @@ fsevents@~2.3.1:
     "@types/leaflet": 1.8.0
     "@types/lodash": 4.14.186
     "@types/lowdb": 1.0.11
-    "@types/node": 16.11.63
+    "@types/node": 16.18.4
     "@types/react": 18.0.21
     "@types/react-dom": 18.0.6
     "@types/url-join": 4.0.1
