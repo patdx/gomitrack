@@ -21,7 +21,7 @@
     "dotenv": "16.0.3",
     "fs-extra": "10.1.0",
     "immer": "9.0.15",
-    "isomorphic-unfetch": "3.1.0",
+    "isomorphic-unfetch": "4.0.2",
     "leaflet": "1.9.1",
     "lodash": "4.17.21",
     "mingo": "6.1.1",
