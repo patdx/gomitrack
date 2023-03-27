@@ -1,6 +1,6 @@
 const { merge } = require('webpack-merge');
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
-require('dotenv').config();
+// require('dotenv').config();
 
 module.exports = (phase) => ({
   env: (() => {
@@ -37,8 +37,5 @@ module.exports = (phase) => ({
     );
 
     return output;
-  },
-  future: {
-    webpack5: true,
   },
 });

@@ -1,6 +1,6 @@
-import RRule from 'rrule';
-import { GarbageType } from "./garbage-type";
-import { format } from 'date-fns';
+import { RRule } from 'rrule';
+import { GarbageType } from './garbage-type';
+import { DateTime } from 'luxon';
 
 export interface GarbageTypeFrequency {
   garbage: string | GarbageType;
@@ -21,16 +21,18 @@ export const nextDate = (garbageItem: GarbageTypeFrequency) => {
   const rrule = RRule.fromString(garbageItem.frequencyRRule);
   const nextDateInFakeUtc = rrule.after(dateInFakeUtc, true);
 
-  const nextDate = new Date(
-    nextDateInFakeUtc.getUTCFullYear(),
-    nextDateInFakeUtc.getUTCMonth(),
-    nextDateInFakeUtc.getUTCDate()
-  );
-  console.log(nextDateInFakeUtc, JSON.stringify(nextDateInFakeUtc));
-  console.log(nextDate, JSON.stringify(nextDate));
+  // TODO: review is this is corrcct
+  const nextDate = DateTime.fromJSDate(nextDateInFakeUtc!)
+    .toUTC()
+    .setZone('local', { keepLocalTime: true })
+    .setZone('Asia/Tokyo');
+
+  console.log('fake next date:', nextDateInFakeUtc, 'real next date', nextDate);
+
   return nextDate;
 };
 
 export const nextDateFormatted = (garbageItem: GarbageTypeFrequency) => {
-  return format(nextDate(garbageItem), 'PPPP');
+  return nextDate(garbageItem).toLocaleString(DateTime.DATE_FULL);
+  // return format(nextDate(garbageItem), 'PPPP');
 };

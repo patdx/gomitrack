@@ -1,5 +1,4 @@
-import { pipe } from 'fp-ts/pipeable';
-import { IncomingMessage } from 'http';
+import { pipe } from 'fp-ts/function';
 import produce from 'immer';
 import { find } from 'mingo';
 import { CollectionArea } from './collection-area';
@@ -25,13 +24,12 @@ export const mapLocations = (district: CollectionDistrict) => {
   });
 };
 
-export const findDistrict = async (
-  districtName: string,
-  req?: IncomingMessage
-) => {
-  const db = await getDatabase(req);
+export const findDistrict = async (districtName: string) => {
+  const db = await getDatabase();
   const district = pipe(
-    find(db.districts ?? [], { name: districtName }).next() as CollectionDistrict,
+    find(db.districts ?? [], {
+      name: districtName,
+    }).next() as CollectionDistrict,
     (district) =>
       produce(district, (draft) => {
         draft.garbages.forEach((garbage) => {
@@ -46,11 +44,8 @@ export const findDistrict = async (
   return district;
 };
 
-export const findDistrictWithSortedSchedule = async (
-  districtName: string,
-  req?: IncomingMessage
-) => {
-  const district = await findDistrict(districtName, req);
+export const findDistrictWithSortedSchedule = async (districtName: string) => {
+  const district = await findDistrict(districtName);
   if (!district) {
     return;
   }

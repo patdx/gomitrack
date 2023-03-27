@@ -1,14 +1,15 @@
-import { IncomingMessage } from 'http';
 import { memoize } from 'lodash';
 import { CollectionDistrict } from './collection-district';
-import { fetchJson } from './fetch';
 import { GarbageType } from './garbage-type';
 
-export const getDatabase = memoize(async (req?: IncomingMessage) => {
-  const db = await fetchJson({ req, src: '/db.json' });
+export const getDatabase = memoize(async () => {
+  const db = await import('./db.json');
+  return db.default;
+  // const db = await fetchJson({ req, src: '/db.json' });
 
-  return db;
+  // return db;
 });
+
 export interface AppDatabase {
   garbages?: GarbageType[];
   districts?: CollectionDistrict[];

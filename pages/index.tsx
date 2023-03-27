@@ -26,11 +26,12 @@ const IndexPage: NextPage<{ districts: CollectionDistrict[] }> = ({
             <div className="row gy-2" key={index}>
               <div className="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                 <h2 className="h-100">
-                  <Link href="/districts/[district]" as={`/districts/${name}`}>
-                    <a className="btn h-100 btn-lg d-block text-start btn-outline-light text-dark">
-                      <div>{nameJP}</div>
-                      <div>{name}</div>
-                    </a>
+                  <Link
+                    href={`/districts/${name}`}
+                    className="btn h-100 btn-lg d-block text-start btn-outline-light text-dark"
+                  >
+                    <div>{nameJP}</div>
+                    <div>{name}</div>
                   </Link>
                 </h2>
               </div>
@@ -45,22 +46,16 @@ const IndexPage: NextPage<{ districts: CollectionDistrict[] }> = ({
                         key={index}
                       >
                         <Link
-                          href={{
-                            pathname: '/districts/[district]',
-                            query: {
-                              district: name,
-                            },
-                          }}
+                          href={`/districts/${encodeURIComponent(name)}`}
+                          className="card p-0 shadow-sm text-decoration-none text-start btn btn-outline-light"
                         >
-                          <a className="card p-0 shadow-sm text-decoration-none text-start btn btn-outline-light">
-                            <div className="card-body">
-                              <div className="text-dark">{addressJP}</div>
-                              <div className="text-muted">{address}</div>
-                              <div className="text-black-50">
-                                〒{formatZip(addressItem)}
-                              </div>
+                          <div className="card-body">
+                            <div className="text-dark">{addressJP}</div>
+                            <div className="text-muted">{address}</div>
+                            <div className="text-black-50">
+                              〒{formatZip(addressItem)}
                             </div>
-                          </a>
+                          </div>
                         </Link>
                       </div>
                     );

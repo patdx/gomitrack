@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React, { ReactNode } from 'react';
 import { Collapse, Container, Nav, Navbar, NavItem, NavLink } from 'reactstrap';
 import logoSvg from '../assets/logo.svg';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 export const Layout: React.FunctionComponent<{
   children?: ReactNode;
@@ -19,27 +19,31 @@ export const Layout: React.FunctionComponent<{
 
       <Container>
         <Navbar expand="sm" className="px-0">
-          <Link href="/" passHref>
-            <a className="navbar-brand">
-              <Image aria-label="Gomitrack" src={logoSvg} unoptimized width={200} height={40} />
-              {/* <img
+          <Link href="/" passHref className="navbar-brand">
+            <Image
+              aria-label="Gomitrack"
+              src={logoSvg}
+              unoptimized
+              width={200}
+              height={40}
+            />
+            {/* <img
                 aria-label="Gomitrack"
                 src="/images/logo4.svg"
                 style={{ width: '200px', height: '40px' }}
               /> */}
-            </a>
           </Link>
 
           <Collapse isOpen={true} navbar>
             <Nav navbar>
               <NavItem>
-                <Link href="/" passHref>
+                <Link href="/" passHref legacyBehavior>
                   <NavLink>Districts</NavLink>
                 </Link>
               </NavItem>
 
               <NavItem>
-                <Link href="/about" passHref>
+                <Link href="/about" passHref legacyBehavior>
                   <NavLink>About</NavLink>
                 </Link>
               </NavItem>

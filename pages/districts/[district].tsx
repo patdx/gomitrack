@@ -105,10 +105,7 @@ const DistrictPage: NextPage<{
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const districtName = context.query.district as string;
-  const district = await findDistrictWithSortedSchedule(
-    districtName,
-    context.req
-  );
+  const district = await findDistrictWithSortedSchedule(districtName);
 
   if (!district) {
     throw new Error(`could not find district ${districtName}`);
