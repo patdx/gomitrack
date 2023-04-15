@@ -40,17 +40,17 @@
     "@babel/core": "7.21.4",
     "@babel/plugin-proposal-decorators": "7.21.0",
     "@types/leaflet": "1.9.3",
-    "@types/lodash": "4.14.192",
+    "@types/lodash": "4.14.194",
     "@types/luxon": "^3.2.0",
     "@types/node": "18.15.11",
-    "@types/react": "18.0.34",
+    "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
     "@types/webpack": "5.28.1",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "fp-ts": "2.13.1",
     "typescript": "5.0.4",
-    "webpack": "5.78.0"
+    "webpack": "5.79.0"
   },
   "license": "ISC",
   "packageManager": "yarn@3.5.0"
