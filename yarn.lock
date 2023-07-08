@@ -4751,16 +4751,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:~0.5.19":
-  version: 0.5.19
-  resolution: "source-map-support@npm:0.5.19"
-  dependencies:
-    buffer-from: ^1.0.0
-    source-map: ^0.6.0
-  checksum: c72802fdba9cb62b92baef18cc14cc4047608b77f0353e6c36dd993444149a466a2845332c5540d4a6630957254f0f68f4ef5a0120c33d2e83974c51a05afbac
-  languageName: node
-  linkType: hard
-
 "source-map-support@npm:~0.5.20":
   version: 0.5.21
   resolution: "source-map-support@npm:0.5.21"
@@ -4775,13 +4765,6 @@ fsevents@~2.3.1:
   version: 0.6.1
   resolution: "source-map@npm:0.6.1"
   checksum: 59ce8640cf3f3124f64ac289012c2b8bd377c238e316fb323ea22fbfe83da07d81e000071d7242cad7a23cd91c7de98e4df8830ec3f133cb6133a5f6e9f67bc2
-  languageName: node
-  linkType: hard
-
-"source-map@npm:~0.7.2":
-  version: 0.7.3
-  resolution: "source-map@npm:0.7.3"
-  checksum: cd24efb3b8fa69b64bf28e3c1b1a500de77e84260c5b7f2b873f88284df17974157cc88d386ee9b6d081f08fdd8242f3fc05c953685a6ad81aad94c7393dedea
   languageName: node
   linkType: hard
 
@@ -5029,9 +5012,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"terser@npm:^5.16.5":
-  version: 5.16.9
-  resolution: "terser@npm:5.16.9"
+"terser@npm:^5.16.5, terser@npm:^5.7.0":
+  version: 5.17.1
+  resolution: "terser@npm:5.17.1"
   dependencies:
     "@jridgewell/source-map": ^0.3.2
     acorn: ^8.5.0
@@ -5039,20 +5022,7 @@ fsevents@~2.3.1:
     source-map-support: ~0.5.20
   bin:
     terser: bin/terser
-  checksum: b373693ee01ce08cc9b9595d57df889acbbc899d929a7fe53662330ce954d53145582f6715c9cc4839d555f5769a28fbeb203155b54e3a9c6c646db292002edd
-  languageName: node
-  linkType: hard
-
-"terser@npm:^5.7.0":
-  version: 5.7.0
-  resolution: "terser@npm:5.7.0"
-  dependencies:
-    commander: ^2.20.0
-    source-map: ~0.7.2
-    source-map-support: ~0.5.19
-  bin:
-    terser: bin/terser
-  checksum: 3abeb551865079b27e2890dbec866054967d1963fc80a81e5e14e414c43db88ff53a5e88844c145df11bed01b28040aa96afd82113c6d1a6ad28409b6cae4fde
+  checksum: 69b0e80e3c4084db2819de4d6ae8a2ba79f2fcd7ed6df40fe4b602ec7bfd8e889cc63c7d5268f30990ffecbf6eeda18f857adad9386fe2c2331b398d58ed855c
   languageName: node
   linkType: hard
 
