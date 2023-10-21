@@ -3272,7 +3272,7 @@ fsevents@~2.3.1:
     leaflet: 1.9.4
     lodash: 4.17.21
     luxon: ^3.3.0
-    mingo: 6.4.7
+    mingo: 6.4.8
     next: 13.5.6
     original-url: 1.2.3
     react: 18.2.0
@@ -4159,10 +4159,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mingo@npm:6.4.7":
-  version: 6.4.7
-  resolution: "mingo@npm:6.4.7"
-  checksum: d37fcb1200350b107c4f0586e44d06e09c671e721a38bc258a31b8f378aa200f42e4f5328432661bf661416b394e8166aa6f5283cb129d0e11773f3cad7400bd
+"mingo@npm:6.4.8":
+  version: 6.4.8
+  resolution: "mingo@npm:6.4.8"
+  checksum: 800640631ab3f9f76605e55783ce854a0d71027b86a56a0dc17e80d75896acec597c41385762882cf37e1f26f962e49161546c67ddcf15d547effd3a175d252b
   languageName: node
   linkType: hard
 
