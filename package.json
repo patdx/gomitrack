@@ -53,5 +53,5 @@
     "webpack": "5.89.0"
   },
   "license": "ISC",
-  "packageManager": "yarn@3.6.4"
+  "packageManager": "yarn@4.0.2"
 }
