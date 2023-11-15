@@ -1,8 +1,7 @@
 import React from 'react';
-import { Layout } from '../components/Layout';
 
 const AboutPage: React.FunctionComponent = () => (
-  <Layout>
+  <>
     <h1>About</h1>
 
     <p>
@@ -25,7 +24,7 @@ const AboutPage: React.FunctionComponent = () => (
     </p>
 
     <p>(Note that the data is not currently posted on the website.)</p>
-  </Layout>
+  </>
 );
 
 export default AboutPage;

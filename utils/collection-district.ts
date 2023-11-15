@@ -1,10 +1,9 @@
-import { pipe } from 'fp-ts/function';
-import produce from 'immer';
+import { produce } from 'immer';
 import { find } from 'mingo';
 import { CollectionArea } from './collection-area';
-import { GarbageTypeFrequency, nextDate } from './garbage-type-frequency';
 import { getDatabase } from './database';
 import { GarbageType } from './garbage-type';
+import { GarbageTypeFrequency, nextDate } from './garbage-type-frequency';
 
 export interface CollectionDistrict {
   name: string;
@@ -25,23 +24,23 @@ export const mapLocations = (district: CollectionDistrict) => {
 };
 
 export const findDistrict = async (districtName: string) => {
+  console.log(`Searching for ` + districtName);
   const db = await getDatabase();
-  const district = pipe(
-    find(db.districts ?? [], {
-      name: districtName,
-    }).next() as CollectionDistrict,
-    (district) =>
-      produce(district, (draft) => {
-        draft.garbages.forEach((garbage) => {
-          // TODO: use two properties for this
-          garbage.garbage = find(db.garbages ?? [], {
-            _id: garbage.garbage as string,
-          }).next() as GarbageType;
-        });
-      })
-  );
 
-  return district;
+  const district = find<CollectionDistrict>(db.districts ?? [], {
+    name: districtName,
+  }).next();
+
+  if (!district) return undefined;
+
+  return produce(district, (draft) => {
+    draft.garbages.forEach((garbage) => {
+      // TODO: use two properties for this
+      garbage.garbage = find(db.garbages ?? [], {
+        _id: garbage.garbage as string,
+      }).next() as GarbageType;
+    });
+  });
 };
 
 export const findDistrictWithSortedSchedule = async (districtName: string) => {

@@ -1,22 +1,19 @@
+'use client';
+
 import bbox from '@turf/bbox';
 import { lineString } from '@turf/helpers';
 import { pipe } from 'fp-ts/function';
-import { GetServerSideProps, NextPage } from 'next';
+import { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import { Layout } from '../../components/Layout';
-import { formatZip } from '../../utils/collection-area';
-import {
-  CollectionDistrict,
-  findDistrictWithSortedSchedule,
-  mapLocations,
-} from '../../utils/collection-district';
-import { GarbageType } from '../../utils/garbage-type';
-import { nextDateFormatted } from '../../utils/garbage-type-frequency';
+import { formatZip } from '../../../utils/collection-area';
+import { CollectionDistrict } from '../../../utils/collection-district';
+import { GarbageType } from '../../../utils/garbage-type';
+import { nextDateFormatted } from '../../../utils/garbage-type-frequency';
 
-const Map = dynamic(() => import('../../components/map'), { ssr: false });
+const Map = dynamic(() => import('../../../components/map'), { ssr: false });
 
-const DistrictPage: NextPage<{
+export const ClientDistrictPage: NextPage<{
   district: CollectionDistrict;
   locations: { lat: number; lng: number }[];
 }> = ({ district, locations }) => {
@@ -30,7 +27,7 @@ const DistrictPage: NextPage<{
   });
 
   return (
-    <Layout>
+    <>
       <h1>
         <span className="districtJP">{district?.nameJP}</span>{' '}
         <span className="districtEN">{district?.name}</span>
@@ -99,26 +96,6 @@ const DistrictPage: NextPage<{
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const districtName = context.query.district as string;
-  const district = await findDistrictWithSortedSchedule(districtName);
-
-  if (!district) {
-    throw new Error(`could not find district ${districtName}`);
-  }
-
-  return {
-    props: JSON.parse(
-      JSON.stringify({
-        district,
-        locations: mapLocations(district),
-      })
-    ),
-  };
-};
-
-export default DistrictPage;

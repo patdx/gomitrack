@@ -1,21 +1,30 @@
 import mingo from 'mingo';
-import { GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
-import React from 'react';
-import { Layout } from '../components/Layout';
 import { formatZip } from '../utils/collection-area';
-import { CollectionDistrict } from '../utils/collection-district';
 import { getDatabase } from '../utils/database';
 
 // const A = forwardRef<HTMLAnchorElement>((props, ref) => (
 //   <a {...props} ref={ref} />
 // ));
 
-const IndexPage: NextPage<{ districts: CollectionDistrict[] }> = ({
-  districts,
-}) => {
+const IndexPage = async () => {
+  const db = await getDatabase();
+
+  const districts = mingo
+    .find<{
+      addresses: any[];
+      [key: string]: any;
+    }>(db.districts ?? [], {})
+    .sort({
+      name: 1,
+      'addresses.addressJP': 1,
+    })
+    .all();
+
+  // <Layout title="Gomitrack Districts"></Layout>
+
   return (
-    <Layout title="Gomitrack Districts">
+    <>
       <h1>Districts</h1>
 
       <div className="d-grid gap-4">
@@ -66,26 +75,8 @@ const IndexPage: NextPage<{ districts: CollectionDistrict[] }> = ({
           );
         })}
       </div>
-    </Layout>
+    </>
   );
-};
-
-export const getStaticProps: GetStaticProps = async (_context) => {
-  const db = await getDatabase();
-
-  const districts = mingo
-    .find(db.districts ?? [], {})
-    .sort({
-      name: 1,
-      'addresses.addressJP': 1,
-    })
-    .all();
-
-  return {
-    props: {
-      districts,
-    },
-  };
 };
 
 export default IndexPage;
