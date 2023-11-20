@@ -22,9 +22,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/cli@npm:7.23.0":
-  version: 7.23.0
-  resolution: "@babel/cli@npm:7.23.0"
+"@babel/cli@npm:7.23.4":
+  version: 7.23.4
+  resolution: "@babel/cli@npm:7.23.4"
   dependencies:
     "@jridgewell/trace-mapping": "npm:^0.3.17"
     "@nicolo-ribaudo/chokidar-2": "npm:2.1.8-no-fsevents.3"
@@ -45,7 +45,7 @@ __metadata:
   bin:
     babel: ./bin/babel.js
     babel-external-helpers: ./bin/babel-external-helpers.js
-  checksum: a08dab5b18e839562f8a9664b09b5b30ef43a4a81ab54c2a3ad6810d2e6d382fd5b8b8ec33841e84692e18df3927c0792018a896ca107c970f3fea75f9043417
+  checksum: a65f04c37b483727b27a3cb130dfaecb2af46cee4f9f5aac579f5ade934b592c1049afa5c16eeac704de38b4119c280230a434e242fbaea1f41763d0dd00d549
   languageName: node
   linkType: hard
 
@@ -2701,7 +2701,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gomitrack@workspace:."
   dependencies:
-    "@babel/cli": "npm:7.23.0"
+    "@babel/cli": "npm:7.23.4"
     "@babel/core": "npm:7.23.3"
     "@babel/plugin-proposal-decorators": "npm:7.23.3"
     "@turf/bbox": "npm:6.5.0"
@@ -2735,7 +2735,7 @@ __metadata:
     react-leaflet: "npm:4.2.1"
     reactstrap: "npm:9.2.1"
     rrule: "npm:2.8.1"
-    typescript: "npm:5.2.2"
+    typescript: "npm:5.3.2"
     url-join: "npm:5.0.0"
     webpack: "npm:5.89.0"
     webpack-merge: "npm:5.10.0"
@@ -4986,23 +4986,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.2.2":
-  version: 5.2.2
-  resolution: "typescript@npm:5.2.2"
+"typescript@npm:5.3.2":
+  version: 5.3.2
+  resolution: "typescript@npm:5.3.2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: d65e50eb849bd21ff8677e5b9447f9c6e74777e346afd67754934264dcbf4bd59e7d2473f6062d9a015d66bd573311166357e3eb07fea0b52859cf9bb2b58555
+  checksum: 415e5fb6611f5713e460bad48039f00bcfdbde53a2f911727862d5aa9c5d5edd250059a419df382d8f031709e15a169c41eb62b6a401da5eec7ac0f4e359d6ac
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>":
-  version: 5.2.2
-  resolution: "typescript@patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"
+"typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>":
+  version: 5.3.2
+  resolution: "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: f79cc2ba802c94c2b78dbb00d767a10adb67368ae764709737dc277273ec148aa4558033a03ce901406b35fddf4eac46dabc94a1e1d12d2587e2b9cfe5707b4a
+  checksum: 1b45cdfb577a78ae7a9a9d0b77a7b772142cb98ba05e4e5aefba7044a028ded885bcecef63166407a5986645cea816fe4986894336aacd5e791796ea79a6a7ed
   languageName: node
   linkType: hard
 
