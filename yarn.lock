@@ -382,7 +382,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.7":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.7":
   version: 7.23.1
   resolution: "@babel/runtime@npm:7.23.1"
   dependencies:
@@ -1834,12 +1834,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:2.30.0":
-  version: 2.30.0
-  resolution: "date-fns@npm:2.30.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.21.0"
-  checksum: 70b3e8ea7aaaaeaa2cd80bd889622a4bcb5d8028b4de9162cbcda359db06e16ff6e9309e54eead5341e71031818497f19aaf9839c87d1aba1e27bb4796e758a9
+"date-fns@npm:3.0.0":
+  version: 3.0.0
+  resolution: "date-fns@npm:3.0.0"
+  checksum: 2d3de7f435bb85d8898b3f0c32e5f25d554fea926dc3d5814cfc42f0079aa44e46c284be801e856b7be5e371b2ac93fccda7fa5a58f6996e23291feb5f536eb4
   languageName: node
   linkType: hard
 
@@ -2821,7 +2819,7 @@ __metadata:
     "@types/url-join": "npm:4.0.3"
     "@types/webpack": "npm:5.28.5"
     bootstrap: "npm:5.3.2"
-    date-fns: "npm:2.30.0"
+    date-fns: "npm:3.0.0"
     dotenv: "npm:16.3.1"
     eslint: "npm:8.56.0"
     eslint-config-next: "npm:14.0.4"
