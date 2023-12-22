@@ -1834,10 +1834,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:3.0.5":
-  version: 3.0.5
-  resolution: "date-fns@npm:3.0.5"
-  checksum: a2709e1f205f2f53109566ce06341c2ea767b9abbb6d1a15c38b34504eac56d68281094ab3445723958eabdf5b576b786446c434def3256785d62a662b5c3abf
+"date-fns@npm:3.0.6":
+  version: 3.0.6
+  resolution: "date-fns@npm:3.0.6"
+  checksum: 4eb4c1f15257026593bd62ea366347be3940a83133fc84aa32e03bc9a19d6f8a919ef0475211200b16de7980e1d797c993713ed092a6f5c941474bce516f7d96
   languageName: node
   linkType: hard
 
@@ -2819,7 +2819,7 @@ __metadata:
     "@types/url-join": "npm:4.0.3"
     "@types/webpack": "npm:5.28.5"
     bootstrap: "npm:5.3.2"
-    date-fns: "npm:3.0.5"
+    date-fns: "npm:3.0.6"
     dotenv: "npm:16.3.1"
     eslint: "npm:8.56.0"
     eslint-config-next: "npm:14.0.4"
