@@ -887,12 +887,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.10.7":
-  version: 20.10.7
-  resolution: "@types/node@npm:20.10.7"
+"@types/node@npm:20.10.8":
+  version: 20.10.8
+  resolution: "@types/node@npm:20.10.8"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 4a1ba3fb7fc0a262c6b2d5ec763cec7abf5b5d6b2d277798ddbf05227f5778f9a806987821fd4d3eacd6f37c946ac61a9c64fb79ae4b84daaec12354158835a3
+  checksum: 820efb084997bb62635883c820bc00c4bd01c71d66b8191fe8559256d6612f6665bbf682ed700bc55a99d48ff1e646d987c6f51afb3cffdb772f267727706277
   languageName: node
   linkType: hard
 
@@ -1831,10 +1831,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:3.1.0":
-  version: 3.1.0
-  resolution: "date-fns@npm:3.1.0"
-  checksum: d542977c57fbb2166a569e235af5e8dde884f9a15fd6778df41a81237dae2a49891b041c8e4b12dae5270f5f00e508907fe7eee07ad24291edad0d75de352006
+"date-fns@npm:3.2.0":
+  version: 3.2.0
+  resolution: "date-fns@npm:3.2.0"
+  checksum: 2f36cb9165a066ae90c0b6f0c25b3c70eb75bc52e64ba6dd8680964ebda144851a244ff4ed0b2afb4a6bab796a1af6a0e6c7c2814529d04c72fa434f931d4e81
   languageName: node
   linkType: hard
 
@@ -2810,13 +2810,13 @@ __metadata:
     "@types/lodash": "npm:4.14.202"
     "@types/lowdb": "npm:1.0.15"
     "@types/luxon": "npm:^3.3.4"
-    "@types/node": "npm:20.10.7"
+    "@types/node": "npm:20.10.8"
     "@types/react": "npm:18.2.47"
     "@types/react-dom": "npm:18.2.18"
     "@types/url-join": "npm:4.0.3"
     "@types/webpack": "npm:5.28.5"
     bootstrap: "npm:5.3.2"
-    date-fns: "npm:3.1.0"
+    date-fns: "npm:3.2.0"
     dotenv: "npm:16.3.1"
     eslint: "npm:8.56.0"
     eslint-config-next: "npm:14.0.4"
