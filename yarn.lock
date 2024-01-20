@@ -893,9 +893,9 @@ __metadata:
   linkType: hard
 
 "@types/luxon@npm:^3.3.4":
-  version: 3.4.1
-  resolution: "@types/luxon@npm:3.4.1"
-  checksum: dc133d28dee98fd7944e81fbde8df4fcdd7b602139259b5566b556a09da296a6c57e02899b0068470465d5b3798f551edafe0a6c8fb89fcd327d799ff7d37c92
+  version: 3.4.2
+  resolution: "@types/luxon@npm:3.4.2"
+  checksum: fd89566e3026559f2bc4ddcc1e70a2c16161905ed50be9473ec0cfbbbe919165041408c4f6e06c4bcf095445535052e2c099087c76b1b38e368127e618fc968d
   languageName: node
   linkType: hard
 
@@ -1882,10 +1882,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:3.2.0":
-  version: 3.2.0
-  resolution: "date-fns@npm:3.2.0"
-  checksum: 2f36cb9165a066ae90c0b6f0c25b3c70eb75bc52e64ba6dd8680964ebda144851a244ff4ed0b2afb4a6bab796a1af6a0e6c7c2814529d04c72fa434f931d4e81
+"date-fns@npm:3.3.0":
+  version: 3.3.0
+  resolution: "date-fns@npm:3.3.0"
+  checksum: e93a99f0a447e26e01aeb099ee711abbced3b62f40e28c84effd09e69788f93587f2daec43950ead417faeebbd94afddc335bfd442c34443b03f09dfc0022ff8
   languageName: node
   linkType: hard
 
@@ -2892,7 +2892,7 @@ __metadata:
     "@types/url-join": "npm:4.0.3"
     "@types/webpack": "npm:5.28.5"
     bootstrap: "npm:5.3.2"
-    date-fns: "npm:3.2.0"
+    date-fns: "npm:3.3.0"
     dotenv: "npm:16.3.2"
     eslint: "npm:8.56.0"
     eslint-config-next: "npm:14.1.0"
@@ -2908,7 +2908,7 @@ __metadata:
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     react-leaflet: "npm:4.2.1"
-    reactstrap: "npm:9.2.1"
+    reactstrap: "npm:9.2.2"
     rrule: "npm:2.8.1"
     typescript: "npm:5.3.3"
     url-join: "npm:5.0.0"
@@ -4432,9 +4432,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"reactstrap@npm:9.2.1":
-  version: 9.2.1
-  resolution: "reactstrap@npm:9.2.1"
+"reactstrap@npm:9.2.2":
+  version: 9.2.2
+  resolution: "reactstrap@npm:9.2.2"
   dependencies:
     "@babel/runtime": "npm:^7.12.5"
     "@popperjs/core": "npm:^2.6.0"
@@ -4445,7 +4445,7 @@ __metadata:
   peerDependencies:
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: 97ac391b8d919a93da9d027f3fe23aa8a03c9daf9ffb01d6865bc5e8a9098a1fd2828e609c62bea4a4e7563d18de9a836c284d834c8e66873bd8c6fdbb5d4103
+  checksum: 97e46b90c31c0060ee9ce3d2e8d67fb863972f2af53c911cb78b776fd0e3e74f50687124448e64623ff4be8f25a219238f1d630c0ef495cde97e3c71f5055ea1
   languageName: node
   linkType: hard
 
