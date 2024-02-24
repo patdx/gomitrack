@@ -2974,7 +2974,7 @@ __metadata:
     leaflet: "npm:1.9.4"
     lodash: "npm:4.17.21"
     luxon: "npm:^3.4.4"
-    mingo: "npm:6.4.10"
+    mingo: "npm:6.4.11"
     next: "npm:14.1.0"
     original-url: "npm:1.2.3"
     react: "npm:18.2.0"
@@ -3838,10 +3838,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mingo@npm:6.4.10":
-  version: 6.4.10
-  resolution: "mingo@npm:6.4.10"
-  checksum: 10/bee9c672da20299f0c0ef5c1c8dc3c70161247822e05cae12f7b525d5d23c81656e1b49cb738ed3874c8e52682431c9586155d4d18c032bb9549fadf1e90b8c1
+"mingo@npm:6.4.11":
+  version: 6.4.11
+  resolution: "mingo@npm:6.4.11"
+  checksum: 10/815675b11864baf0d2ed1149394e89133fb8aad8a8aee6eb715e21ccf7825ef7ca61d07a6da142a7797778ac7bc8ce03750cd62cdcbc6134b6f0017b777648e8
   languageName: node
   linkType: hard
 
