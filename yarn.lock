@@ -1068,14 +1068,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.67":
-  version: 18.2.67
-  resolution: "@types/react@npm:18.2.67"
+"@types/react@npm:18.2.69":
+  version: 18.2.69
+  resolution: "@types/react@npm:18.2.69"
   dependencies:
     "@types/prop-types": "npm:*"
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10/d7e248dbe8d9d3b05f0d8e128d615fc9c85aa2c5d15634271d20cb9b343dbeffb0875f31a44e7ac63b42afc25949bd4c3633b7ebee45ee4666591ca934a8dffb
+  checksum: 10/5cc185f00ad5a4c2261e127ad25241448492f391e2206738b0477cbdba6aa75692e18ece5e75854ed513342d95c9ee83315744cb6b1470d488772cef1f8b40c8
   languageName: node
   linkType: hard
 
@@ -3181,7 +3181,7 @@ __metadata:
     "@types/lowdb": "npm:1.0.15"
     "@types/luxon": "npm:^3.3.4"
     "@types/node": "npm:20.11.30"
-    "@types/react": "npm:18.2.67"
+    "@types/react": "npm:18.2.69"
     "@types/react-dom": "npm:18.2.22"
     "@types/url-join": "npm:4.0.3"
     "@types/webpack": "npm:5.28.5"
@@ -3196,7 +3196,7 @@ __metadata:
     leaflet: "npm:1.9.4"
     lodash: "npm:4.17.21"
     luxon: "npm:^3.4.4"
-    mingo: "npm:6.4.12"
+    mingo: "npm:6.4.13"
     next: "npm:14.1.4"
     original-url: "npm:1.2.3"
     react: "npm:18.2.0"
@@ -4060,10 +4060,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mingo@npm:6.4.12":
-  version: 6.4.12
-  resolution: "mingo@npm:6.4.12"
-  checksum: 10/5e1c9599d0ba188e73db7971d27e610307f77ecae3e5843833541be509c03a93c4201f79575d3be763fb4cd853f9ea2bd03bdd79cbe6065ed341556b69727331
+"mingo@npm:6.4.13":
+  version: 6.4.13
+  resolution: "mingo@npm:6.4.13"
+  checksum: 10/9288cdfc61bcd75a28c5fd1e78475c3425d0f995a9d5582a2aeb7db1496476ee6e6079b247619a9c10e59e58e09945e386e207a715fcdca45e4bb5b6be963ef5
   languageName: node
   linkType: hard
 
