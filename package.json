@@ -43,7 +43,7 @@
     "@types/lodash": "4.17.0",
     "@types/luxon": "^3.3.4",
     "@types/node": "20.11.30",
-    "@types/react": "18.2.69",
+    "@types/react": "18.2.70",
     "@types/react-dom": "18.2.22",
     "@types/webpack": "5.28.5",
     "eslint": "8.57.0",
