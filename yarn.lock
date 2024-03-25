@@ -2908,10 +2908,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fp-ts@npm:2.16.4":
-  version: 2.16.4
-  resolution: "fp-ts@npm:2.16.4"
-  checksum: 10/e39253478811542bfc94152d9e7351e2d856e838a829f51694443df42c8220f7217b1149fe1a204cda4c9c2848b6ffed9a1d6591e2db6a7b525f41cb5be61044
+"fp-ts@npm:2.16.5":
+  version: 2.16.5
+  resolution: "fp-ts@npm:2.16.5"
+  checksum: 10/2274ae9f65597321f308ea0b11637c4d8aa21f14f16981da8bf3187aaed88b9ab9fd5df2f40976809b3b504b845cf60c1601919364937d9b0d65044e0f076b81
   languageName: node
   linkType: hard
 
@@ -3190,7 +3190,7 @@ __metadata:
     dotenv: "npm:16.4.5"
     eslint: "npm:8.57.0"
     eslint-config-next: "npm:14.1.4"
-    fp-ts: "npm:2.16.4"
+    fp-ts: "npm:2.16.5"
     fs-extra: "npm:11.2.0"
     immer: "npm:10.0.4"
     leaflet: "npm:1.9.4"
