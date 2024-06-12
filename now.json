@@ -1,7 +1,0 @@
-{
-  "build": {
-    "env": {
-      "MAPS_URL": "@gomitrack-maps-url"
-    }
-  }
-}
