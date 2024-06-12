@@ -23,6 +23,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Gomitrack',
+  description: 'Garbage schedule for Kusatsu City, Shiga',
 };
 
 export default function RootLayout({
@@ -44,6 +45,7 @@ export default function RootLayout({
                 unoptimized
                 width={200}
                 height={40}
+                priority
               />
             </Link>
 
