@@ -12,8 +12,8 @@ importers:
         specifier: 7.0.0
         version: 7.0.0
       '@turf/helpers':
-        specifier: 6.5.0
-        version: 6.5.0
+        specifier: 7.0.0
+        version: 7.0.0
       '@types/fs-extra':
         specifier: 11.0.4
         version: 11.0.4
@@ -551,9 +551,6 @@ packages:
 
   '@turf/bbox@7.0.0':
     resolution: {integrity: sha512-IyXG5HAsn6IZLdAtQo7aWYccjU5WsV+uzIzhGaXrh/qTVylSYmRiWgLdiekHZVED9nv9r7D/EJUMOT4zyA6POA==}
-
-  '@turf/helpers@6.5.0':
-    resolution: {integrity: sha512-VbI1dV5bLFzohYYdgqwikdMVpe7pJ9X3E+dlr425wa2/sMJqYDhTO++ec38/pcPvPE6oD9WEEeU3Xu3gza+VPw==}
 
   '@turf/helpers@7.0.0':
     resolution: {integrity: sha512-vwZvxRuyjGpGXvhXSbT9mX6FK92dBMLWbMbDJ/MXQUPx17ReVPFc+6N6IcxAzZfkiCnqy7vpuq0c+/TTrQxIiA==}
@@ -2706,8 +2703,6 @@ snapshots:
       '@turf/helpers': 7.0.0
       '@turf/meta': 7.0.0
       tslib: 2.6.3
-
-  '@turf/helpers@6.5.0': {}
 
   '@turf/helpers@7.0.0':
     dependencies:

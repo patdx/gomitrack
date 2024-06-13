@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@turf/bbox": "7.0.0",
-    "@turf/helpers": "6.5.0",
+    "@turf/helpers": "7.0.0",
     "@types/fs-extra": "11.0.4",
     "@types/lowdb": "1.0.15",
     "@types/url-join": "4.0.3",
