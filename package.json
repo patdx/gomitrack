@@ -11,7 +11,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
-    "@turf/bbox": "6.5.0",
+    "@turf/bbox": "7.0.0",
     "@turf/helpers": "6.5.0",
     "@types/fs-extra": "11.0.4",
     "@types/lowdb": "1.0.15",
