@@ -36,8 +36,8 @@
     "webpack-merge": "6.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "7.24.7",
-    "@babel/core": "7.24.7",
+    "@babel/cli": "7.24.8",
+    "@babel/core": "7.24.8",
     "@babel/plugin-proposal-decorators": "7.24.7",
     "@types/leaflet": "1.9.12",
     "@types/lodash": "4.17.6",
@@ -51,7 +51,7 @@
     "fp-ts": "2.16.8",
     "svgo": "^3.3.2",
     "typescript": "5.5.3",
-    "webpack": "5.92.1"
+    "webpack": "5.93.0"
   },
   "license": "ISC",
   "packageManager": "pnpm@9.5.0"
