@@ -115,8 +115,8 @@ importers:
         specifier: 14.2.5
         version: 14.2.5(eslint@9.7.0)(typescript@5.5.4)
       fp-ts:
-        specifier: 2.16.8
-        version: 2.16.8
+        specifier: 2.16.9
+        version: 2.16.9
       svgo:
         specifier: ^3.3.2
         version: 3.3.2
@@ -1262,8 +1262,8 @@ packages:
   forwarded-parse@2.1.2:
     resolution: {integrity: sha512-alTFZZQDKMporBH77856pXgzhEzaUVmLCDk+egLgIgHst3Tpndzz8MnKe+GzRJRfvVdn69HhpW7cmXzvtLvJAw==}
 
-  fp-ts@2.16.8:
-    resolution: {integrity: sha512-nmDtNqmMZkOxu0M5hkrS9YA15/KPkYkILb6Axg9XBAoUoYEtzg+LFmVWqZrl9FNttsW0qIUpx9RCA9INbv+Bxw==}
+  fp-ts@2.16.9:
+    resolution: {integrity: sha512-+I2+FnVB+tVaxcYyQkHUq7ZdKScaBlX53A41mxQtpIccsfyv8PzdzP7fzp2AY832T4aoK6UZ5WRX/ebGd8uZuQ==}
 
   fs-extra@11.2.0:
     resolution: {integrity: sha512-PmDi3uwK5nFuXh7XDTlVnS17xJS7vW36is2+w3xcv8SVxiB4NyATf4ctkVY5bkSjX0Y4nbvZCq1/EjtEyr9ktw==}
@@ -3677,7 +3677,7 @@ snapshots:
 
   forwarded-parse@2.1.2: {}
 
-  fp-ts@2.16.8: {}
+  fp-ts@2.16.9: {}
 
   fs-extra@11.2.0:
     dependencies:
