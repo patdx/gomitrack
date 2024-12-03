@@ -4,11 +4,10 @@ import {
 } from '../../../utils/collection-district';
 import { ClientDistrictPage } from './district';
 
-export default async function DistrictPage({
-  params,
-}: {
-  params: { district: string };
+export default async function DistrictPage(props: {
+  params: Promise<{ district: string }>;
 }) {
+  const params = await props.params;
   // export const getServerSideProps: GetServerSideProps = async (context) => {
   const districtName = decodeURIComponent(params.district);
   const district = await findDistrictWithSortedSchedule(districtName);

@@ -59,22 +59,8 @@ export const ClientDistrictPage: NextPage<{
         <div className="col-xs-12 col-sm-8">
           <h2>Area</h2>
 
-          <div style={{ height: 300 }}>
-            <Map
-              locations={locations}
-              mapContainerProps={{
-                className: 'h-100',
-                maxZoom: 14,
-                scrollWheelZoom: false,
-                bounds: [
-                  [minY, minX],
-                  [maxY, maxX],
-                ],
-                // whenCreated: (map) => {
-                //   (window as any).map = map;
-                // },
-              }}
-            />
+          <div style={{ height: 400 }}>
+            <Map locations={locations} bounds={[minX, minY, maxX, maxY]} />
           </div>
 
           <div className="row mt-2">

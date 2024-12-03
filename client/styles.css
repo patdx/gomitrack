@@ -6,8 +6,15 @@
 } */
 
 body {
-  font-family: ’ヒラギノ角ゴ Pro W3’, ‘Hiragino Kaku Gothic Pro’, メイリオ,
-    Meiryo, Osaka, ‘MS Pゴシック’, ‘MS PGothic’, sans-serif;
+  font-family:
+    ’ヒラギノ角ゴ Pro W3’,
+    ‘Hiragino Kaku Gothic Pro’,
+    メイリオ,
+    Meiryo,
+    Osaka,
+    ‘MS Pゴシック’,
+    ‘MS PGothic’,
+    sans-serif;
 }
 
 /* .districtJP {
