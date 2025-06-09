@@ -9,7 +9,11 @@ import { useState } from 'react';
 import { formatZip } from '../../../utils/collection-area';
 import { CollectionDistrict } from '../../../utils/collection-district';
 import { GarbageType } from '../../../utils/garbage-type';
-import { nextDateFormatted } from '../../../utils/garbage-type-frequency';
+import {
+  FormatDate,
+  nextDate,
+  nextDateFormatted,
+} from '../../../utils/garbage-type-frequency';
 
 const Map = dynamic(() => import('../../../components/map'), { ssr: false });
 
@@ -50,7 +54,8 @@ export const ClientDistrictPage: NextPage<{
                       {(garbage.garbage as GarbageType).name}
                     </span>
                   </b>
-                  <br />({garbage.frequency}) {pipe(garbage, nextDateFormatted)}
+                  <br />({garbage.frequency}){' '}
+                  <FormatDate date={nextDate(garbage)} />
                 </div>
               </div>
             );

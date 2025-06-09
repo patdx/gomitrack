@@ -36,3 +36,15 @@ export const nextDateFormatted = (garbageItem: GarbageTypeFrequency) => {
   return nextDate(garbageItem).toLocaleString(DateTime.DATE_FULL);
   // return format(nextDate(garbageItem), 'PPPP');
 };
+
+export function FormatDate({ date }: { date?: DateTime | null }) {
+  if (!date) {
+    return null;
+  }
+
+  return (
+    <time dateTime={date.toJSON() ?? undefined} suppressHydrationWarning>
+      {date.toLocaleString(DateTime.DATE_FULL)}
+    </time>
+  );
+}
