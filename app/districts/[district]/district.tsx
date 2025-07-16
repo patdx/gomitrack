@@ -2,18 +2,13 @@
 
 import bbox from '@turf/bbox';
 import { lineString } from '@turf/helpers';
-import { pipe } from 'fp-ts/function';
 import { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { formatZip } from '../../../utils/collection-area';
 import { CollectionDistrict } from '../../../utils/collection-district';
 import { GarbageType } from '../../../utils/garbage-type';
-import {
-  FormatDate,
-  nextDate,
-  nextDateFormatted,
-} from '../../../utils/garbage-type-frequency';
+import { FormatDate, nextDate } from '../../../utils/garbage-type-frequency';
 
 const Map = dynamic(() => import('../../../components/map'), { ssr: false });
 
