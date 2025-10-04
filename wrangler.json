@@ -7,7 +7,10 @@
   "vars": {
     "VALUE_FROM_CLOUDFLARE": "hello world 123"
   },
-  "compatibility_flags": ["nodejs_als"],
+  "preview_urls": true,
+  "compatibility_flags": [
+    "nodejs_als"
+  ],
   "limits": {
     "cpu_ms": 10
   },
