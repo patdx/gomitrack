@@ -1,48 +1,138 @@
 {
   "name": "gomitrack",
-  "version": "2.0.0",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "dev-legacy": "next dev",
-    "dev-inspect": "NODE_OPTIONS='--inspect' node node_modules/.bin/next dev",
-    "build": "next build",
-    "start": "next start",
-    "start-inspect": "NODE_OPTIONS='--inspect' next start",
-    "type-check": "tsc"
+    "build": "wireit",
+    "dev": "wireit",
+    "start": "wireit",
+    "typecheck": "wireit",
+    "typegen": "wireit",
+    "deploy": "wireit",
+    "postinstall": "pnpm typegen"
   },
   "dependencies": {
+    "@cloudflare/vite-plugin": "1.13.10",
+    "@react-router/node": "7.9.3",
+    "@react-router/serve": "7.9.3",
     "@turf/bbox": "7.2.0",
     "@turf/helpers": "7.2.0",
-    "@types/fs-extra": "11.0.4",
-    "bootstrap": "5.3.8",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
     "date-fns": "4.1.0",
-    "dotenv": "17.2.3",
-    "fs-extra": "11.3.2",
     "immer": "10.1.3",
+    "isbot": "5.1.31",
     "lodash": "4.17.21",
-    "luxon": "^3.7.1",
+    "lucide-react": "0.544.0",
+    "luxon": "3.7.2",
     "maplibre-gl": "5.8.0",
     "mingo": "6.7.0",
-    "next": "15.5.4",
-    "original-url": "1.2.3",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "react-map-gl": "8.0.4",
-    "reactstrap": "9.2.3",
+    "react-map-gl": "8.1.0",
+    "react-router": "7.9.3",
     "rrule": "2.8.1",
+    "tailwind-merge": "3.3.1",
     "url-join": "5.0.0"
   },
   "devDependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "0.2.3",
+    "@playwright/mcp": "0.0.41",
+    "@react-router/dev": "7.9.3",
+    "@react-router/fs-routes": "7.9.3",
+    "@tailwindcss/vite": "4.1.14",
     "@types/lodash": "4.17.20",
-    "@types/luxon": "^3.3.4",
-    "@types/node": "24.6.1",
+    "@types/luxon": "3.7.1",
+    "@types/node": "24.6.2",
     "@types/react": "19.2.0",
     "@types/react-dom": "19.2.0",
-    "eslint": "9.36.0",
-    "eslint-config-next": "15.5.4",
+    "autoprefixer": "10.4.21",
+    "esbuild": "0.25.10",
+    "postcss": "8.5.6",
     "prettier": "3.6.2",
-    "typescript": "5.9.3"
+    "prettier-plugin-tailwindcss": "0.6.14",
+    "shadcn": "3.3.1",
+    "tailwindcss": "4.1.14",
+    "tw-animate-css": "1.4.0",
+    "typescript": "5.9.3",
+    "unplugin-auto-import": "20.2.0",
+    "vite": "7.1.9",
+    "vite-tsconfig-paths": "5.1.4",
+    "wireit": "0.14.12",
+    "workerd": "1.20251004.0",
+    "wrangler": "4.42.0"
   },
-  "license": "ISC",
-  "packageManager": "pnpm@10.17.1+sha512.17c560fca4867ae9473a3899ad84a88334914f379be46d455cbf92e5cf4b39d34985d452d2583baf19967fa76cb5c17bc9e245529d0b98745721aa7200ecaf7a"
+  "wireit": {
+    "build": {
+      "command": "react-router build",
+      "dependencies": [
+        "typecheck"
+      ],
+      "files": [
+        "app/**",
+        "vite.config.ts",
+        "react-router.config.ts"
+      ],
+      "output": [
+        "build/**"
+      ]
+    },
+    "deploy": {
+      "command": "wrangler deploy",
+      "dependencies": [
+        "build"
+      ]
+    },
+    "dev": {
+      "command": "react-router dev",
+      "files": [
+        "app/**",
+        "vite.config.ts"
+      ],
+      "service": true
+    },
+    "start": {
+      "command": "wrangler dev",
+      "service": true
+    },
+    "typecheck": {
+      "command": "tsc --build",
+      "dependencies": [
+        "typegen"
+      ],
+      "files": [
+        "tsconfig.json",
+        "app/**/*.ts",
+        "app/**/*.tsx",
+        "worker-configuration.d.ts",
+        ".react-router/**"
+      ],
+      "output": [
+        "tsconfig.tsbuildinfo"
+      ]
+    },
+    "typegen": {
+      "command": "node scripts/update-date.js && wrangler types && react-router typegen",
+      "files": [
+        "app/**",
+        "react-router.config.ts",
+        ".env",
+        "wrangler.json"
+      ],
+      "output": [
+        "worker-configuration.d.ts",
+        ".react-router/**"
+      ]
+    }
+  },
+  "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad",
+  "pnpm": {
+    "overrides": {
+      "esbuild": "$esbuild",
+      "@esbuild-plugins/node-globals-polyfill": "$@esbuild-plugins/node-globals-polyfill",
+      "workerd": "$workerd"
+    },
+    "onlyBuiltDependencies": []
+  }
 }

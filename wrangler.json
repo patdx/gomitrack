@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "gomitrack",
+  "compatibility_date": "2025-10-04",
+  "send_metrics": false,
+  "main": "./workers/app.ts",
+  "vars": {
+    "VALUE_FROM_CLOUDFLARE": "hello world 123"
+  },
+  "compatibility_flags": ["nodejs_als"],
+  "limits": {
+    "cpu_ms": 10
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "assets": {
+    "directory": "./build/client/"
+  }
+}

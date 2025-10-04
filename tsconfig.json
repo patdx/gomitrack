@@ -1,31 +1,18 @@
 {
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.cloudflare.json" }
+  ],
   "compilerOptions": {
-    "allowJs": true,
-    "alwaysStrict": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": ["dom", "es2017"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "resolveJsonModule": true,
+    "incremental": true,
+    "checkJs": true,
+    "verbatimModuleSyntax": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext",
-    "experimentalDecorators": true,
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
-  "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", ".next/types/**/*.ts"]
+    "noEmit": true,
+    "paths": {
+      "~/*": ["./app/*"]
+    }
+  }
 }

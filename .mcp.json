@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "args": ["mcp-server-playwright"],
+      "command": "pnpm"
+    },
+    "shadcn": {
+      "args": ["shadcn", "mcp"],
+      "command": "pnpm"
+    }
+  }
+}

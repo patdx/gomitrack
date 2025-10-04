@@ -1,13 +1,14 @@
-node_modules
-.next
+.DS_Store
+/node_modules/
 
-.now
-.env
+# React Router
+/.react-router/
+/build/
 
-.yarn/*
-!.yarn/patches
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
+# Cloudflare
+.mf
+.wrangler
+
+# Wireit
+.wireit
+*.tsbuildinfo
