@@ -30,8 +30,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 				<meta name="format-detection" content="telephone=no" />
 				<meta name="mobile-web-app-capable" content="yes" />
-				<meta name="msapplication-config" content="/browserconfig.xml" />
-				<meta name="msapplication-TileImage" content="/mstile-144x144.png" />
 				<meta property="og:title" content="Gomitrack" />
 				<meta
 					property="og:description"
@@ -49,7 +47,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
 					content="Garbage schedule for Kusatsu City, Shiga"
 				/>
 				<meta name="theme-color" content="#ffffff" />
-				<meta name="msapplication-TileColor" content="#da532c" />
 				<Links />
 				<link rel="apple-touch-icon" sizes="180x180" href={appleIcon} />
 				<link rel="icon" type="image/x-icon" href="/favicon.ico" />
