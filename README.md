@@ -1,25 +1,22 @@
-# react-router-7-template
+# Gomitrack
 
-Previously called `patdx-remix-template`
+Track Garbage Schedule
 
-## Create a new project from this template
+Note: As of 2023, the garbage schedule is unfortunately now out of date...
 
-This will copy the code in `main` branch to a new directory.
+## About
 
-```
-npx degit patdx/patdx-remix-template
-```
+This is a React Router 7 application for tracking garbage collection schedules. Built using the React Router 7 template with Cloudflare Pages deployment.
 
-## Summary
+## Tech Stack
 
-This is a template for React Router 7 (Remix) apps with the following features already set up:
+This application is built with:
 
+- React Router 7
 - Cloudflare Pages Functions deployment using wrangler.toml
 - React 19
 - Auto import plugin with React imports set up
 - Tailwind CSS
-
-It is largely based on the [React Router 7 Cloudflare D1 Template](https://github.com/remix-run/react-router-templates/tree/main/cloudflare-d1) but using Cloudflare Pages instead of the new Cloudflare Worker Assets feature, and a different plugin to use Worker Proxy mode instead of the Vite Environments API.
 
 ## Adding Node-targeted modules
 

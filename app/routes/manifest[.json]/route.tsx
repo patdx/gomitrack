@@ -1,6 +1,6 @@
 import type { Route } from './+types/route'
-import icon192 from '../../assets/android-chrome-192x192.png?url'
-import icon512 from '../../assets/android-chrome-512x512.png?url'
+import icon192 from '../../assets/android-chrome-192x192.png?url&no-inline'
+import icon512 from '../../assets/android-chrome-512x512.png?url&no-inline'
 
 export function loader({}: Route.LoaderArgs) {
 	return Response.json({

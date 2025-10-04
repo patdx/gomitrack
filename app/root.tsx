@@ -8,10 +8,9 @@ import {
 } from 'react-router'
 import { Link } from 'react-router'
 import type { Route } from './+types/root'
-import appleIcon from './apple-icon.png?url'
-import favicon from './favicon.ico?url'
-import iconSvg from './icon.svg?url'
-import opengraphImage from './opengraph-image.png?url'
+import appleIcon from './apple-icon.png?url&no-inline'
+import iconSvg from './icon.svg?url&no-inline'
+import opengraphImage from './opengraph-image.png?url&no-inline'
 import './app.css'
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -53,7 +52,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<meta name="msapplication-TileColor" content="#da532c" />
 				<Links />
 				<link rel="apple-touch-icon" sizes="180x180" href={appleIcon} />
-				<link rel="icon" type="image/x-icon" href={favicon} />
+				<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 				<link rel="icon" type="image/svg+xml" href={iconSvg} />
 				<link rel="mask-icon" href={iconSvg} color="#5bbad5" />
 				<link rel="manifest" href="/manifest.json" />

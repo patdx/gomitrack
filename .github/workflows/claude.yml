@@ -43,8 +43,9 @@ jobs:
         uses: anthropics/claude-code-action@v1
         env:
           NODE_VERSION: '22.x'
+          ANTHROPIC_BASE_URL: 'https://api.z.ai/api/anthropic'
         with:
-          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.ZHIPU_API_KEY }}
 
           # This is an optional setting that allows Claude to read CI results on PRs
           additional_permissions: |
