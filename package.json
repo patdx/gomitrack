@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "1.13.10",
-    "@react-router/node": "7.9.3",
+    "@react-router/node": "7.9.4",
     "@react-router/serve": "7.9.3",
     "@turf/bbox": "7.2.0",
     "@turf/helpers": "7.2.0",
