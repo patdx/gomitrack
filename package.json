@@ -61,7 +61,7 @@
     "vite-tsconfig-paths": "5.1.4",
     "wireit": "0.14.12",
     "workerd": "1.20251004.0",
-    "wrangler": "4.42.0"
+    "wrangler": "4.59.1"
   },
   "wireit": {
     "build": {
