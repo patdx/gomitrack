@@ -14,8 +14,8 @@ importers:
   .:
     dependencies:
       '@cloudflare/vite-plugin':
-        specifier: 1.22.1
-        version: 1.22.1(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))(workerd@1.20251004.0)(wrangler@4.61.1)
+        specifier: 1.25.6
+        version: 1.25.6(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))(workerd@1.20251004.0)(wrangler@4.69.0)
       '@react-router/node':
         specifier: 7.9.4
         version: 7.9.4(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)
@@ -88,10 +88,10 @@ importers:
         version: 0.0.41
       '@react-router/dev':
         specifier: 7.9.3
-        version: 7.9.3(@react-router/serve@7.9.3(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3))(@types/node@24.6.2)(@vitejs/plugin-rsc@0.4.11(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(jiti@2.6.1)(lightningcss@1.30.1)(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))(wrangler@4.61.1)(yaml@2.6.1)
+        version: 7.9.3(@react-router/serve@7.9.3(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3))(@types/node@24.6.2)(@vitejs/plugin-rsc@0.4.11(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(jiti@2.6.1)(lightningcss@1.30.1)(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))(wrangler@4.69.0)(yaml@2.6.1)
       '@react-router/fs-routes':
         specifier: 7.9.3
-        version: 7.9.3(@react-router/dev@7.9.3(@react-router/serve@7.9.3(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3))(@types/node@24.6.2)(@vitejs/plugin-rsc@0.4.11(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(jiti@2.6.1)(lightningcss@1.30.1)(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))(wrangler@4.61.1)(yaml@2.6.1))(typescript@5.9.3)
+        version: 7.9.3(@react-router/dev@7.9.3(@react-router/serve@7.9.3(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3))(@types/node@24.6.2)(@vitejs/plugin-rsc@0.4.11(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(jiti@2.6.1)(lightningcss@1.30.1)(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))(wrangler@4.69.0)(yaml@2.6.1))(typescript@5.9.3)
       '@tailwindcss/vite':
         specifier: 4.1.14
         version: 4.1.14(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))
@@ -153,8 +153,8 @@ importers:
         specifier: 1.20251004.0
         version: 1.20251004.0
       wrangler:
-        specifier: 4.61.1
-        version: 4.61.1
+        specifier: 4.69.0
+        version: 4.69.0
 
 packages:
 
@@ -301,8 +301,8 @@ packages:
     resolution: {integrity: sha512-SIOD2DxrRRwQ+jgzlXCqoEFiKOFqaPjhnNTGKXSRLvp1HiOvapLaFG2kEr9dYQTYe8rKrd9uvDUzmAITeNyaHQ==}
     engines: {node: '>=18.0.0'}
 
-  '@cloudflare/unenv-preset@2.12.0':
-    resolution: {integrity: sha512-NK4vN+2Z/GbfGS4BamtbbVk1rcu5RmqaYGiyHJQrA09AoxdZPHDF3W/EhgI0YSK8p3vRo/VNCtbSJFPON7FWMQ==}
+  '@cloudflare/unenv-preset@2.14.0':
+    resolution: {integrity: sha512-XKAkWhi1nBdNsSEoNG9nkcbyvfUrSjSf+VYVPfOto3gLTZVc3F4g6RASCMh6IixBKCG2yDgZKQIHGKtjcnLnKg==}
     peerDependencies:
       unenv: 2.0.0-rc.24
       workerd: 1.20251004.0
@@ -310,11 +310,11 @@ packages:
       workerd:
         optional: true
 
-  '@cloudflare/vite-plugin@1.22.1':
-    resolution: {integrity: sha512-RDWc6WtrdjVDfpBeO3MYcgJIbq+Phg9qBXq1Ixl00qPqM8bgKp9oPLhg8oayynQs8udNnqkV0CjfojvIhhfZWg==}
+  '@cloudflare/vite-plugin@1.25.6':
+    resolution: {integrity: sha512-p00Wcifec/rpzLFhZnA86JcPYazDkQ54q/ieAwuJQ+YUjbNKWjq872SUwUuX3+nIvo0KIRQmL9VBLE8mWfTE7g==}
     peerDependencies:
       vite: ^6.1.0 || ^7.0.0
-      wrangler: ^4.61.1
+      wrangler: ^4.69.0
 
   '@cloudflare/workerd-darwin-64@1.20251004.0':
     resolution: {integrity: sha512-gL6/b7NXCum95e77n+CLyDzmfV14ZAsyoWWHoWsi2Nt89ngl8xB7aW6IQQPZPjxvtSth5y/peFCIbmR55DxFCg==}
@@ -1823,6 +1823,7 @@ packages:
 
   glob@10.4.5:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   globrex@0.1.2:
@@ -2225,8 +2226,8 @@ packages:
   mingo@6.7.0:
     resolution: {integrity: sha512-0ZGCOJWMb5bkik4A0E4AIQcqYCyP7463+y1T0qCXX3EdzUn0hExAIBHvEGzsGIa4+1BW2dOIa06woGNntbPWtQ==}
 
-  miniflare@4.20260128.0:
-    resolution: {integrity: sha512-AVCn3vDRY+YXu1sP4mRn81ssno6VUqxo29uY2QVfgxXU2TMLvhRIoGwm7RglJ3Gzfuidit5R86CMQ6AvdFTGAw==}
+  miniflare@4.20260305.0:
+    resolution: {integrity: sha512-jVhtKJtiwaZa3rI+WgoLvSJmEazDsoUmAPYRUmEe2VO6VSbvkhbnDRm+dsPbYRatgNIExwrpqG1rv96jHiSb0w==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -2921,7 +2922,7 @@ packages:
   tar@7.5.1:
     resolution: {integrity: sha512-nlGpxf+hv0v7GkWBK2V9spgactGOp0qvfWRxUMjqHyzrt3SgwE48DIv/FhqPHJYLHpgW1opq3nERbz5Anq7n1g==}
     engines: {node: '>=18'}
-    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exhorbitant rates) by contacting i@izs.me
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   tiny-invariant@1.3.3:
     resolution: {integrity: sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg==}
@@ -3189,12 +3190,12 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  wrangler@4.61.1:
-    resolution: {integrity: sha512-hfYQ16VLPkNi8xE1/V3052S2stM5e+vq3Idpt83sXoDC3R7R1CLgMkK6M6+Qp3G+9GVDNyHCkvohMPdfFTaD4Q==}
+  wrangler@4.69.0:
+    resolution: {integrity: sha512-EmVfIM65I5b4ITHe3Y9R7zQyf4NUBQ1leStakMlWiVR9n6VlDwuEltyQI2l3i0JciDnWyR3uqe+T6C08ivniTQ==}
     engines: {node: '>=20.0.0'}
     hasBin: true
     peerDependencies:
-      '@cloudflare/workers-types': ^4.20260128.0
+      '@cloudflare/workers-types': ^4.20260305.0
     peerDependenciesMeta:
       '@cloudflare/workers-types':
         optional: true
@@ -3480,19 +3481,19 @@ snapshots:
 
   '@cloudflare/kv-asset-handler@0.4.2': {}
 
-  '@cloudflare/unenv-preset@2.12.0(unenv@2.0.0-rc.24)(workerd@1.20251004.0)':
+  '@cloudflare/unenv-preset@2.14.0(unenv@2.0.0-rc.24)(workerd@1.20251004.0)':
     dependencies:
       unenv: 2.0.0-rc.24
     optionalDependencies:
       workerd: 1.20251004.0
 
-  '@cloudflare/vite-plugin@1.22.1(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))(workerd@1.20251004.0)(wrangler@4.61.1)':
+  '@cloudflare/vite-plugin@1.25.6(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))(workerd@1.20251004.0)(wrangler@4.69.0)':
     dependencies:
-      '@cloudflare/unenv-preset': 2.12.0(unenv@2.0.0-rc.24)(workerd@1.20251004.0)
-      miniflare: 4.20260128.0
+      '@cloudflare/unenv-preset': 2.14.0(unenv@2.0.0-rc.24)(workerd@1.20251004.0)
+      miniflare: 4.20260305.0
       unenv: 2.0.0-rc.24
       vite: 7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)
-      wrangler: 4.61.1
+      wrangler: 4.69.0
       ws: 8.18.0
     transitivePeerDependencies:
       - bufferutil
@@ -3947,7 +3948,7 @@ snapshots:
 
   '@poppinss/exception@1.2.2': {}
 
-  '@react-router/dev@7.9.3(@react-router/serve@7.9.3(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3))(@types/node@24.6.2)(@vitejs/plugin-rsc@0.4.11(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(jiti@2.6.1)(lightningcss@1.30.1)(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))(wrangler@4.61.1)(yaml@2.6.1)':
+  '@react-router/dev@7.9.3(@react-router/serve@7.9.3(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3))(@types/node@24.6.2)(@vitejs/plugin-rsc@0.4.11(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(jiti@2.6.1)(lightningcss@1.30.1)(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))(wrangler@4.69.0)(yaml@2.6.1)':
     dependencies:
       '@babel/core': 7.28.4
       '@babel/generator': 7.28.3
@@ -3982,7 +3983,7 @@ snapshots:
       '@react-router/serve': 7.9.3(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)
       '@vitejs/plugin-rsc': 0.4.11(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))
       typescript: 5.9.3
-      wrangler: 4.61.1
+      wrangler: 4.69.0
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -4007,9 +4008,9 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  '@react-router/fs-routes@7.9.3(@react-router/dev@7.9.3(@react-router/serve@7.9.3(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3))(@types/node@24.6.2)(@vitejs/plugin-rsc@0.4.11(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(jiti@2.6.1)(lightningcss@1.30.1)(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))(wrangler@4.61.1)(yaml@2.6.1))(typescript@5.9.3)':
+  '@react-router/fs-routes@7.9.3(@react-router/dev@7.9.3(@react-router/serve@7.9.3(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3))(@types/node@24.6.2)(@vitejs/plugin-rsc@0.4.11(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(jiti@2.6.1)(lightningcss@1.30.1)(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))(wrangler@4.69.0)(yaml@2.6.1))(typescript@5.9.3)':
     dependencies:
-      '@react-router/dev': 7.9.3(@react-router/serve@7.9.3(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3))(@types/node@24.6.2)(@vitejs/plugin-rsc@0.4.11(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(jiti@2.6.1)(lightningcss@1.30.1)(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))(wrangler@4.61.1)(yaml@2.6.1)
+      '@react-router/dev': 7.9.3(@react-router/serve@7.9.3(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3))(@types/node@24.6.2)(@vitejs/plugin-rsc@0.4.11(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(jiti@2.6.1)(lightningcss@1.30.1)(react-router@7.12.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)(vite@7.1.11(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))(wrangler@4.69.0)(yaml@2.6.1)
       minimatch: 9.0.5
     optionalDependencies:
       typescript: 5.9.3
@@ -5258,7 +5259,7 @@ snapshots:
 
   mingo@6.7.0: {}
 
-  miniflare@4.20260128.0:
+  miniflare@4.20260305.0:
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       sharp: 0.34.5
@@ -5368,7 +5369,7 @@ snapshots:
 
   npm-install-checks@6.3.0:
     dependencies:
-      semver: 7.7.2
+      semver: 7.7.3
 
   npm-normalize-package-bin@3.0.1: {}
 
@@ -5376,7 +5377,7 @@ snapshots:
     dependencies:
       hosted-git-info: 6.1.3
       proc-log: 3.0.0
-      semver: 7.7.2
+      semver: 7.7.3
       validate-npm-package-name: 5.0.1
 
   npm-pick-manifest@8.0.2:
@@ -6244,13 +6245,13 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20251004.0
       '@cloudflare/workerd-windows-64': 1.20251004.0
 
-  wrangler@4.61.1:
+  wrangler@4.69.0:
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.2
-      '@cloudflare/unenv-preset': 2.12.0(unenv@2.0.0-rc.24)(workerd@1.20251004.0)
+      '@cloudflare/unenv-preset': 2.14.0(unenv@2.0.0-rc.24)(workerd@1.20251004.0)
       blake3-wasm: 2.1.5
       esbuild: 0.25.10
-      miniflare: 4.20260128.0
+      miniflare: 4.20260305.0
       path-to-regexp: 6.3.0
       unenv: 2.0.0-rc.24
       workerd: 1.20251004.0
